@@ -8,19 +8,40 @@ $(document).ready(function() {
 	}
 
 	if ($('.text-slider').length>0) {
-		var $status = $('.pagingInfo');
-	    var $slickElement = $('.text-slider');
+		var $gallery = $('.text-slider');
+		var slideCount = null;
 
-	    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-	        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-	        var i = (currentSlide ? currentSlide : 0) + 1;
-	        $status.text(i + '/' + slick.slideCount);
-	    });
+		$( document ).ready(function() {
+		    $gallery.slick({
+				dots: false,
+		        fade: true,
+		        useTransform: true,
+				nextArrow: '<i class="arrow-right"></i>',
+				prevArrow: '<i class="arrow-left"></i>',
+		    });
+		});
 
-	    $slickElement.slick({
-	        dots: false,
-	         fade: true,
-	    });
+		$gallery.on('init', function(event, slick){
+			slideCount = slick.slideCount;
+			setSlideCount();
+			setCurrentSlideNumber(slick.currentSlide);
+			$('.arrow-left').insertBefore('.slide-count-wrap__inner');
+			$('.arrow-right').insertAfter('.slide-count-wrap__inner');
+		});
+
+		$gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		  setCurrentSlideNumber(nextSlide);
+		});
+
+		function setSlideCount() {
+		  var $el = $('.slide-count-wrap').find('.total');
+		  $el.text(slideCount);
+		}
+
+		function setCurrentSlideNumber(currentSlide) {
+		  var $el = $('.slide-count-wrap').find('.current');
+		  $el.text(currentSlide + 1);
+		}
 	};
 
 
@@ -76,20 +97,17 @@ function isTouchDevice() {
 }
 
 // links pages
-// $('body').append(
-// 	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
-// 		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
-// 	<style> \
-// 		#pages { padding: 10px 20px 0 50px; font-size: 18px; } \
-// 		#pages a { text-decoration: none; } \
-// 		#pages li { margin: 5px 0; } \
-// 	</style> \
-// 	<ol id="pages"> \
-// 		<li><a href="#"></a></li> \
-// 		<li><a href="#"></a></li> \
-// 		<li><a href="#"></a></li> \
-// 		<li><a href="#"></a></li> \
-// 		<li><a href="#"></a></li> \
-// 		<li><a href="#"></a></li> \
-// 	</ol> \
-// </div>');
+$('body').append(
+	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
+		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
+	<style> \
+		#pages { padding: 10px 20px 0 50px; font-size: 18px; } \
+		#pages a { text-decoration: none; } \
+		#pages li { margin: 5px 0; } \
+	</style> \
+	<ol id="pages"> \
+		<li><a href="about.html">About</a></li> \
+		<li><a href="news.html">News</a></li> \
+		<li><a href="news-in.html">News-in</a></li> \
+	</ol> \
+</div>');
