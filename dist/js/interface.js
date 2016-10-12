@@ -109,5 +109,6 @@ $('body').append(
 		<li><a href="about.html">About</a></li> \
 		<li><a href="news.html">News</a></li> \
 		<li><a href="news-in.html">News-in</a></li> \
+		<li><a href="index.html">Index</a></li> \
 	</ol> \
 </div>');
