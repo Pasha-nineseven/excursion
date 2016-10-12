@@ -18,7 +18,7 @@
 	<body>
 		<!--LAYOUT-->
 		<div class="layout">
-			<header class="page-header">
+			<header class="page-header page-header--index">
 				<div class="container-fluid">
 					<a href="#" class="page-header__logo">
 						<img src="img/content/top-logo.png" alt="">
@@ -46,11 +46,165 @@
 						<input type="text" class="page-header__input" placeholder="Введите город, пункт назначения или достопримечательность">
 						<input type="submit" class="page-header__submit" value="Найти">
 					</div>
+					<div class="page-header--index__title">
+						Поиск экскурсий и мероприятий
+					</div>
+				</div>
+				<div class="page-header--index__selecting">
+					<a href="#" class="page-header--index__selecting-item active" data-item="1">
+						test1
+					</a>
+					<a href="#" class="page-header--index__selecting-item" data-item="2">
+						test2
+					</a>
+					<a href="#" class="page-header--index__selecting-item" data-item="3">
+						test3
+					</a>
+					<a href="#" class="page-header--index__selecting-item" data-item="4">
+						test4
+					</a>
 				</div>
 			</header>
 			<div class="wrapper">
 				<div class="page-content workarea">
 					<!-- CONTENT-PART -->
+					<div class="index-search">
+						<div class="index-search__top">
+							<h1>
+								Введите город, пункт назначения или достопримечательность
+							</h1>
+							<form action="#" method="post">
+								<div class="index-search__form">
+									<input class="index-search__input" type="text" placeholder="Будапешт, Венгрия">
+									<input type="submit" value="Найти">
+								</div>
+								<div class="index-tags">
+									<div class="index-tags__item">Сочи</div>
+									<div class="index-tags__item">Крым</div>
+									<div class="index-tags__item">Париж</div>
+									<div class="index-tags__item">Рим</div>
+									<div class="index-tags__item">Прага</div>
+									<div class="index-tags__item">Амстердам</div>
+									<div class="index-tags__item">Москва</div>
+									<div class="index-tags__item">Женева</div>
+									<div class="index-tags__item">Флоренция</div>
+									<div class="index-tags__item">Милан</div>
+									<div class="index-tags__item">Ялта</div>
+									<div class="index-tags__item">Франкфурт</div>
+									<div class="index-tags__item">Ижевск</div>
+									<div class="index-tags__item">Ростов-на-Дону</div>
+									<div class="index-tags__item">Киев</div>
+									<div class="index-tags__item">Будапешт</div>
+									<div class="index-tags__item">Вильнюс</div>
+								</div>
+							</form>
+						</div>
+						<div class="city-list">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-4">
+										<a href="#" class="city-list__item city-list__item--big">
+											<div class="city-list__img" style="background:url(img/city/city1.jpg);"></div>
+											<div class="city-list__info">
+												<div class="city-list__info-inner">
+													<div class="city-list__title">Барселона</div>
+													<div class="city-list__count">10 экскурсий</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-2">
+										<a href="#" class="city-list__item">
+											<div class="city-list__img" style="background:url(img/city/city2.jpg);"></div>
+											<div class="city-list__info">
+												<div class="city-list__info-inner">
+													<div class="city-list__title">Прага</div>
+													<div class="city-list__count">18 экскурсий</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-2">
+										<a href="#" class="city-list__item">
+											<div class="city-list__img" style="background:url(img/city/city3.jpg);"></div>
+											<div class="city-list__info">
+												<div class="city-list__info-inner">
+													<div class="city-list__title">Амстердам</div>
+													<div class="city-list__count">15 экскурсий</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-4">
+										<a href="#" class="city-list__item city-list__item--big">
+											<div class="city-list__img" style="background:url(img/city/city1.jpg);"></div>
+											<div class="city-list__info">
+												<div class="city-list__info-inner">
+													<div class="city-list__title">Будапешт</div>
+													<div class="city-list__count">45 экскурсий</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-2">
+										<a href="#" class="city-list__item">
+											<div class="city-list__img" style="background:url(img/city/city2.jpg);"></div>
+											<div class="city-list__info">
+												<div class="city-list__info-inner">
+													<div class="city-list__title">Рим</div>
+													<div class="city-list__count">18 экскурсий</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-2">
+										<a href="#" class="city-list__item">
+											<div class="city-list__img" style="background:url(img/city/city3.jpg);"></div>
+											<div class="city-list__info">
+												<div class="city-list__info-inner">
+													<div class="city-list__title">Лиссабон</div>
+													<div class="city-list__count">15 экскурсий</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-4">
+										<a href="#" class="city-list__item city-list__item--big">
+											<div class="city-list__img" style="background:url(img/city/city1.jpg);"></div>
+											<div class="city-list__info">
+												<div class="city-list__info-inner">
+													<div class="city-list__title">Париж</div>
+													<div class="city-list__count">45 экскурсий</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-2">
+										<a href="#" class="city-list__item">
+											<div class="city-list__img" style="background:url(img/city/city2.jpg);"></div>
+											<div class="city-list__info">
+												<div class="city-list__info-inner">
+													<div class="city-list__title">Дубаи</div>
+													<div class="city-list__count">18 экскурсий</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-2">
+										<a href="#" class="city-list__item">
+											<div class="city-list__img" style="background:url(img/city/city3.jpg);"></div>
+											<div class="city-list__info">
+												<div class="city-list__info-inner">
+													<div class="city-list__title">Париж</div>
+													<div class="city-list__count">15 экскурсий</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="index-benefits">
 						<div class="index-benefits__list">
 							<div class="index-benefits__list-wrapper">
@@ -121,20 +275,6 @@
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="index-search">
-						<div class="index-search__top">
-							<h1>
-								Введите город, пункт назначения или достопримечательность
-							</h1>
-							<form action="#" method="post">
-								<div class="index-search__form">
-									<input class="index-search__input" type="text" placeholder="Будапешт, Венгрия">
-									<input type="submit" value="Найти">
-								</div>
-
-							</form>
 						</div>
 					</div>
 					<div class="news__page">

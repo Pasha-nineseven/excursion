@@ -1,6 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400';
 @font-face { font-family: 'bodoni'; src: url("../fonts/bodoni/bodoni-regular/bodoni.eot"); src: url("../fonts/bodoni/bodoni-regular/bodoni.eot?#iefix") format("embedded-opentype"), url("../fonts/bodoni/bodoni-regular/bodoni.woff2") format("woff2"), url("../fonts/bodoni/bodoni-regular/bodoni.woff") format("woff"), url("../fonts/bodoni/bodoni-regular/bodoni.ttf") format("truetype"), url("../fonts/bodoni/bodoni-regular/bodoni.svg#bodoni") format("svg"); font-weight: normal; font-style: normal; }
 
+@font-face { font-family: 'bodoni-bold'; src: url("../fonts/bodoni/bodoni-bold/bodoni-bold.eot"); src: url("../fonts/bodoni/bodoni-bold/bodoni-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/bodoni/bodoni-bold/bodoni-bold.woff2") format("woff2"), url("../fonts/bodoni/bodoni-bold/bodoni-bold.woff") format("woff"), url("../fonts/bodoni/bodoni-bold/bodoni-bold.ttf") format("truetype"), url("../fonts/bodoni/bodoni-bold/bodoni-bold.svg#bodoni-bold") format("svg"); font-weight: normal; font-style: normal; }
+
 /*MIXINS*/
 /*FONT-FAMILY*/
 /*FONT-SIZE*/
@@ -564,6 +566,26 @@ textarea, input { -webkit-box-shadow: none; box-shadow: none; font-family: inher
 
 .page-header:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 36, 53, 0.4); }
 
+.page-header--index { height: 845px; background: url(../img/index-head-bg/index-head-bg1.jpg) no-repeat; background-size: cover !important; background-repeat: no-repeat !important; background-position: center top !important; padding: 0; -webkit-transition: background 0.5s ease; -o-transition: background 0.5s ease; transition: background 0.5s ease; }
+
+.page-header--index:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 36, 53, 0.7); }
+
+.page-header--index .page-header__select, .page-header--index .page-header__search { display: none; }
+
+.page-header--index .page-header__logo { width: 329px; height: 104px; background: url(../img/content/index-logo.png) no-repeat; background-size: cover; position: absolute; left: 50%; margin-left: -165px; float: none; margin-right: 0; margin-top: 42px; }
+
+.page-header--index .page-header__logo img { display: none; }
+
+.page-header--index .page-header__links { padding-top: 45px; }
+
+.page-header--index__selecting { display: table; position: absolute; top: 0; left: 0; table-layout: fixed; width: 100%; height: 100%; }
+
+.page-header--index__selecting-item { display: table-cell; width: 25%; height: 100%; color: #fff; vertical-align: bottom; padding-bottom: 60px; text-align: center; text-decoration: none; -webkit-transition: background 0.5s ease; -o-transition: background 0.5s ease; transition: background 0.5s ease; background: rgba(61, 203, 255, 0); }
+
+.page-header--index__selecting-item.active { background: rgba(61, 203, 255, 0.15); }
+
+.page-header--index__title { color: #fff; font-size: 72px; font-family: 'bodoni',serif; text-align: center; margin-bottom: 30px; padding-top: 230px; }
+
 .page-header__logo { float: left; display: block; text-decoration: none; margin-right: 30px; padding-top: 7px; }
 
 .page-header__links { float: right; padding-top: 20px; }
@@ -894,7 +916,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; }
 
 .tags__offer-link:hover { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
 
-.news__page { background: #d8dbe6; padding-top: 40px; }
+.news__page { background: #d8dbe6; padding-top: 40px; overflow: hidden; }
 
 .news__page .news { margin-bottom: 0; }
 
@@ -902,7 +924,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; }
 
 .comments { background: #fff; padding: 65px 0 60px; }
 
-.index-benefits { padding: 60px 0 0; background: url(../img/content/index-benefits-bg.jpg) center no-repeat; background-size: cover; }
+.index-benefits { padding: 60px 0 0; background: url(../img/content/index-benefits-bg.jpg) center no-repeat; background-size: cover; overflow: hidden; }
 
 .index-benefits__list { max-width: 1050px; margin: 0 auto; }
 
@@ -916,18 +938,38 @@ p.subtitle { font-size: 24px; line-height: 1.3; }
 
 .index-benefits__info { font-size: 14px; line-height: 1.5; }
 
-.index-search { padding: 85px 0 20px; }
+.index-search { padding: 85px 0 0; }
 
 .index-search h1 { text-align: center; margin-bottom: 49px; }
 
 .index-search__top { max-width: 935px; margin: 0 auto 20px; }
 
-.index-search__form { width: 100%; padding-right: 235px; position: relative; }
+.index-search__form { width: 100%; padding-right: 235px; position: relative; margin-bottom: 30px; }
 
 .index-search__form input[type="text"].index-search__input { border: 0; display: block; padding: 13px 15px; font-size: 24px; }
 
 .index-search__form input[type="submit"] { position: absolute; right: 0; top: 0; padding: 13px 70px; }
 
 .index-search__input { width: 100%; -webkit-box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5); box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5); }
+
+.index-tags { text-align: center; max-width: 900px; margin: 0 auto 20px; }
+
+.index-tags__item { display: inline-block; vertical-align: middle; margin-right: 6px; height: 26px; line-height: 26px; border: 1px solid #1858c3; color: #1858c3; font-size: 18px; padding: 0 7px; background: #ecedf3; margin-bottom: 10px; }
+
+.city-list__item { height: 370px; display: block; overflow: hidden; position: relative; text-decoration: none; margin-bottom: 30px; }
+
+.city-list__item:hover .city-list__img { -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -o-transform: scale(1.05); transform: scale(1.05); }
+
+.city-list__img { background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; width: 100%; height: 100%; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 5; display: block; vertical-align: middle; table-layout: fixed; }
+
+.city-list__img:before { content: ""; display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0, 0, 0, 0.8); z-index: 10; }
+
+.city-list__info { display: table; vertical-align: middle; color: #fff; text-align: center; z-index: 15; position: relative; width: 100%; height: 100%; }
+
+.city-list__info-inner { display: table-cell; vertical-align: middle; padding: 0 30px; }
+
+.city-list__title { font-family: 'bodoni-bold',serif; font-size: 36px; border-top: 1px solid #2d758e; border-bottom: 1px solid #2d758e; margin-bottom: 40px; padding: 10px 0; }
+
+.city-list__item--big .city-list__title { font-size: 60px; }
 
 @media screen and (max-width: 1550px) { .page-footer .container-fluid, .page-header .container-fluid, .wrapper { padding: 0 20px; } }

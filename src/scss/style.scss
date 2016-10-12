@@ -12,6 +12,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'bodoni-bold';
+    src: url('../fonts/bodoni/bodoni-bold/bodoni-bold.eot');
+    src: url('../fonts/bodoni/bodoni-bold/bodoni-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bodoni/bodoni-bold/bodoni-bold.woff2') format('woff2'),
+         url('../fonts/bodoni/bodoni-bold/bodoni-bold.woff') format('woff'),
+         url('../fonts/bodoni/bodoni-bold/bodoni-bold.ttf') format('truetype'),
+         url('../fonts/bodoni/bodoni-bold/bodoni-bold.svg#bodoni-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 // Core variables and mixins
 @import "bootstrap/variables";
@@ -160,6 +172,7 @@
 }
 
 .page-header{
+	
 	background: url(../img/content/head-bg.jpg)top center no-repeat;
 	background-size: cover;
 	padding: 35px 0 30px;
@@ -177,6 +190,86 @@
 		background: rgba(11, 36, 53, 0.4);
 	}
 }
+
+
+.page-header--index{
+	height: 845px;
+	background: url(../img/index-head-bg/index-head-bg1.jpg) no-repeat;
+	background-size: cover!important;
+	background-repeat: no-repeat!important;
+	background-position: center top!important;
+	padding: 0;
+	@include transition(background 0.5s ease);
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(11, 36, 53, 0.7);
+	}
+	.page-header__select,
+	.page-header__search{
+		display: none;
+	}
+	.page-header__logo{
+		width: 329px;
+		height: 104px;
+		background: url(../img/content/index-logo.png) no-repeat;
+		background-size: cover;
+		position: absolute;
+		left: 50%;
+		margin-left: -165px;
+		float: none;
+		margin-right: 0;
+		margin-top: 42px;
+		img{
+			display: none;
+		}
+	}
+	.page-header__links {
+	    padding-top: 45px;
+	}
+}
+
+.page-header--index__selecting{
+	display: table;
+	position: absolute;
+	top: 0;
+	left: 0;
+	table-layout: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+
+.page-header--index__selecting-item{
+	display: table-cell;
+	width: 25%;
+	height: 100%;
+	color: #fff;
+	vertical-align: bottom;
+	padding-bottom: 60px;
+	text-align: center;
+	text-decoration: none;
+	@include transition(background 0.5s ease);
+	background: rgba(61, 203, 255, 0.0);
+	&.active{
+		background: rgba(61, 203, 255, 0.15);
+	}
+}
+
+.page-header--index__title{
+	color: #fff;
+	font-size: 72px;
+	font-family: 'bodoni',serif;
+	    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 230px;
+}
+
 
 
 .page-header__logo{
@@ -1297,6 +1390,7 @@ p.subtitle{
 .news__page{
 	background: #d8dbe6;
 	padding-top: 40px;
+	overflow: hidden;
 	.news{
 		margin-bottom: 0;
 	}
@@ -1316,6 +1410,7 @@ p.subtitle{
 	padding: 60px 0 0;
 	background: url(../img/content/index-benefits-bg.jpg) center no-repeat;
 	background-size: cover;
+	overflow: hidden;
 }
 
 .index-benefits__list{
@@ -1351,7 +1446,7 @@ p.subtitle{
 }
 
 .index-search{
-	padding: 85px 0 20px;
+	padding: 85px 0 0;
 	h1{
 		text-align: center;
 		margin-bottom: 49px;
@@ -1366,6 +1461,7 @@ p.subtitle{
 	width: 100%;
 	padding-right: 235px;
 	position: relative;
+	margin-bottom: 30px;
 	input[type="text"].index-search__input{
 		border: 0;
 		display: block;
@@ -1385,6 +1481,114 @@ p.subtitle{
 	    -webkit-box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5);
     box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5);
 }
+
+.index-tags{
+	text-align: center;
+	max-width: 900px;
+	margin: 0 auto 20px;
+}
+
+.index-tags__item{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #1858c3;
+    color: #1858c3;
+    font-size: 18px;
+    padding: 0 7px;
+    background: #ecedf3;
+    margin-bottom: 10px;
+}
+
+.city-list{
+
+}
+.city-list__item{
+	height: 370px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	text-decoration: none;
+	margin-bottom: 30px;
+	&:hover{
+		.city-list__img{
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			transform: scale(1.05);
+		}
+	}
+}
+
+.city-list__img{
+	background-size: cover!important;
+	background-position: center!important;
+	background-repeat: no-repeat!important;
+	width: 100%;
+	height: 100%;
+	@include transition(all 0.3s ease);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 5;
+	display: block;
+	vertical-align: middle;
+	table-layout: fixed;
+	&:before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.8); 
+		z-index: 10;
+	}
+}
+
+.city-list__info{
+    display: table;
+    vertical-align: middle;
+    color: #fff;
+    text-align: center;
+    z-index: 15;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.city-list__info-inner{
+	display: table-cell;
+	vertical-align: middle;
+	    padding: 0 30px;
+}
+
+
+
+.city-list__title{
+	font-family: 'bodoni-bold',serif;
+	font-size: 36px;
+	border-top: 1px solid #2d758e;
+	border-bottom: 1px solid #2d758e;
+	    margin-bottom: 40px;
+    padding: 10px 0;
+}
+
+.city-list__item--big{
+	.city-list__title{
+		font-size: 60px;
+	}
+}
+
+// .city-list__count{
+// 	font-size: 
+// }
+
 
 //MEDIA
 @media screen and (max-width: 1550px){

@@ -80,6 +80,26 @@ $(document).ready(function() {
     if ($('.fs').length>0) {
 		$('.fs').styler();
     };
+
+
+
+	$("body").on("mouseover",".page-header--index__selecting-item ", function () {
+
+        $('.page-header--index__selecting-item').removeClass('active');
+		$(this).addClass('active');
+		if ($(this).data("item")=="1") {
+			$('.page-header--index').css('background','url(img/index-head-bg/index-head-bg1.jpg) no-repeat')
+		}
+		else if ($(this).data("item")=="2") {
+			$('.page-header--index').css('background','url(img/index-head-bg/index-head-bg2.jpg) no-repeat')
+		};
+		if ($(this).data("item")=="3") {
+			$('.page-header--index').css('background','url(img/index-head-bg/index-head-bg1.jpg) no-repeat')
+		}
+		else if ($(this).data("item")=="4") {
+			$('.page-header--index').css('background','url(img/index-head-bg/index-head-bg2.jpg) no-repeat')
+		};
+    });
 });
 
 
