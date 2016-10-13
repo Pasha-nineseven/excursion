@@ -27,7 +27,30 @@
 					<div class="page-header__select">
 						<a href="#">
 							<img src="img/content/top-icon1.png" alt="">
+							<i></i>
 						</a>
+						<ul class="page-header__select-list">
+							<li class="page-header__select-item page-header__select-item--active">
+								<a href="#">
+									<img src="img/content/top-icon1.png" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/content/top-icon2.png" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/content/top-icon3.png" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/content/top-icon4.png" alt="">
+								</a>
+							</li>
+						</ul>
 					</div>
 					<div class="page-header__links">
 						<a href="#" class="page-header__language">
@@ -51,13 +74,17 @@
 			</header>
 			<div class="wrapper">
 				<div class="breadcrumbs">
-					<a href="#" class="breadcrumbs__item">Главная</a>
+					<a href="#" class="breadcrumbs__item"><span>Главная</span></a>
 					<span class="breadcrumbs__item">Новости и лайфхаки</span>
 				</div>
 				<div class="page-content workarea">
 					<div class="page-content__title">
 						<div class="container-fluid">
-							<div class="page-content__title-label">Опыт</div>
+							<div class="page-content__title-labels">
+								<div class="page-content__title-labels__item">Опыт</div>
+								<div class="page-content__title-labels__item">Новость</div>
+								<div class="page-content__title-labels__item">Лайфхак</div>
+							</div>
 							<h1>
 								Жизнь без барьеров или как проехать на мотоцикле от Польши до Владивостока без ноги
 							</h1>
@@ -67,10 +94,10 @@
 					<div class="container-fluid">
 						<div class="page-content__wrapper">
 							<div class="author">
-								<time class="author__date" datetime="2016-20-09">20 сентября 2016</time>
+								<time class="author__date" datetime="2016-09-20">20 сентября 2016</time>
 								<div class="author__item">
 									<div class="author__img" style="background:url(img/content/author1.jpg)"></div>
-									<div class="author__name">Ренат Анпилогов</div>
+									<a href="#" class="author__name">Ренат Анпилогов</a>
 								</div>
 							</div>
 							<p class="subtitle">
@@ -79,8 +106,10 @@
 							<p>
 								Любая авария, поломка, да и просто управление «железным конем» становится mission impossible. Но вот уже четыре дня по дороге из Кракова во Владивосток едут трое польских мотоциклистов, которые каждым своим действием подтверждают: все барьеры – в голове, а путь осилит идущий, или в данном случае, тот, кто едет за мечтой.
 							</p>
-							<img src="img/content/test.jpg" alt="" class="detail_picture">
-							<div class="img-title">Пояснительный текст к фото, если есть</div>
+							<figure class="image">
+								<img alt="" src="img/content/test.jpg">
+								<figcaption>Пояснительный текст к фото, если есть</figcaption>
+							</figure>
 							<p>
 								Туда, где восходит солнце, чтобы прогуляться по центру Владивостока в шортах, с протезом вместо ноги и с мотоциклетным шлемом в руках, 14 июля отправились трое смельчаков. Аркадиуш Томасиак, Ричард Плучински, Мачек Банашек и Павел Килинаски – основатели польского общества мотоциклистов–инвалидов. 
 							</p>
@@ -98,25 +127,10 @@
 								И такой пример не может не быть заразительным: райдеры путешествуют на расстояния тысяч километров от дома (они уже были в Армении и на мысе Нордкап). 
 							</p>
 							<div class="video-wrap video-wrap--news">
-								<div class="video__labels">
-									<div class="video__labels-item">
-										<i>
-											<img src="img/content/sub.png" alt="">
-										</i>
-										Есть субтитры
-									</div>
-									<div class="video__labels-item">
-										<i>
-											<img src="img/content/no-sub.png" alt="">
-										</i>
-										Без субтитров
-									</div>
+								
+								<div class="embeddedContent oembed-provider-youtube" data-align="left" data-maxheight="473" data-maxwidth="841" data-oembed="https://www.youtube.com/watch?v=4PaW6xY3-RU" data-oembed_provider="youtube" data-resizetype="custom" style="text-align:left">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/ueFE6j18RkY" frameborder="0" allowfullscreen></iframe>
 								</div>
-								<video id="video" class="main-video_video" loop autoplay preload="auto" poster="img/content/main.jpg">
-								    <source src="video/97-video_bg.mp4"/>
-								    <source src="video/97-video_bg.ogv" type="video/ogg"/>
-								    <source src="video/97-video_bg.webm" type="video/webm"/>
-								</video>
 								<div class="video-title">
 									Пример подписи к видео
 								</div>
@@ -131,7 +145,7 @@
 										<img src="img/content/test2.jpg" alt="">
 									</div>
 									<div class="text-slider__item">
-										<img src="img/content/test2.jpg" alt="">
+										<img src="img/index-head-bg/index-head-bg2.jpg" alt="">
 									</div>
 									<div class="text-slider__item">
 										<img src="img/content/test2.jpg" alt="">
@@ -164,10 +178,10 @@
 								</div>
 								<div class="tags__list">
 									<span>Теги:</span>
-									<div class="tags__item">Мотоциклы</div>
-									<div class="tags__item">Опыт</div>
-									<div class="tags__item">Путешествие</div>
-									<div class="tags__item">Компания</div>
+									<a href="#" class="tags__item">Мотоциклы</a>
+									<a href="#" class="tags__item">Опыт</a>
+									<a href="#" class="tags__item">Путешествие</a>
+									<a href="#" class="tags__item">Компания</a>
 								</div>
 								<div class="tags__offer">
 									<span>Предложить материал</span>
@@ -176,11 +190,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="news__page">
+					<div class="news__page news__page--center">
 						<div class="container-fluid">
 							<h2>Аналогичные материалы</h2>
 							<div class="news row">
-								<div class="col-sm-4 news__item">
+								<div class="col-xs-4 news__item">
 									<a href="#" class="news__item-inner">
 										<div class="news__item-img-wrap">
 											<div class="news__item-img" style="background:url(img/news/news1.jpg)"></div>
@@ -204,7 +218,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="col-sm-4 news__item">
+								<div class="col-xs-4 news__item">
 									<a href="#" class="news__item-inner">
 										<div class="news__item-img-wrap">
 											<div class="news__item-img" style="background:url(img/news/news2.jpg)"></div>
@@ -228,7 +242,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="col-sm-4 news__item">
+								<div class="col-xs-4 news__item">
 									<a href="#" class="news__item-inner">
 										<div class="news__item-img-wrap">
 											<div class="news__item-img" style="background:url(img/news/news3.jpg)"></div>
@@ -266,7 +280,7 @@
 			<footer class="page-footer">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-sm-3">
+						<div class="col-xs-3">
 							<a href="#" class="page-footer__logo">
 								<img src="img/content/footer-logo.png" alt="">
 							</a>
@@ -285,29 +299,23 @@
 								</a>
 							</div>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-xs-6">
 							<div class="page-footer__menu">
-								<div class="page-footer__menu-column">
-									<a href="#" class="page-footer__menu-item">Как это работает?</a>
-									<a href="#" class="page-footer__menu-item">Гидам</a>
-									<a href="#" class="page-footer__menu-item">Партнерская программа</a>
-									<a href="#" class="page-footer__menu-item">Контакты</a>
-								</div>
-								<div class="page-footer__menu-column">
-									<a href="#" class="page-footer__menu-item">Новости</a>
-									<a href="#" class="page-footer__menu-item">Объекты</a>
-									<a href="#" class="page-footer__menu-item">Опыт</a>
-									<a href="#" class="page-footer__menu-item">Лайфхаки</a>
-								</div>
-								<div class="page-footer__menu-column">
-									<a href="#" class="page-footer__menu-item">Экскурсии</a>
-									<a href="#" class="page-footer__menu-item">Мероприятия</a>
-									<a href="#" class="page-footer__menu-item">Объекты</a>
-									<a href="#" class="page-footer__menu-item">Страны</a>
-								</div>
+								<a href="#" class="page-footer__menu-item">Как это работает?</a>
+								<a href="#" class="page-footer__menu-item">Гидам</a>
+								<a href="#" class="page-footer__menu-item">Контакты</a>
+								<a href="#" class="page-footer__menu-item">Новости</a>
+								<a href="#" class="page-footer__menu-item">Объекты</a>
+								<a href="#" class="page-footer__menu-item">Опыт</a>
+								<a href="#" class="page-footer__menu-item">Лайфхаки</a>
+								<a href="#" class="page-footer__menu-item">Экскурсии</a>
+								<a href="#" class="page-footer__menu-item">Мероприятия</a>
+								<a href="#" class="page-footer__menu-item">Объекты</a>
+								<a href="#" class="page-footer__menu-item">Страны</a>
+								<a href="#" class="page-footer__menu-item">Партнерская программа</a>
 							</div>
 						</div>
-						<div class="col-sm-3">
+						<div class="col-xs-3">
 							<div class="page-footer__delivery">
 								<form action="#" method="post">
 									<input type="text" placeholder="Подписаться на рассылку" class="page-footer__delivery-input">
@@ -318,13 +326,13 @@
 					</div>
 					<div class="page-footer__copyright">
 						<div class="row">
-							<div class="col-sm-offset-3 col-sm-9">
+							<div class="col-xs-offset-3 col-xs-9">
 								<div class="page-footer__copyright-inner">
 									<div class="row">
-										<div class="col-sm-8 page-footer__copyright-item">
+										<div class="col-xs-8 page-footer__copyright-item">
 											©2016. Globe-all.info
 										</div>
-										<div class="col-sm-4 page-footer__copyright-item">
+										<div class="col-xs-4 page-footer__copyright-item">
 											О проекте
 										</div>
 									</div>
