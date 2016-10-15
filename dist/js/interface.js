@@ -100,6 +100,36 @@ $(document).ready(function() {
 	    }
 	});
 
+	$(".fb-image").fancybox({
+    	openEffect	: 'elastic',
+    	closeEffect	: 'elastic',
+
+    	padding:0,
+		beforeShow: function(){
+		    $("body").css({'overflow-y':'hidden'});
+		    if($(window).width() > 700){
+		    	$("html").css({'padding-right':'17px'});
+		    }
+		    if($(window).width() < 700){
+		    	$("body").css({'position': 'fixed'});
+		    }
+		},
+		afterClose: function(){
+		    $("body").css({'overflow-y':'auto'});
+		    if($(window).width() > 700){
+			    $("html").css({'padding-right':'0'});
+			}
+		    if($(window).width() < 700){
+		    	$("body").css({'position': 'static'});
+		    }
+		},
+		helpers : {
+	        overlay : {
+	            locked: false,
+	        }
+	    }
+    });
+
 	//SELECT
     if ($('.fs').length>0) {
 		$('.fs').styler();
@@ -124,6 +154,28 @@ $(document).ready(function() {
 			$('.page-header--index').css('background','url(img/index-head-bg/index-head-bg2.jpg) no-repeat')
 		};
     });
+
+
+    //INPUT FILE
+	$('.input-file').on('change', function (event) {
+	    var file = this.files[0];
+	    if(file){
+			$('.remove').remove();
+			$('.button').remove();
+	        $(this).siblings('.input-file-text').html(this.value).after("<a href='#' class='remove'></a>").addClass('active');
+	    }else{
+	        $(this).siblings('.input-file-text').html('').removeClass('active');
+	        $('.remove').remove();
+	        $(this).after('<div class="button" >Выбрать<span>(до 5 мб)</span></div>');
+	    }
+	});
+	$( 'body' ).on( 'click', '.remove', function(){
+		$('.input-file-text').html('');
+		$('.remove').remove();
+		$('.input-file-text').html('').removeClass('active');
+		$('.input-file').after('<div class="button" >Выбрать<span>(до 5 мб)</span></div>');
+		return false
+	});
 });
 
 

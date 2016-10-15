@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=1200">
 		<title>test</title>
 		<!-- <link rel="icon" href="img/favicon.png" type="image/x-icon" /> -->
 		<link href="js/vendors/slick/slick.css" rel="stylesheet">
@@ -137,7 +137,7 @@
 							</h2>
 							<div class="video-wrap">
 								<div class="embeddedContent oembed-provider-youtube" data-align="left" data-maxheight="473" data-maxwidth="841" data-oembed="https://www.youtube.com/watch?v=4PaW6xY3-RU" data-oembed_provider="youtube" data-resizetype="custom" style="text-align:left">
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/ueFE6j18RkY" frameborder="0" allowfullscreen></iframe>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/ueFE6j18RkY"  allowfullscreen></iframe>
 								</div>
 								<div class="video-title">
 									Пример подписи к видео
@@ -269,6 +269,11 @@
 									</select>
 								</div>
 							</div>
+
+							<br>
+							<br>
+							<br>
+							<a href="#publication" class="btn fb-inline">Предложить публикацию</a>
 						</div>
 					</div>
 					<div class="paging">
@@ -282,6 +287,8 @@
 							<a href="#" class="btn-more paging__item--next">Следующая страница »</a>
 						</div>
 					</div>
+					
+							
 				</div>
 				<!--end CONTENT-PART -->	
 			</div>
@@ -355,11 +362,59 @@
 
 
 
-		<div id="text-popup" class="dnone">
-			<div class="text-popup">
-				Павел, который после аварии оказался в аналогичном положении, понял, что страсть к движению, ветру в волосах и скорости осталась, а значит, всего-то нужно немного модифицировать «железного коня».
+		<div id="publication" class="dnone">
+			<div class="popup">
+				<div class="popup__title">Предложить публикацию</div>
+				<div class="popup__form">
+					<form action="#" method="post">
+						<div class="input-wrap input-wrap--error">
+							<label>Представьтесь:</label>
+							<div class="error-wrap">
+								<input type="text" placeholder="">
+								<span class="label-error">Поле необходимо заполнить</span>
+							</div>
+						</div>
+						<div class="input-wrap input-wrap--textarea input-wrap--error">
+							<label>Текст:</label>
+							<div class="error-wrap">
+								<textarea></textarea>
+								<span class="label-error">Поле необходимо заполнить</span>
+							</div>
+						</div>
+						<div class="input-wrap">
+							<label>Представьтесь:</label>
+							<div class="uploadbutton">
+			            		<input class="input-file" type="file" />
+							    <div class="button" >Выбрать<span>(до 5 мб)</span></div>
+							    <div class='input-file-text'>&nbsp;</div>
+							</div>
+						</div>
+						<div class="input-wrap">
+							<label>&nbsp;</label>
+							<!-- <input type="submit" value="Отправить"> -->
+							<a href="#success-msg" class="btn fb-inline">Отправить</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="success-msg" class="dnone">
+			<div class="popup">
+				<div class="popup__title popup__title--centered">Данные успешно отправлены</div>
+				<div class="text-popup text-popup--centered">
+					Предложение будет рассмотрено администратором сайта в ближайшее время
+				</div>
 			</div>
 		</div>		
+
+		<div id="text-popup" class="dnone">
+			<div class="popup">
+				<div class="text-popup">
+					Павел, который после аварии оказался в аналогичном положении, понял, что страсть к движению, ветру в волосах и скорости осталась, а значит, всего-то нужно немного модифицировать «железного коня».
+				</div>
+			</div>
+		</div>			
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="js/vendors/slick/slick.min.js"></script>

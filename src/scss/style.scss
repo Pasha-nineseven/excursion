@@ -917,9 +917,11 @@ p.subtitle{
 }
 
 .text-popup{
-	padding: 30px 40px;
 	font-size: 18px;
 	line-height: 1.4;
+}
+.text-popup--centered{
+	text-align: center;
 }
 
 .fancybox-close {
@@ -946,6 +948,11 @@ p.subtitle{
 	}
 }
 
+.input-wrap--textarea{
+	label{
+		vertical-align: top;
+	}
+}
 .error-wrap{
 	display: inline-block;
 	vertical-align: middle;
@@ -1166,6 +1173,9 @@ p.subtitle{
 	@include transition(all 0.3s ease);
 	&:hover{
 		background: #0f1c2c;
+	}
+	&:last-child{
+		margin-right: 0;
 	}
 }
 
@@ -1723,6 +1733,126 @@ p.subtitle{
 	background-image: url(../img/content/head-icon4.png)
 }
 
+.popup{
+	padding: 35px 60px;
+	.input-wrap label {
+	    width: 175px;
+	}
+	input[type="text"],
+	input[type="email"]{
+		//width: 100%;
+		border: 1px solid #bcbcbc;
+		padding: 11px 15px;
+		display: inline-block;
+		vertical-align: middle;
+		color: #000;
+		width: 380px;
+	}
+	textarea{
+		border: 1px solid #bcbcbc;
+	    padding: 15px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    color: #000;
+	    resize: none;
+	    height: 225px;
+	        width: 380px;
+	}
+	.input-wrap--error input[type="text"],
+	.input-wrap--error input[type="email"],
+	.input-wrap--error textarea{
+	    border: 1px solid #de2e4c;
+	}
+	input[type="submit"]{
+		background: #db1b3c;
+		@include transition(all 0.3s ease);
+		color: #fff;
+		font-size: 24px;
+		font-weight: 300;
+		border: 0;
+		padding: 8px 70px;
+		text-decoration: none;
+		display: inline-block;
+		vertical-align: middle;
+		@include box-shadow(0 8px 10px -6px rgba(0, 0, 0, 0.5));
+		&:hover{
+			background: #eb2245;
+		}
+		&:active{
+			background: #b91532;
+			@include box-shadow(0 7px 10px -6px rgba(0, 0, 0, 0.4));
+		}
+	}
+}
+.popup__title{
+	font-size: 36px;
+	margin-bottom: 32px;
+	 font-family: 'bodoni',serif;
+}
+
+.popup__title--centered{
+	text-align: center;
+}
+
+.popup__form{
+	width: 560px;
+}
+
+.uploadbutton {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    color: #000;
+    position: relative;
+    .input-file {
+	    opacity: 0;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 152px;
+	    height: 100%;
+		z-index: 10;
+		cursor: pointer;
+	}
+	.button {
+		display: inline-block;
+		vertical-align: middle;
+		color: #1858c3;
+		margin-right: 7px;
+		span{
+			display: inline-block;
+			vertical-align: middle;
+			color: #a5a8ab;
+			margin-top: -3px;
+			padding-left: 4px;
+		}
+	}
+	.remove{
+		width: 14px;
+		height: 14px;
+		background: url(../img/content/close.png) no-repeat;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 15px;
+		position: relative;
+    	z-index: 15;
+	}
+}
+.input-file-text{
+    display: inline-block;
+    vertical-align: middle;
+    color: #a5a8ab;
+    font-size: 14px;
+    position: relative;
+    padding-left: 22px;
+    background: url(../img/content/file.png) 0 0px no-repeat;
+    opacity: 0;
+    height: 19px;
+    line-height: 19px;
+    &.active{
+    	opacity: 1;
+    }
+}
 
 //MEDIA
 @media screen and (max-width: 1550px){
@@ -1730,5 +1860,20 @@ p.subtitle{
 	.page-header .container-fluid,
 	.wrapper{
 		padding: 0 20px;
+	}
+	.container-fluid {
+	    padding-left: 15px;
+	    padding-right: 15px;
+	}
+	.city-list__title {
+	    font-size: 25px;
+	}
+	.city-list__info-inner {
+	    padding: 0 10px;
+	}
+
+	.socials__item {
+	    float: left;
+	    margin-right: 3px;
 	}
 }
