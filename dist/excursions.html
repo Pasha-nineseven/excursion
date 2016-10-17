@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=1200">
+		<title>test</title>
+		<!-- <link rel="icon" href="img/favicon.png" type="image/x-icon" /> -->
+		<link href="js/vendors/slick/slick.css" rel="stylesheet">
+		<link href="js/vendors/fancybox/jquery.fancybox.min.css" rel="stylesheet">
+		<link href="js/vendors/formstyler/jquery.formstyler.css" rel="stylesheet">
+		<link href="js/vendors/ui/jqueryui.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<!--LAYOUT-->
+		<div class="layout">
+			<header class="page-header">
+				<div class="container-fluid">
+					<a href="#" class="page-header__logo">
+						<img src="img/content/top-logo.png" alt="">
+					</a>
+					<div class="page-header__select">
+						<a href="#">
+							<img src="img/content/top-icon1.png" alt="">
+							<i></i>
+						</a>
+						<ul class="page-header__select-list">
+							<li class="page-header__select-item page-header__select-item--active">
+								<a href="#">
+									<img src="img/content/top-icon1.png" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/content/top-icon2.png" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/content/top-icon3.png" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/content/top-icon4.png" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="page-header__links">
+						<a href="#" class="page-header__language">
+							<i>
+								<img src="img/content/rus.png" alt="">
+							</i>
+							Рус
+						</a>
+						<a href="#" class="page-header__favorite">
+							<i>
+								<img src="img/content/favorite.png" alt="">
+							</i>
+							Избранное
+						</a>
+					</div>
+					<div class="page-header__search">
+						<input type="text" class="page-header__input" placeholder="Введите город, пункт назначения или достопримечательность">
+						<input type="submit" class="page-header__submit" value="Найти">
+					</div>
+				</div>
+			</header>
+			<div class="wrapper">
+				<div class="breadcrumbs">
+					<a href="#" class="breadcrumbs__item"><span>Главная</span></a>
+					<span class="breadcrumbs__item">Экскурсии в Париже</span>
+				</div>
+				<div class="page-content workarea">
+					<div class="page-content__title">
+						<div class="container-fluid">
+							<h1>
+								Экскурсии
+							</h1>
+						</div>
+					</div>
+					<!-- CONTENT-PART -->
+					<div class="container-fluid">
+						<div class="page-content__wrapper">	
+							<div class="top-filter">
+								<div class="top-filter__select">
+									<select class="fs">
+										<option>Сначала дорогие</option>
+										<option>Дешевые</option>
+										<option>Короткие</option>
+										<option>Длинные</option>
+									</select>
+								</div>
+							</div>
+							<div class="excursions">
+								<div class="excursions__filter">
+									<div class="excursions__filter-view">
+										<form action="#" method="post">
+											<input type="reset" value="Сбросить" class="excursions__reset">
+											<h2 class="excursions__filter-title">Фильтр</h2>
+											<div class="input-wrap">
+												<label><span>Тип экскурсии</span></label>
+												<div class="select-wrap">
+													<select class="fs">
+														<option>Все типы</option>
+														<option>Тип1</option>
+														<option>Тип2</option>
+														<option>Тип3</option>
+														<option>Тип4</option>
+													</select>
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label><span>Язык</span></label>
+												<div class="select-wrap">
+													<select class="fs">
+														<option>Русский</option>
+														<option>Английский</option>
+														<option>Турецкий</option>
+													</select>
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label><span>Длительность</span></label>
+												<div class="select-wrap">
+													<select class="fs">
+														<option>3-4 часа</option>
+														<option>1-2 часа</option>
+														<option>6-7 часов</option>
+													</select>
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label><span>Кол-во участников</span></label>
+												<div class="slider-count">
+													<input type="text" id="slider-count-input" value="1" />
+													<div class="slider-count-slider"></div>
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label><span>Показывать</span></label>
+												<div class="select-wrap">
+													<select class="fs">
+														<option>Бесплатные</option>
+														<option>Платные</option>
+													</select>
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label><span>Города</span></label>
+												<div class="select-wrap">
+													<select class="fs">
+														<option>Все</option>
+														<option>Минск</option>
+														<option>Ганцевичи</option>
+													</select>
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label><span>Тип гостя</span></label>
+												<div class="select-wrap">
+													<select class="fs">
+														<option>Все</option>
+														<option>Гость 1</option>
+														<option>Гость 2</option>
+													</select>
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label><span>Тематика</span></label>
+												<div class="select-wrap">
+													<select class="fs">
+														<option>Все</option>
+														<option>Тематика 1</option>
+														<option>Тематика 2</option>
+													</select>
+												</div>
+											</div>
+											<div class="excursions__filter-submit-wrap">
+												<input type="submit" value="Применить фильтр" class="excursions__filter-submit">
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="excursions__list row">
+									<div class="col-xs-4 excursions__item">
+										<div class="excursions__item-wrap">
+											<a href="#" class="excursions__item-favorite"></a>
+											<a href="#" class="excursions__item-inner">
+												<div class="excursions__item-img-wrap">
+													<div class="excursions__item-img" style="background:url(img/news/news1.jpg)">
+													</div>
+													<div class="excursions__item-img__label">
+														<div class="excursions__item-img__time">3 часа</div>
+														Бесплатно
+													</div>
+												</div>
+												<div class="news__icons">
+													<span class="news__icon news__icon--disable"></span>
+												</div>
+												<div class="excursions__item-txt">
+													<div class="excursions__item-labels">
+														<div class="excursions__item-labels__item">Агро</div>
+														<div class="excursions__item-labels__item">Гурман</div>
+													</div>
+													<div class="excursions__item-title">
+														Экскурсия по знаковым местам Рима с заездом в рестораны
+													</div>
+													<div class="excursions__item-city">Санкт-Петербург</div>
+												</div>
+											</a>
+											<div class="excursions__item-hover">
+									        	<div class="excursions__item-hover__info">Групповая, авутомобильная экскурсия</div>
+									        	<div class="author__item">
+									        		Гид:
+													<div class="author__img" style="background:url(img/content/author1.jpg)"></div>
+													<a href="#" class="author__name">Егор Шевчик</a>
+												</div>
+									        </div>
+								        </div>
+									</div>
+									<div class="col-xs-4 excursions__item">
+										<div class="excursions__item-wrap">
+											<a href="#" class="excursions__item-favorite"></a>
+											<a href="#" class="excursions__item-inner">
+												<div class="excursions__item-img-wrap">
+													<div class="excursions__item-img" style="background:url(img/news/news2.jpg)"></div>
+													<div class="excursions__item-img__label">
+														<div class="excursions__item-img__time">14 дней</div>
+														<div class="old-price">3 300<span class="rouble">a</span></div>
+														3 300 <span class="rouble">a</span>
+													</div>
+												</div>
+												<div class="news__icons">
+													<span class="news__icon news__icon--disable"></span>
+												</div>
+												<div class="excursions__item-txt">
+													<div class="excursions__item-labels">
+														<div class="excursions__item-labels__item">Агро</div>
+														<div class="excursions__item-labels__item">Экстрим</div>
+														<div class="excursions__item-labels__item">Гурман</div>
+													</div>
+													<div class="excursions__item-title">
+														Экскурсия по знаковым местам парижа с заездом в рестораны
+													</div>
+													<div class="excursions__item-city">Москва</div>
+												</div>
+											</a>
+											<div class="excursions__item-hover">
+									        	<div class="excursions__item-hover__info">Групповая, авутомобильная экскурсия</div>
+									        	<div class="author__item">
+									        		Гид:
+													<div class="author__img" style="background:url(img/content/av.jpg)"></div>
+													<a href="#" class="author__name">Андрей Волосюк</a>
+												</div>
+									        </div>
+								        </div>
+									</div>
+									<div class="col-xs-4 excursions__item">
+										<div class="excursions__item-wrap">
+											<a href="#" class="excursions__item-favorite"></a>
+											<a href="#" class="excursions__item-inner">
+												<div class="excursions__item-img-wrap">
+													<div class="excursions__item-img" style="background:url(img/news/news3.jpg)">
+													</div>
+													<div class="excursions__item-img__label">
+														<div class="excursions__item-img__time">14 дней</div>
+														3 300 <span class="rouble">a</span>
+													</div>
+												</div>
+												<div class="news__icons">
+													<span class="news__icon news__icon--disable"></span>
+												</div>
+												<div class="excursions__item-txt">
+													<div class="excursions__item-labels">
+														<div class="excursions__item-labels__item">Агро</div>
+														<div class="excursions__item-labels__item">Гурман</div>
+													</div>
+													<div class="excursions__item-title">
+														Экскурсия по знаковым местам парижа с заездом в рестораны
+													</div>
+													<div class="excursions__item-city">Санкт-Петербург</div>
+												</div>
+											</a>
+											<div class="excursions__item-hover">
+									        	<div class="excursions__item-hover__info">Групповая, авутомобильная экскурсия</div>
+									        	<div class="author__item">
+									        		Гид:
+													<div class="author__img" style="background:url(img/content/author1.jpg)"></div>
+													<a href="#" class="author__name">Дмитрий Хоружко</a>
+												</div>
+									        </div>
+								        </div>
+									</div>
+									<div class="col-xs-4 excursions__item">
+										<div class="excursions__item-wrap">
+											<a href="#" class="excursions__item-favorite"></a>
+											<a href="#" class="excursions__item-inner">
+												<div class="excursions__item-img-wrap">
+													<div class="excursions__item-img" style="background:url(img/news/news1.jpg)">
+													</div>
+													<div class="excursions__item-img__label">
+														<div class="excursions__item-img__time">3 часа</div>
+														Бесплатно
+													</div>
+												</div>
+												<div class="news__icons">
+													<span class="news__icon news__icon--disable"></span>
+												</div>
+												<div class="excursions__item-txt">
+													<div class="excursions__item-labels">
+														<div class="excursions__item-labels__item">Агро</div>
+														<div class="excursions__item-labels__item">Гурман</div>
+													</div>
+													<div class="excursions__item-title">
+														Экскурсия по знаковым местам Рима с заездом в рестораны
+													</div>
+													<div class="excursions__item-city">Санкт-Петербург</div>
+												</div>
+											</a>
+											<div class="excursions__item-hover">
+									        	<div class="excursions__item-hover__info">Групповая, авутомобильная экскурсия</div>
+									        	<div class="author__item">
+									        		Гид:
+													<div class="author__img" style="background:url(img/content/author1.jpg)"></div>
+													<a href="#" class="author__name">Егор Шевчик</a>
+												</div>
+									        </div>
+								        </div>
+									</div>
+									<div class="col-xs-4 excursions__item">
+										<div class="excursions__item-wrap">
+											<a href="#" class="excursions__item-favorite"></a>
+											<a href="#" class="excursions__item-inner">
+												<div class="excursions__item-img-wrap">
+													<div class="excursions__item-img" style="background:url(img/news/news2.jpg)"></div>
+													<div class="excursions__item-img__label">
+														<div class="excursions__item-img__time">14 дней</div>
+														<div class="old-price">3 300<span class="rouble">a</span></div>
+														3 300 <span class="rouble">a</span>
+													</div>
+												</div>
+												<div class="news__icons">
+													<span class="news__icon news__icon--disable"></span>
+												</div>
+												<div class="excursions__item-txt">
+													<div class="excursions__item-labels">
+														<div class="excursions__item-labels__item">Агро</div>
+														<div class="excursions__item-labels__item">Экстрим</div>
+														<div class="excursions__item-labels__item">Гурман</div>
+													</div>
+													<div class="excursions__item-title">
+														Экскурсия по знаковым местам парижа с заездом в рестораны
+													</div>
+													<div class="excursions__item-city">Москва</div>
+												</div>
+											</a>
+											<div class="excursions__item-hover">
+									        	<div class="excursions__item-hover__info">Групповая, авутомобильная экскурсия</div>
+									        	<div class="author__item">
+									        		Гид:
+													<div class="author__img" style="background:url(img/content/av.jpg)"></div>
+													<a href="#" class="author__name">Андрей Волосюк</a>
+												</div>
+									        </div>
+								        </div>
+									</div>
+									<div class="col-xs-4 excursions__item">
+										<div class="excursions__item-wrap">
+											<a href="#" class="excursions__item-favorite"></a>
+											<a href="#" class="excursions__item-inner">
+												<div class="excursions__item-img-wrap">
+													<div class="excursions__item-img" style="background:url(img/news/news3.jpg)">
+													</div>
+													<div class="excursions__item-img__label">
+														<div class="excursions__item-img__time">14 дней</div>
+														3 300 <span class="rouble">a</span>
+													</div>
+												</div>
+												<div class="news__icons">
+													<span class="news__icon news__icon--disable"></span>
+												</div>
+												<div class="excursions__item-txt">
+													<div class="excursions__item-labels">
+														<div class="excursions__item-labels__item">Агро</div>
+														<div class="excursions__item-labels__item">Гурман</div>
+													</div>
+													<div class="excursions__item-title">
+														Экскурсия по знаковым местам парижа с заездом в рестораны
+													</div>
+													<div class="excursions__item-city">Санкт-Петербург</div>
+												</div>
+											</a>
+											<div class="excursions__item-hover">
+									        	<div class="excursions__item-hover__info">Групповая, авутомобильная экскурсия</div>
+									        	<div class="author__item">
+									        		Гид:
+													<div class="author__img" style="background:url(img/content/author1.jpg)"></div>
+													<a href="#" class="author__name">Дмитрий Хоружко</a>
+												</div>
+									        </div>
+								        </div>
+									</div>
+									<div class="col-xs-4 excursions__item">
+										<div class="excursions__item-wrap">
+											<a href="#" class="excursions__item-favorite"></a>
+											<a href="#" class="excursions__item-inner">
+												<div class="excursions__item-img-wrap">
+													<div class="excursions__item-img" style="background:url(img/news/news1.jpg)">
+													</div>
+													<div class="excursions__item-img__label">
+														<div class="excursions__item-img__time">3 часа</div>
+														Бесплатно
+													</div>
+												</div>
+												<div class="news__icons">
+													<span class="news__icon news__icon--disable"></span>
+												</div>
+												<div class="excursions__item-txt">
+													<div class="excursions__item-labels">
+														<div class="excursions__item-labels__item">Агро</div>
+														<div class="excursions__item-labels__item">Гурман</div>
+													</div>
+													<div class="excursions__item-title">
+														Экскурсия по знаковым местам Рима с заездом в рестораны
+													</div>
+													<div class="excursions__item-city">Санкт-Петербург</div>
+												</div>
+											</a>
+											<div class="excursions__item-hover">
+									        	<div class="excursions__item-hover__info">Групповая, авутомобильная экскурсия</div>
+									        	<div class="author__item">
+									        		Гид:
+													<div class="author__img" style="background:url(img/content/author1.jpg)"></div>
+													<a href="#" class="author__name">Егор Шевчик</a>
+												</div>
+									        </div>
+								        </div>
+									</div>
+									<div class="col-xs-4 excursions__item">
+										<div class="excursions__item-wrap">
+											<a href="#" class="excursions__item-favorite"></a>
+											<a href="#" class="excursions__item-inner">
+												<div class="excursions__item-img-wrap">
+													<div class="excursions__item-img" style="background:url(img/news/news2.jpg)"></div>
+													<div class="excursions__item-img__label">
+														<div class="excursions__item-img__time">14 дней</div>
+														<div class="old-price">3 300<span class="rouble">a</span></div>
+														3 300 <span class="rouble">a</span>
+													</div>
+												</div>
+												<div class="news__icons">
+													<span class="news__icon news__icon--disable"></span>
+												</div>
+												<div class="excursions__item-txt">
+													<div class="excursions__item-labels">
+														<div class="excursions__item-labels__item">Агро</div>
+														<div class="excursions__item-labels__item">Экстрим</div>
+														<div class="excursions__item-labels__item">Гурман</div>
+													</div>
+													<div class="excursions__item-title">
+														Экскурсия по знаковым местам парижа с заездом в рестораны
+													</div>
+													<div class="excursions__item-city">Москва</div>
+												</div>
+											</a>
+											<div class="excursions__item-hover">
+									        	<div class="excursions__item-hover__info">Групповая, авутомобильная экскурсия</div>
+									        	<div class="author__item">
+									        		Гид:
+													<div class="author__img" style="background:url(img/content/av.jpg)"></div>
+													<a href="#" class="author__name">Андрей Волосюк</a>
+												</div>
+									        </div>
+								        </div>
+									</div>
+									<div class="col-xs-4 excursions__item">
+										<div class="excursions__item-wrap">
+											<a href="#" class="excursions__item-favorite"></a>
+											<a href="#" class="excursions__item-inner">
+												<div class="excursions__item-img-wrap">
+													<div class="excursions__item-img" style="background:url(img/news/news3.jpg)">
+													</div>
+													<div class="excursions__item-img__label">
+														<div class="excursions__item-img__time">14 дней</div>
+														3 300 <span class="rouble">a</span>
+													</div>
+												</div>
+												<div class="news__icons">
+													<span class="news__icon news__icon--disable"></span>
+												</div>
+												<div class="excursions__item-txt">
+													<div class="excursions__item-labels">
+														<div class="excursions__item-labels__item">Агро</div>
+														<div class="excursions__item-labels__item">Гурман</div>
+													</div>
+													<div class="excursions__item-title">
+														Экскурсия по знаковым местам парижа с заездом в рестораны
+													</div>
+													<div class="excursions__item-city">Санкт-Петербург</div>
+												</div>
+											</a>
+											<div class="excursions__item-hover">
+									        	<div class="excursions__item-hover__info">Групповая, авутомобильная экскурсия</div>
+									        	<div class="author__item">
+									        		Гид:
+													<div class="author__img" style="background:url(img/content/author1.jpg)"></div>
+													<a href="#" class="author__name">Дмитрий Хоружко</a>
+												</div>
+									        </div>
+								        </div>
+									</div>
+									<div class="paging">
+										<a href="#" class="btn-more paging__item--prev">« Предыдущая страница</a>
+										<span class="paging__item paging__item--active">1</span>
+										<a href="#" class="paging__item">2</a>
+										<a href="#" class="paging__item">3</a>
+										<a href="#" class="paging__item">4</a>
+										<a href="#" class="paging__item">5</a>
+										<a href="#" class="btn-more paging__item--next">Следующая страница »</a>
+									</div>
+									<div class="toggle-text-wrap">
+										<div class="toggle-text">
+											Любая авария, поломка, да и просто управление «железным конем» становится mission impossible. Но вот уже четыре дня по дороге из Кракова во Владивосток едут трое польских мотоциклистов, которые каждым своим действием подтверждают: все барьеры – в голове, а путь осилит идущий, или в данном случае, тот, кто едет за управление «железным конем» становится mission impossible. Но вот уже четыре дня по дороге из Кракова во Владивосток едут трое польских мотоциклистов, которые каждым своим действием подтверждают: все барьеры – в голове, а путь осилит идущий, или в данном случае, тот, кто едет за управление «железным конем» становится mission impossible. Но вот уже четыре дня по дороге из Кракова во Владивосток едут трое польских мотоциклистов, которые каждым своим действием подтверждают: все барьеры – в голове, а путь осилит идущий, или в данном случае, тот, кто едет
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end CONTENT-PART -->	
+			</div>
+			<footer class="page-footer">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-3">
+							<a href="#" class="page-footer__logo">
+								<img src="img/content/footer-logo.png" alt="">
+							</a>
+							<div class="socials">
+								<a href="#" class="socials__item">
+									<img src="img/content/vk.png" alt="">
+								</a>
+								<a href="#" class="socials__item">
+									<img src="img/content/fb.png" alt="">
+								</a>
+								<a href="#" class="socials__item">
+									<img src="img/content/inst.png" alt="">
+								</a>
+								<a href="#" class="socials__item">
+									<img src="img/content/tw.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="page-footer__menu">
+								<a href="#" class="page-footer__menu-item">Как это работает?</a>
+								<a href="#" class="page-footer__menu-item">Гидам</a>
+								<a href="#" class="page-footer__menu-item">Контакты</a>
+								<a href="#" class="page-footer__menu-item">Новости</a>
+								<a href="#" class="page-footer__menu-item">Объекты</a>
+								<a href="#" class="page-footer__menu-item">Опыт</a>
+								<a href="#" class="page-footer__menu-item">Лайфхаки</a>
+								<a href="#" class="page-footer__menu-item">Экскурсии</a>
+								<a href="#" class="page-footer__menu-item">Мероприятия</a>
+								<a href="#" class="page-footer__menu-item">Объекты</a>
+								<a href="#" class="page-footer__menu-item">Страны</a>
+								<a href="#" class="page-footer__menu-item">Партнерская программа</a>
+							</div>
+						</div>
+						<div class="col-xs-3">
+							<div class="page-footer__delivery">
+								<form action="#" method="post">
+									<input type="text" placeholder="Подписаться на рассылку" class="page-footer__delivery-input">
+									<input type="submit" class="page-footer__delivery-submit">
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="page-footer__copyright">
+						<div class="row">
+							<div class="col-xs-offset-3 col-xs-9">
+								<div class="page-footer__copyright-inner">
+									<div class="row">
+										<div class="col-xs-8 page-footer__copyright-item">
+											©2016. Globe-all.info
+										</div>
+										<div class="col-xs-4 page-footer__copyright-item">
+											О проекте
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div><!-- END LAYOUT-->
+
+	
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+		<script src="js/vendors/slick/slick.min.js"></script>
+		<script src="js/vendors/fancybox/jquery.fancybox.pack.js"></script>
+		<script src="js/vendors/formstyler/jquery.formstyler.min.js"></script>
+		<script src="js/vendors/jtruncate/jTruncate.min.js"></script>
+		<script src="js/interface.js"></script>
+	</body>
+</html>

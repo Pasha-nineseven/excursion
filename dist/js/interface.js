@@ -176,6 +176,32 @@ $(document).ready(function() {
 		$('.input-file').after('<div class="button" >Выбрать<span>(до 5 мб)</span></div>');
 		return false
 	});
+
+	//SLIDER COUNT
+	if ($( ".slider-count-slider" ).length>0) {
+		$( ".slider-count-slider" ).slider({
+	    	animate: true,
+	        range: "min",
+	        value: 1,
+	        min: 1,
+	        max: 10,
+	        step: 1,  
+	        slide: function( event, ui ) {
+	            $( "#slider-count-input" ).val( ui.value );
+	        },
+		});
+	};
+
+	//TEXT-TRUNCATE
+	if ($('.toggle-text').length>0) {
+		$('.toggle-text').jTruncate({
+			length: 300,
+			moreText: 'Читать полностью',
+			lessText: 'Скрыть',
+			moreAni: 100, 
+			lessAni: 100 
+		});
+	};
 });
 
 
@@ -206,5 +232,6 @@ $('body').append(
 		<li><a href="news.html">News</a></li> \
 		<li><a href="news-in.html">News-in</a></li> \
 		<li><a href="index.html">Index</a></li> \
+		<li><a href="excursions.html">Excursions</a></li> \
 	</ol> \
 </div>');
