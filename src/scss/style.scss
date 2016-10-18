@@ -143,6 +143,8 @@
 
 .page-content{
 	//padding-top: 50px;
+	display: table-cell;
+	height: 100%;
 }
 .page-content__wrapper{
 	//overflow: hidden;
@@ -1140,6 +1142,8 @@ p.subtitle{
 	color: #fff;
 	padding-top: 80px;
 	overflow: hidden;
+	position: relative;
+	z-index: 10;
 }
 .page-footer__copyright{
 	font-size: 16px;
@@ -2717,6 +2721,27 @@ p.subtitle{
 		 background-size: contain;
     }
 }
+
+.recovery{
+	padding-bottom: 50px;
+	max-width: 630px;
+    margin: 0 auto;
+    label {
+	    float: left;
+	    width: 165px;
+	    padding-right: 10px;
+	    margin-top: 12px;
+	}
+	.input-wrap__overflow {
+	    margin-left: 165px;
+	}
+	.btn-wrap {
+	    text-align: left;
+	    padding-left: 165px;
+	    padding-bottom: 0;
+	}
+}
+
 
 //MEDIA
 @media screen and (max-width: 1550px){

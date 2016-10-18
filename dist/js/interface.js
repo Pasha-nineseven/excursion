@@ -211,7 +211,7 @@ $(document).ready(function() {
     	$('.phone-mask').inputmask("+7999 999−99−99");
     };
 
-    //Show-password
+    //SHOW-PASSWORD
 	$( 'body' ).on( 'click', '.pass-toggle', function( event ) {
 	    $(this).toggleClass('active');
 	    if( $(this).is('.active') ){
@@ -222,7 +222,7 @@ $(document).ready(function() {
 	    return false;
 	});
 
-	//Множественный select
+	//MULTIPLE-SELECT
 	if ($('.multiple-select').length>0) {
 		$('.multiple-select').multipleSelect({
 			placeholder: "+ Добавить язык",
@@ -262,5 +262,6 @@ $('body').append(
 		<li><a href="excursions.html">Excursions</a></li> \
 		<li><a href="excursions-in.html">Excursions-in</a></li> \
 		<li><a href="registration-gid.html">Registration-gid</a></li> \
+		<li><a href="recovery-password.html">Recovery-password</a></li> \
 	</ol> \
 </div>');
