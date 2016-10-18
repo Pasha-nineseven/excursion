@@ -263,5 +263,6 @@ $('body').append(
 		<li><a href="excursions-in.html">Excursions-in</a></li> \
 		<li><a href="registration-gid.html">Registration-gid</a></li> \
 		<li><a href="recovery-password.html">Recovery-password</a></li> \
+		<li><a href="cabinet.html">Cabinet</a></li> \
 	</ol> \
 </div>');
