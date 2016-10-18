@@ -202,6 +202,19 @@ $(document).ready(function() {
 			lessAni: 100 
 		});
 	};
+
+	//TEXT-TOGGLE
+	$( 'body' ).on( 'click', '.text-hidden__toggle', function(){
+        $(this).toggleClass('active');
+        $(this).parents('.text-hidden__toggle-wrap').next('.text-hidden').slideToggle();
+        if ( $(this).hasClass("active") ) {
+            $(this).text("Скрыть подробности");
+        }
+        else {
+            $(this).text("Показать подробности");
+        }
+        return false
+    });
 });
 
 
@@ -233,5 +246,7 @@ $('body').append(
 		<li><a href="news-in.html">News-in</a></li> \
 		<li><a href="index.html">Index</a></li> \
 		<li><a href="excursions.html">Excursions</a></li> \
+		<li><a href="excursions-in.html">Excursions-in</a></li> \
+		
 	</ol> \
 </div>');

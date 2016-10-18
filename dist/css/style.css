@@ -443,6 +443,8 @@ textarea, input { -webkit-box-shadow: none; box-shadow: none; font-family: inher
 
 .container-fluid { max-width: 1520px; padding: 0; position: relative; height: 100%; }
 
+.container-min { max-width: 940px; margin: 0 auto; }
+
 .btn { background: #db1b3c; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; color: #fff; font-size: 24px; font-weight: 300; padding: 13px 70px; text-decoration: none; display: inline-block; vertical-align: middle; -webkit-box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5); box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5); }
 
 .btn:hover { background: #eb2245; }
@@ -651,7 +653,7 @@ a.breadcrumbs__item:hover span { text-decoration: underline; }
 
 .video__labels-item i img { max-width: 100%; height: auto; display: inline-block; vertical-align: middle; }
 
-.author { text-align: center; }
+.author { text-align: center; margin-bottom: 20px; }
 
 .author__date { display: inline-block; vertical-align: middle; font-size: 14px; margin-right: 30px; }
 
@@ -665,7 +667,7 @@ a.breadcrumbs__item:hover span { text-decoration: underline; }
 
 .author__item:before { content: ""; display: inline-block; vertical-align: middle; height: 15px; width: 1px; background: #ecedf3; position: absolute; top: 50%; margin-top: -7px; left: 0; }
 
-p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; }
+p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0; }
 
 .detail_picture { display: block; margin-bottom: 13px; }
 
@@ -1076,6 +1078,92 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; }
 .truncate_more_link { color: #000; border-bottom: 1px dotted #4679cf; text-decoration: none; }
 
 .truncate_more_link:hover { border-bottom: 1px dotted transparent; }
+
+.excursions__add { overflow: hidden; }
+
+.excursions__add .container-fluid { background: #ebedf2; padding: 20px 0; }
+
+.excursions__add .tags__offer { overflow: hidden; position: static; margin: 0; text-align: left; }
+
+.excursions__add .tags__offer span { display: inline-block; vertical-align: middle; background: transparent; padding: 0; margin-bottom: 0; margin-left: 10px; }
+
+.excursions__add .share { margin-top: 10px; }
+
+.excursions__in { background: #fff; }
+
+.excursions__in-img { background-size: cover !important; background-position: top center !important; background-repeat: no-repeat !important; height: 460px; width: 100%; position: relative; }
+
+.excursions__in-info { margin-bottom: 30px; padding-top: 25px; }
+
+.excursions__in-top { position: absolute; width: 100%; bottom: 0; left: 0; font-weight: 100; }
+
+.excursions__in-wrap { display: table; table-layout: fixed; vertical-align: middle; width: 100%; }
+
+.excursions__in-item { background: #ebedf2; display: table-cell; text-align: center; padding: 21px 10px; }
+
+.excursions__in-item i, .excursions__in-item span { display: inline-block; vertical-align: middle; }
+
+.excursions__in-item i { margin-right: 5px; }
+
+.excursions__in-item .rouble { margin-top: -5px; font-weight: 100; }
+
+.excursions__in-item--price { background: #fff; position: relative; width: 205px; font-weight: 100; }
+
+.excursions__in-item--price .btn { width: 100%; position: absolute; left: 0; top: 100%; }
+
+.excursions__bottom { justify-content: center; padding: 40px 0 20px; }
+
+.excursions__bottom h2 { text-align: center; }
+
+.excursions__in-price { color: #f8284c; font-size: 24px; position: relative; }
+
+.excursions__in-price .old-price { position: absolute; bottom: 100%; left: 0; width: 100%; margin-right: 0; margin-bottom: -5px; }
+
+.excursions__in-info { overflow: hidden; margin-left: 21px; }
+
+.excursions__in-included { float: right; width: 205px; padding-top: 30px; font-size: 14px; padding-left: 20px; }
+
+.excursions__in-included__title { color: #787d82; margin-bottom: 10px; }
+
+.excursions__in-included__item { margin-bottom: 9px; padding-left: 31px; position: relative; }
+
+.excursions__in-included__item i { position: absolute; top: 4px; left: 9px; width: 10px; height: 10px; }
+
+.excursions__in-included__item--positive i { background: url(../img/content/positive.png) center no-repeat; }
+
+.excursions__in-included__item--negative i { background: url(../img/content/negative.png) center no-repeat; }
+
+.excursions__in-left { overflow: hidden; }
+
+.excursions__in-info__item { border-bottom: 1px solid #ebedf2; padding: 24px 0; overflow: hidden; }
+
+.excursions__in-info__title { font-size: 14px; color: #787d82; width: 185px; padding-right: 15px; float: left; }
+
+.excursions__in-info__right { margin-left: 185px; font-size: 18px; }
+
+.people-cathegory { display: inline-block; vertical-align: middle; margin-right: 35px; margin-top: -10px; }
+
+.people-cathegory:last-child { margin-right: 0; }
+
+.people-cathegory i { display: inline-block; vertical-align: middle; width: 35px; height: 40px; line-height: 40px; margin-right: 15px; }
+
+.people-cathegory i img { max-width: 100%; height: auto; max-height: 100%; }
+
+.text-hidden { display: none; }
+
+.text-hidden__toggle { color: #000; border-bottom: 1px dotted #4679cf; text-decoration: none; position: relative; }
+
+.text-hidden__toggle:after { content: ""; display: inline-block; vertical-align: middle; width: 11px; height: 7px; background: url(../img/content/toggle-arrow.png) no-repeat; position: absolute; right: -15px; top: 8px; -webkit-transition: transform 0.3s ease; -o-transition: transform 0.3s ease; transition: transform 0.3s ease; }
+
+.text-hidden__toggle:hover { border-bottom: 1px dotted transparent; }
+
+.text-hidden__toggle.active:after { -webkit-transform: rotate(-180deg); -ms-transform: rotate(-180deg); transform: rotate(-180deg); }
+
+.excursions__in-images { margin-left: -45px; }
+
+.excursions__in-images__item { margin-right: -3px; display: inline-block; vertical-align: top; }
+
+.excursions__in-text { margin-bottom: 20px; }
 
 @media screen and (max-width: 1550px) { .page-footer .container-fluid, .page-header .container-fluid, .wrapper { padding: 0 20px; }
   .container-fluid { padding-left: 15px; padding-right: 15px; }
