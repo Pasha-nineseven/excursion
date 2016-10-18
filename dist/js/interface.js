@@ -205,6 +205,30 @@ $(document).ready(function() {
         }
         return false
     });
+
+    //PHONE-MASK
+    if ($('.phone-mask').length>0) {
+    	$('.phone-mask').inputmask("+7999 999−99−99");
+    };
+
+    //Show-password
+	$( 'body' ).on( 'click', '.pass-toggle', function( event ) {
+	    $(this).toggleClass('active');
+	    if( $(this).is('.active') ){
+	        $(this).prev().attr('type','text');
+	    }else{
+	        $(this).prev().attr('type','password');
+	    }
+	    return false;
+	});
+
+	//Множественный select
+	if ($('.multiple-select').length>0) {
+		$('.multiple-select').multipleSelect({
+			placeholder: "+ Добавить язык",
+			selectAll: false
+		});
+	};
 });
 
 
@@ -237,6 +261,6 @@ $('body').append(
 		<li><a href="index.html">Index</a></li> \
 		<li><a href="excursions.html">Excursions</a></li> \
 		<li><a href="excursions-in.html">Excursions-in</a></li> \
-		
+		<li><a href="registration-gid.html">Registration-gid</a></li> \
 	</ol> \
 </div>');
