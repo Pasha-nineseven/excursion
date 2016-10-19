@@ -775,6 +775,7 @@ a.breadcrumbs__item{
     padding: 0 8px;
     display: inline-block;
     margin-right: 5px;
+    text-decoration: none;
     &:last-child{
 		margin-right: 0;
     }
@@ -1113,6 +1114,10 @@ p.subtitle{
 	text-align: center;
 	color: #1858c3;
 	text-decoration: none;
+	@include transition(all 0.3s ease);
+	&:hover{
+		background: #fff;
+	}
 }
 
 .paging__item--active{
@@ -1341,6 +1346,9 @@ p.subtitle{
 			-o-transform: scale(1.05);
 			transform: scale(1.05);
     	}
+    }
+    a{
+    	text-decoration: none;
     }
 }
 
@@ -2527,7 +2535,8 @@ p.subtitle{
 }
 
 
-.registration{
+.registration,
+.create{
 	padding-bottom: 50px;
 	max-width: 550px;
 	margin: 0 auto;
@@ -2614,7 +2623,7 @@ p.subtitle{
 	    -webkit-box-shadow: none;
 	    -moz-box-shadow: none;
 	    box-shadow: none;
-	    padding: 10px 0;
+	    padding: 10px 0 0;
 	}
 	.ms-drop{
 		border: 1px solid #CCC;
@@ -2646,9 +2655,12 @@ p.subtitle{
 	.ms-drop ul > li {
 	    list-style: none;
 	    display: block;
-	        margin-bottom: 12px;
+	    margin-bottom: 12px;
 	    background-image: none;
 	    position: static;
+	    &:last-child{
+	    	margin-bottom: 0;
+	    }
 	    &:hover{
 	    	background: #eeeeee;
 	    }
@@ -2668,7 +2680,8 @@ p.subtitle{
 	    cursor: pointer;
 	    position: relative;
 	}
-	.multiple-select{
+	.multiple-select,
+	.multiple-select-theme{
 		input[type="checkbox"] + span:before {
 		    content: '';
 		    position: absolute;
@@ -2905,6 +2918,152 @@ p.subtitle{
     overflow: hidden;
 }
 
+.create{
+	max-width: 730px;
+	.input-wrap label{
+		width: 225px;
+	}
+	.btn-wrap {
+	    text-align: center;
+	    padding-left: 0;
+	    padding-bottom: 0;
+	}
+	input[type="text"].price{
+		width: 180px;
+		text-align: center;
+		padding-right: 10px;
+	}
+}
+
+.gallery-img-wrap{
+
+}
+.gallery-img {
+    width: 210px;
+    height: 130px;
+    line-height: 130px;
+    background: #d8dbe6;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    position: relative;
+    display: none;
+    img{
+    	max-width: 100%;
+	    height: auto;
+	    max-height: 100%;
+	    display:inline-block;
+	    vertical-align: middle;
+    }
+}
+::-webkit-file-upload-button { cursor:pointer; }
+.gallery-img__close {
+    width: 20px;
+    height: 20px;
+    text-indent: -999em;
+    background: url(../img/content/remove.png) center no-repeat;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 20;
+}
+
+.gallery-img__change{
+	display: inline-block;
+    vertical-align: middle;
+    color: #1858c3;
+    text-decoration: none;
+    position: relative;
+    span{
+    	display: inline-block;
+	    vertical-align: middle;
+	    color: #a5a8ab;
+	    margin-top: -3px;
+	    padding-left: 4px;
+    }
+    &:hover{
+    	text-decoration: underline;
+    }
+}
+
+.galleryInp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.gallery-img-wrap {
+    line-height: 100px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.gallery-img__wrapper{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+    overflow: hidden;
+}
+
+
+.photo-list{
+	overflow: hidden;
+
+
+	font-size: 0;
+}
+.photo-list__item{
+	display: inline-block;
+	height: 75px;
+	line-height: 75px;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 1px;
+	&:last-child{
+		margin-right: 0;
+	}
+	img{
+		max-height: 100%;
+		width: auto;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.del{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.5) url(../img/content/del.png) center no-repeat;
+		display: block;
+		opacity: 0;
+		@include transition(all 0.3s ease);
+	}
+	&:hover{
+		.del{
+			opacity: 1;
+		}
+	}
+}
+
+.guest-category{
+	margin-bottom: -30px;
+	.checkbox-wrap{
+		width: 50%;
+		margin-right: -4px;
+		margin-bottom: 30px;
+	}
+}
+
+
+
 
 //MEDIA
 @media screen and (max-width: 1550px){
@@ -2976,6 +3135,17 @@ p.subtitle{
 	}
 }
 
+@media screen and (max-width: 1400px){
+	.input-wrap__overflow-msg {
+	    left: 0;
+	    top: 100%;
+	    padding-left: 0;
+	    br{
+	    	display: none;
+	    }
+	}
+}
+
 @media screen and (max-width: 1200px){
 	.excursions__filter-view .input-wrap label{
 		font-size: 14px;
@@ -2994,11 +3164,6 @@ p.subtitle{
 	.slider-count{
 		width: 100%;
 		float: none;
-	}
-	.input-wrap__overflow-msg {
-	    left: 0;
-	    top: 100%;
-	    padding-left: 0;
 	}
 }
 

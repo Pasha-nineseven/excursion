@@ -230,9 +230,22 @@ $(document).ready(function() {
 		});
 	};
 
+	if ($('.multiple-select-theme').length>0) {
+		$('.multiple-select-theme').multipleSelect({
+			placeholder: " ",
+			selectAll: false
+		});
+	};
+
 	//IMG-CHANGE
 	if ($(".imgInp").length>0) {
 		$(".imgInp").change(function(){
+	        readURL(this);
+	    });
+	};
+	if ($(".galleryInp").length>0) {
+		$(".galleryInp").change(function(){
+			$('.gallery-img').show();
 	        readURL(this);
 	    });
 	};
@@ -282,5 +295,6 @@ $('body').append(
 		<li><a href="recovery-password.html">Recovery-password</a></li> \
 		<li><a href="cabinet-excursions.html">Cabinet-excursions</a></li> \
 		<li><a href="cabinet-data.html">Cabinet-data</a></li> \
+		<li><a href="create-excursion.html">Create-excursion</a></li> \
 	</ol> \
 </div>');
