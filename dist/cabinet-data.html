@@ -10,6 +10,7 @@
 		<link href="js/vendors/fancybox/jquery.fancybox.min.css" rel="stylesheet">
 		<link href="js/vendors/formstyler/jquery.formstyler.css" rel="stylesheet">
 		<link href="js/vendors/multipleSelect/multiple-select.css" rel="stylesheet">
+
 		<link href="css/style.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -19,7 +20,7 @@
 	<body>
 
 		<!--LAYOUT-->
-		<div class="layout layout--white-theme">
+		<div class="layout">
 			<header class="page-header">
 				<div class="container-fluid">
 					<a href="#" class="page-header__logo">
@@ -77,127 +78,158 @@
 				<div class="page-content workarea">
 					<div class="breadcrumbs">
 						<a href="#" class="breadcrumbs__item"><span>Главная</span></a>
-						<span class="breadcrumbs__item">Регистрация гида</span>
+						<span class="breadcrumbs__item">Личный кабинет</span>
 					</div>
 					<div class="page-content__title">
 						<div class="container-fluid">
 							<h1>
-								Регистрация гида
+								Личный кабинет
 							</h1>
 						</div>
 					</div>
 					<!-- CONTENT-PART -->
 					<div class="container-fluid">
-						<div class="page-content__wrapper">	
-							<div class="registration">
-								<h2>Личная информация</h2>
-								<form action="#" method="post">
-									<div class="input-wrap">
-										<label>ФИО:</label>
-										<div class="input-wrap__overflow">
-											<input type="text">
-										</div>
-									</div>
-									<div class="input-wrap">
-										<label>Эл.почта:</label>
-										<div class="input-wrap__overflow">
-											<input type="email">
-											<div class="input-wrap__overflow-msg">
-												Вышлем на нее регистрационные данные
+						<div class="page-content__wrapper">
+							<div class="cabinet">
+								<div class="cabinet__links">
+									<a href="#" class="cabinet__links-item cabinet__links-item--active">Личные данные</a>
+									<a href="#" class="cabinet__links-item">Мои экскурсии</a>
+									<a href="#" class="btn btn--minimal">+ Добавить экскурсию</a>
+								</div>	
+								<div class="cabinet__data">
+									<div class="registration">
+										<form action="#" method="post">
+											<h2>Личная информация</h2>
+											<div class="input-wrap">
+												<label>ФИО:</label>
+												<div class="input-wrap__overflow">
+													<input type="text" placeholder="Егоров Константин Константинович">
+												</div>
 											</div>
-										</div>
-									</div>
-									<div class="input-wrap">
-										<label>Телефон:</label>
-										<div class="input-wrap__overflow">
-											<input type="text" placeholder='+7___ ___−__−__' class="phone-mask">
-										</div>
-									</div>
-									<div class="input-wrap">
-										<label>Пароль:</label>
-										<div class="input-wrap__overflow">
-											<input type="password" id="user_password">
-											<a href="#" class="pass-toggle"></a>
-										</div>
-									</div>
-									<h2>География</h2>
-									<div class="input-wrap">
-										<label>Города:</label>
-										<div class="input-wrap__overflow">
-											<select class="fs">
-												<option>Город1</option>
-												<option>Город2</option>
-												<option>Город3</option>
-											</select>
-											<div class="input-wrap__overflow-msg">
-												В которых можете быть гидом
+											<div class="input-wrap">
+												<label>Эл.почта:</label>
+												<div class="input-wrap__overflow">
+													<input type="email" placeholder="mail@gmail.com">
+												</div>
 											</div>
-										</div>
-									</div>
-									<div class="input-wrap">
-										<label>Языки:</label>
-										<div class="input-wrap__overflow">
-											<select multiple="multiple" class="multiple-select">
-										        <option value="1">Русский</option>
-										      	<option value="2">Английский</option>
-										      	<option value="3">Японский</option>
-										      	<option value="4">Польский</option>
-										        <option value="5">Немецкий</option>
-										        <option value="6">Русский</option>
-										      	<option value="7">Английский</option>
-										      	<option value="8">Японский</option>
-										      	<option value="9">Польский</option>
-										        <option value="10">Немецкий</option>
-										        <option value="11">Польский</option>
-										        <option value="12">Немецкий</option>
-										    </select>
-											<div class="input-wrap__overflow-msg">
-												На которых можете вести экскурсию
+											<div class="input-wrap">
+												<label>Телефон:</label>
+												<div class="input-wrap__overflow">
+													<input type="text" placeholder='+7___ ___−__−__' class="phone-mask">
+												</div>
 											</div>
-										</div>
-									</div>
-									<h2>Дополнительная информация</h2>
-									<div class="input-wrap">
-										<label>Информация о себе:</label>
-										<div class="input-wrap__overflow">
-											<textarea></textarea>
-										</div>
-									</div>
-									<div class="input-wrap">
-										<label>&nbsp;</label>
-										<div class="input-wrap__overflow">
-											<div class="checkbox-wrap">
-												<input type="checkbox" id="confirmation">
-												<label for="confirmation">
-													Могу дать моментальное подтверждение
-												</label>
+											<div class="input-wrap">
+												<label>Новый пароль:</label>
+												<div class="input-wrap__overflow">
+													<input type="password" id="user_password">
+													<a href="#" class="pass-toggle"></a>
+												</div>
 											</div>
-										</div>
-									</div>
-									<div class="input-wrap">
-										<label>Фото:</label>
-										<div class="uploadbutton">
-						            		<input class="input-file" type="file" />
-										    <div class="button" >Выбрать<span>(до 5 мб)</span></div>
-										    <div class='input-file-text'>&nbsp;</div>
-										</div>
-									</div>
-									<hr>
-									<div class="input-wrap">
-										<label>&nbsp;</label>
-										<div class="input-wrap__overflow">
-											<div class="checkbox-wrap">
-												<input type="checkbox" id="agreement">
-												<label for="agreement">
-													Согласен с <a href="#">правилами</a> пользования сайтом
-												</label>
+											<h2>География</h2>
+											<div class="input-wrap">
+												<label>Города:</label>
+												<div class="input-wrap__overflow">
+													<select class="fs">
+														<option>Город1</option>
+														<option>Город2</option>
+														<option>Город3</option>
+													</select>
+													<div class="input-wrap__overflow-msg">
+														В которых можете быть гидом
+													</div>
+												</div>
 											</div>
-										</div>
+											<div class="input-wrap">
+												<label>Языки:</label>
+												<div class="input-wrap__overflow">
+													<select multiple="multiple" class="multiple-select">
+												        <option value="1">Русский</option>
+												      	<option value="2">Английский</option>
+												      	<option value="3">Японский</option>
+												      	<option value="4">Польский</option>
+												        <option value="5">Немецкий</option>
+												        <option value="6">Русский</option>
+												      	<option value="7">Английский</option>
+												      	<option value="8">Японский</option>
+												      	<option value="9">Польский</option>
+												        <option value="10">Немецкий</option>
+												        <option value="11">Польский</option>
+												        <option value="12">Немецкий</option>
+												    </select>
+													<div class="input-wrap__overflow-msg">
+														На которых можете вести экскурсию
+													</div>
+												</div>
+											</div>
+											<h2>Ссылки на соц. сети</h2>
+											<div class="input-wrap">
+												<label>Вконтакте:</label>
+												<div class="input-wrap__overflow">
+													<input type="text">
+													<div class="input-wrap__overflow-msg">
+														Укажите ссылки на аккаунты, если есть
+													</div>
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label>Фейсбук:</label>
+												<div class="input-wrap__overflow">
+													<input type="text">
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label>Твиттер:</label>
+												<div class="input-wrap__overflow">
+													<input type="text">
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label>Инстаграмм:</label>
+												<div class="input-wrap__overflow">
+													<input type="text">
+												</div>
+											</div>
+											<h2>Дополнительная информация</h2>
+											<div class="input-wrap">
+												<label>Информация о себе:</label>
+												<div class="input-wrap__overflow">
+													<textarea></textarea>
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label>&nbsp;</label>
+												<div class="input-wrap__overflow">
+													<div class="checkbox-wrap">
+														<input type="checkbox" id="confirmation">
+														<label for="confirmation">
+															Могу дать моментальное подтверждение
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label>Фото:</label>
+												<div class="user-img-wrap">
+													<div class="user-img">
+														<span class="user-img__close"></span>
+														<div class="user-img__wrapper">
+															<img src="img/content/av.jpg" alt="" class="no-image blah">
+														</div>
+													</div>
+													<a href="#" class="user-img__change">
+														Выбрать другое
+														<span>(до 5 мб)</span>
+														<input type='file' class="imgInp" />
+													</a>
+												</div>
+											</div>
+											<hr>
+											<div class="btn-wrap">
+												<a href="#" class="btn btn--minimal">Сохранить изменения</a>
+											</div>
+										</form>
 									</div>
-									<div class="btn-wrap">
-										<a href="#" class="btn btn--minimal">Зарегистрироваться</a>
-									</div>
-								</form>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -286,6 +318,8 @@
 		<script src="js/vendors/formstyler/jquery.formstyler.min.js"></script>
 		<script src="js/vendors/inputmask/jquery.inputmask.bundle.min.js"></script>
 		<script src="js/vendors/multipleSelect/multiple-select.js"></script>
+
+
 		<script src="js/interface.js"></script>
 	</body>
 </html>

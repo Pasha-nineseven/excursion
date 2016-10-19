@@ -229,6 +229,13 @@ $(document).ready(function() {
 			selectAll: false
 		});
 	};
+
+	//IMG-CHANGE
+	if ($(".imgInp").length>0) {
+		$(".imgInp").change(function(){
+	        readURL(this);
+	    });
+	};
 });
 
 
@@ -243,6 +250,16 @@ $(window).load(function(){
 // functions
 function isTouchDevice() {
 	return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+}
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('.blah').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
 }
 
 // links pages
@@ -263,6 +280,7 @@ $('body').append(
 		<li><a href="excursions-in.html">Excursions-in</a></li> \
 		<li><a href="registration-gid.html">Registration-gid</a></li> \
 		<li><a href="recovery-password.html">Recovery-password</a></li> \
-		<li><a href="cabinet.html">Cabinet</a></li> \
+		<li><a href="cabinet-excursions.html">Cabinet-excursions</a></li> \
+		<li><a href="cabinet-data.html">Cabinet-data</a></li> \
 	</ol> \
 </div>');

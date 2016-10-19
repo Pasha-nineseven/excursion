@@ -1117,7 +1117,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .excursions__in-item--price .btn { width: 100%; position: absolute; left: 0; top: 100%; }
 
-.excursions__bottom { justify-content: center; padding: 40px 0 20px; }
+.excursions__bottom { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; justify-content: center; padding: 40px 0 20px; }
 
 .excursions__bottom h2 { text-align: center; }
 
@@ -1171,61 +1171,61 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .excursions__in-text { margin-bottom: 20px; }
 
-.registration-gid { padding-bottom: 50px; max-width: 550px; margin: 0 auto; }
+.registration { padding-bottom: 50px; max-width: 550px; margin: 0 auto; }
 
-.registration-gid h2 { padding-top: 20px; }
+.registration h2 { padding-top: 20px; }
 
-.registration-gid label { float: left; width: 125px; padding-right: 10px; margin-top: 12px; }
+.registration .input-wrap { display: table; width: 100%; table-layout: fixed; }
 
-.registration-gid .phone-mask { max-width: 280px; }
+.registration label { width: 125px; display: table-cell; }
 
-.registration-gid input[type="text"] { padding-right: 40px; }
+.registration .phone-mask { max-width: 280px; }
 
-.registration-gid .btn-wrap { text-align: left; padding-left: 125px; padding-bottom: 0; }
+.registration input[type="text"] { padding-right: 40px; }
 
-.registration-gid .uploadbutton { padding-top: 11px; }
+.registration .btn-wrap { text-align: left; padding-left: 125px; padding-bottom: 0; }
 
-.registration-gid hr { margin: 20px 0; border: 0; width: 100%; height: 1px; background: #e7e7e7; }
+.registration hr { margin: 20px 0; border: 0; width: 100%; height: 1px; background: #e7e7e7; }
 
-.registration-gid .checkbox-wrap { width: 100%; }
+.registration .checkbox-wrap { width: 100%; }
 
-.registration-gid .checkbox-wrap label { width: 100%; }
+.registration .checkbox-wrap label { width: 100%; }
 
-.registration-gid .checkbox-wrap a { text-decoration: none; color: #1858c3; }
+.registration .checkbox-wrap a { text-decoration: none; color: #1858c3; }
 
-.registration-gid .checkbox-wrap a:hover { text-decoration: underline; }
+.registration .checkbox-wrap a:hover { text-decoration: underline; }
 
-.registration-gid .ms-parent { display: inline-block; position: relative; vertical-align: middle; height: 47px; padding: 0; border: 0; border-bottom-color: #CCC; border-radius: 0; background: transparent; background: transparent; background: transparent; box-shadow: none; font: 18px/47px "Roboto", sans-serif; color: #000; text-shadow: none; width: 100% !important; }
+.registration .ms-parent { display: inline-block; position: relative; vertical-align: middle; height: 47px; padding: 0; border: 0; border-bottom-color: #CCC; border-radius: 0; background: transparent; background: transparent; background: transparent; box-shadow: none; font: 18px/47px "Roboto", sans-serif; color: #000; text-shadow: none; width: 100% !important; }
 
-.registration-gid .ms-choice { display: block; width: 100%; height: 100%; line-height: 47px; color: #000; border: 1px solid #CCC; padding: 0 45px 0 10px; text-decoration: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+.registration .ms-choice { display: block; width: 100%; height: 100%; line-height: 47px; color: #000; border: 1px solid #CCC; padding: 0 45px 0 10px; text-decoration: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
 
-.registration-gid .ms-drop.bottom { top: 100%; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; padding: 10px 0; }
+.registration .ms-drop.bottom { top: 100%; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; padding: 10px 0; }
 
-.registration-gid .ms-drop { border: 1px solid #CCC; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+.registration .ms-drop { border: 1px solid #CCC; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
 
-.registration-gid .ms-choice > div { width: 11px; height: 7px; border: 0; top: 19px; right: 15px; background: url(../img/content/sel-arrow.png) no-repeat; -webkit-transition: transform 0.3s ease; -o-transition: transform 0.3s ease; transition: transform 0.3s ease; }
+.registration .ms-choice > div { width: 11px; height: 7px; border: 0; top: 19px; right: 15px; background: url(../img/content/sel-arrow.png) no-repeat; -webkit-transition: transform 0.3s ease; -o-transition: transform 0.3s ease; transition: transform 0.3s ease; }
 
-.registration-gid .ms-choice > div.open { background: url(../img/content/sel-arrow.png) no-repeat; -webkit-transform: rotate(-180deg); -ms-transform: rotate(-180deg); transform: rotate(-180deg); }
+.registration .ms-choice > div.open { background: url(../img/content/sel-arrow.png) no-repeat; -webkit-transform: rotate(-180deg); -ms-transform: rotate(-180deg); transform: rotate(-180deg); }
 
-.registration-gid .ms-drop ul { margin-bottom: 0 !important; padding: 0; }
+.registration .ms-drop ul { margin-bottom: 0 !important; padding: 0; }
 
-.registration-gid .ms-drop ul > li { list-style: none; display: block; margin-bottom: 12px; background-image: none; position: static; }
+.registration .ms-drop ul > li { list-style: none; display: block; margin-bottom: 12px; background-image: none; position: static; }
 
-.registration-gid .ms-drop ul > li:hover { background: #eeeeee; }
+.registration .ms-drop ul > li:hover { background: #eeeeee; }
 
-.registration-gid .ms-drop ul > li:before { display: none; }
+.registration .ms-drop ul > li:before { display: none; }
 
-.registration-gid .ms-drop ul > li label { font-weight: normal; display: block; white-space: nowrap; float: none; width: 100%; padding-right: 0; margin-top: 0; padding-left: 40px; cursor: pointer; position: relative; }
+.registration .ms-drop ul > li label { font-weight: normal; display: block; white-space: nowrap; float: none; width: 100%; padding-right: 0; margin-top: 0; padding-left: 40px; cursor: pointer; position: relative; }
 
-.registration-gid .multiple-select input[type="checkbox"] + span:before { content: ''; position: absolute; left: 12px; top: 6px; width: 16px; height: 16px; border: 1px solid #db1b3c; cursor: pointer; z-index: 5; }
+.registration .multiple-select input[type="checkbox"] + span:before { content: ''; position: absolute; left: 12px; top: 6px; width: 16px; height: 16px; border: 1px solid #db1b3c; cursor: pointer; z-index: 5; }
 
-.registration-gid .multiple-select input[type="checkbox"]:checked + span:after { content: ''; background: url(../img/content/check.png) center no-repeat; width: 17px; height: 13px; display: inline-block; position: absolute; top: 6px; left: 15px; z-index: 10; }
+.registration .multiple-select input[type="checkbox"]:checked + span:after { content: ''; background: url(../img/content/check.png) center no-repeat; width: 17px; height: 13px; display: inline-block; position: absolute; top: 6px; left: 15px; z-index: 10; }
 
-.registration-gid .ms-choice > span.placeholder { color: #000; }
+.registration .ms-choice > span.placeholder { color: #000; }
 
 #user_password { padding-right: 40px; }
 
-.input-wrap__overflow { margin-left: 125px; position: relative; }
+.input-wrap__overflow { position: relative; display: table-cell; }
 
 .input-wrap__overflow-msg { position: absolute; left: 100%; top: 13px; color: #787d82; font-size: 14px; white-space: nowrap; padding-left: 18px; }
 
@@ -1240,6 +1240,46 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 .recovery .input-wrap__overflow { margin-left: 165px; }
 
 .recovery .btn-wrap { text-align: left; padding-left: 165px; padding-bottom: 0; }
+
+.excursions__item-hover__links a { display: inline-block; vertical-align: middle; height: 25px; line-height: 25px; margin-right: 10px; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+
+.excursions__item-hover__links a:last-child { margin-right: 0; }
+
+.excursions__item-hover__links a:hover { opacity: 0.6; }
+
+.excursions__item-hover__links a img { display: inline-block; vertical-align: middle; max-height: 100%; }
+
+.cabinet__links { text-align: center; position: relative; margin-bottom: 30px; }
+
+.cabinet__links:after { content: ""; display: table; clear: both; }
+
+.cabinet__links .btn { position: absolute; right: 0; top: 0; }
+
+.cabinet__links-item { display: inline-block; vertical-align: middle; margin-right: -5px; padding: 8px 20px; border-left: 1px solid #d8dbe6; text-decoration: none; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; color: #1858c3; background: #e8e9f0; }
+
+.cabinet__links-item:first-child { border-left: 0; }
+
+.cabinet__links-item:hover { background: #fff; }
+
+.cabinet__links-item--active { color: #000; background: #fff; pointer-events: none; }
+
+.cabinet__data { background: #fff; padding: 45px 0; }
+
+.user-img { width: 70px; height: 70px; background: #d8dbe6; -moz-border-radius: 50%; -webkit-border-radius: 50%; -ms-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 70px; display: inline-block; vertical-align: middle; margin-right: 20px; position: relative; }
+
+.user-img img { max-width: 100%; height: auto; max-height: 100%; display: inline-block; vertical-align: middle; }
+
+.user-img__close { width: 20px; height: 20px; text-indent: -999em; background: url(../img/content/remove.png) center no-repeat; position: absolute; top: -5px; right: 5px; z-index: 20; }
+
+.user-img__change { display: inline-block; vertical-align: middle; color: #1858c3; margin-right: 7px; text-decoration: none; position: relative; }
+
+.user-img__change span { display: inline-block; vertical-align: middle; color: #a5a8ab; margin-top: -3px; padding-left: 4px; }
+
+.imgInp { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+
+.user-img-wrap { line-height: 100px; vertical-align: middle; overflow: hidden; }
+
+.user-img__wrapper { width: 100%; height: 100%; position: absolute; top: 0; left: 0; -moz-border-radius: 50%; -webkit-border-radius: 50%; -ms-border-radius: 50%; border-radius: 50%; overflow: hidden; }
 
 @media screen and (max-width: 1550px) { .page-footer .container-fluid, .page-header .container-fluid, .wrapper { padding: 0 20px; }
   .container-fluid { padding-left: 15px; padding-right: 15px; }
