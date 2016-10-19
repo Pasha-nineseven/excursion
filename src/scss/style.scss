@@ -776,8 +776,12 @@ a.breadcrumbs__item{
     display: inline-block;
     margin-right: 5px;
     text-decoration: none;
+    @include transition(all 0.3s ease);
     &:last-child{
 		margin-right: 0;
+    }
+    &:hover{
+    	background: #eb2245;
     }
 }
 
@@ -1845,6 +1849,9 @@ p.subtitle{
 			background: #b91532;
 			@include box-shadow(0 7px 10px -6px rgba(0, 0, 0, 0.4));
 		}
+	}
+	.btn{
+		margin-top: 10px;
 	}
 }
 .popup__title{
@@ -3139,8 +3146,63 @@ p.subtitle{
 	}
 }
 
+.guide-enter{
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 64px;
+	color: #3dcbff;
+	text-decoration: none;
+	font-size: 16px;
+	span{
+		border-bottom: 1px solid transparent;
+	}
+	&:hover{
+		span{
+			border-bottom: 1px solid #3dcbff;
+		}
+	}
+	i{
+		display: inline-block;
+		vertical-align: middle;
+		width: 5px;
+		height: 11px;
+		background: url(../img/content/key.png) no-repeat;
+		margin-right: 5px;
+	}
+}
+
+.forgot{
+	display: block;
+	font-size: 14px;
+	text-align: right;
+	text-decoration: underline;
+	color: #1858c3;
+	padding-top: 5px;
+	position: absolute;
+	right: 0;
+	&:hover{
+		text-decoration: none;
+	}
+}
 
 
+
+.popup-register{
+	color: #1858c3;
+	text-decoration: none;
+	position: absolute;
+	right: 0;
+	top: 25px;
+	font-size: 16px;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+#guide-enter{
+	.btn-wrap{
+		position: relative;
+	}
+}
 
 //MEDIA
 @media screen and (max-width: 1550px){

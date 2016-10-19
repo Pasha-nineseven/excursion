@@ -337,6 +337,10 @@
 									<input type="submit" class="page-footer__delivery-submit">
 								</form>
 							</div>
+							<a href="#guide-enter" class="guide-enter fb-inline">
+								<i></i>
+								<span>Вход для гида</span>
+							</a>
 						</div>
 					</div>
 					<div class="page-footer__copyright">
@@ -414,7 +418,70 @@
 					Павел, который после аварии оказался в аналогичном положении, понял, что страсть к движению, ветру в волосах и скорости осталась, а значит, всего-то нужно немного модифицировать «железного коня».
 				</div>
 			</div>
-		</div>			
+		</div>
+
+
+		<div id="guide-enter" class="dnone">
+			<div class="popup">
+				<div class="popup__title">Вход для гидов</div>
+				<div class="popup__form">
+					<form action="#" method="post">
+						<div class="input-wrap input-wrap--error">
+							<label>Логин:</label>
+							<div class="error-wrap">
+								<input type="text" placeholder="">
+								<span class="label-error">Поле необходимо заполнить</span>
+							</div>
+						</div>
+						<div class="input-wrap input-wrap--error">
+							<label>Пароль:</label>
+							<div class="error-wrap">
+								<input type="text" placeholder="">
+								<a href="#recovery-password" class="forgot fb-inline">Забыли пароль</a>
+								<span class="label-error">Поле необходимо заполнить</span>
+							</div>
+						</div>
+						<div class="input-wrap">
+							<label>&nbsp;</label>
+							<!-- <input type="submit" value="Отправить"> -->
+							<div class="btn-wrap">
+								<a href="#" class="btn">Войти</a>
+								<a href="#" class="popup-register">Зарегистрироваться</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="recovery-password" class="dnone">
+			<div class="popup">
+				<div class="popup__title">Восстановление пароля</div>
+				<div class="popup__form">
+					<form action="#" method="post">
+						<div class="input-wrap">
+							<label>Эл. почта:</label>
+							<input type="email">
+						</div>
+						<div class="input-wrap">
+							<label>&nbsp;</label>
+							<!-- <input type="submit" value="Отправить"> -->
+							<a href="#success-guide-msg" class="btn fb-inline">Восстановить</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>	
+
+		<div id="success-guide-msg" class="dnone">
+			<div class="popup">
+				<div class="popup__title popup__title--centered">Восстановление пароля</div>
+				<div class="text-popup text-popup--centered">
+					На указанную электронную почту выслано письмо, с инструкцией по восстановлению пароля
+				</div>
+			</div>
+		</div>				
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="js/vendors/slick/slick.min.js"></script>
