@@ -3055,10 +3055,87 @@ p.subtitle{
 
 .guest-category{
 	margin-bottom: -30px;
+	input[type="checkbox"]:not(:checked) + label, 
+	input[type="checkbox"]:checked + label {
+	    position: relative;
+	    cursor: pointer;
+	    padding-left: 45px;
+	    line-height: 40px;
+	    display: inline-block;
+	    width: auto;
+	    &:after{
+	    	display: none;
+	    }
+	}
+
 	.checkbox-wrap{
 		width: 50%;
 		margin-right: -4px;
 		margin-bottom: 30px;
+	}
+	.cat1{
+		input[type="checkbox"]:not(:checked) + label:before{
+			width: 33px;
+			height: 40px;
+			background: url(../img/content/cat1.png);
+			background-position: 0 0;
+			border: 0;
+		}
+		input[type="checkbox"]:checked + label:before{
+			background: url(../img/content/cat1.png);
+			background-position: 0 -40px;
+			width: 33px;
+			height: 40px;
+			border: 0;
+		}
+	}
+	.cat2{
+		input[type="checkbox"]:not(:checked) + label:before{
+			width: 30px;
+			height: 37px;
+			background: url(../img/content/cat2.png);
+			background-position: 0 0;
+			border: 0;
+		}
+		input[type="checkbox"]:checked + label:before{
+			background: url(../img/content/cat2.png);
+			background-position: 0 -37px;
+			width: 30px;
+			height: 37px;
+			border: 0;
+		}
+	}
+	.cat3{
+		input[type="checkbox"]:not(:checked) + label:before{
+			width: 39px;
+			height: 32px;
+			background: url(../img/content/cat3.png);
+			background-position: 0 0;
+			border: 0;
+		}
+		input[type="checkbox"]:checked + label:before{
+			background: url(../img/content/cat3.png);
+			background-position: 0 -32px;
+			width: 39px;
+			height: 32px;
+			border: 0;
+		}
+	}
+	.cat4{
+		input[type="checkbox"]:not(:checked) + label:before{
+			width: 37px;
+			height: 37px;
+			background: url(../img/content/cat4.png);
+			background-position: 0 0;
+			border: 0;
+		}
+		input[type="checkbox"]:checked + label:before{
+			background: url(../img/content/cat4.png);
+			background-position: 0 -37px;
+			width: 37px;
+			height: 37px;
+			border: 0;
+		}
 	}
 }
 
