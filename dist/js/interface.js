@@ -24,7 +24,7 @@ $(document).ready(function() {
 	    $('.page-header__select-item').removeClass('page-header__select-item--active');
 	    $(this).parents('.page-header__select-item').addClass('page-header__select-item--active');
 	    $('.page-header__select-list').fadeOut(200);
-	    return false
+	    // return false
 	});
 
 	//TEXT-SLIDER
