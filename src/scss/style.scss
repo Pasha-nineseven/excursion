@@ -133,7 +133,7 @@
 	max-width: 1520px;
 	padding: 0;
 	position: relative;
-	height: 100%;
+	//height: 100%;
 }
 
 .container-min{
@@ -1395,7 +1395,7 @@ p.subtitle{
 .news__icon--video{
 	width: 23px;
 	height: 23px;
-	background: url(../img/content/icon-video.png) no-repeat;
+	background: url(../img/svg/icon-video.svg) no-repeat;
 	background-size: cover;	
 }
 .news__icon--disable{
@@ -3242,16 +3242,23 @@ p.subtitle{
 	}
 }
 
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   .excursions__bottom{
+   		justify-content:space-around;
+   }
+}
+
 //MEDIA
 @media screen and (max-width: 1550px){
 	.page-footer .container-fluid,
 	.page-header .container-fluid,
 	.wrapper{
-		padding: 0 20px;
+		padding: 0 25px;
 	}
 	.container-fluid {
-	    padding-left: 15px;
-	    padding-right: 15px;
+	    padding-left: 25px;
+	    padding-right: 25px;
 	}
 	.city-list__title {
 	    font-size: 25px;

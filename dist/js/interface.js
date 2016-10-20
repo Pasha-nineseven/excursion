@@ -142,7 +142,7 @@ $(document).ready(function() {
         $('.page-header--index__selecting-item').removeClass('active');
 		$(this).addClass('active');
 		$('.page-header--index')
-			.css('background','url('+$(this).data("background-url")+') no-repeat');
+			.css('background','url('+$(this).data("background-url")+')');
     });
 
 
