@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=1200">
+		<title>test</title>
+		<!-- <link rel="icon" href="img/favicon.png" type="image/x-icon" /> -->
+		<link href="js/vendors/slick/slick.css" rel="stylesheet">
+		<link href="js/vendors/fancybox/jquery.fancybox.min.css" rel="stylesheet">
+		<link href="js/vendors/formstyler/jquery.formstyler.css" rel="stylesheet">
+		<link href="js/vendors/multipleSelect/multiple-select.css" rel="stylesheet">
+
+		<link href="css/style.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<!--LAYOUT-->
+		<div class="layout layout--white-theme">
+			<header class="page-header">
+				<div class="container-fluid">
+					<a href="#" class="page-header__logo">
+						<img src="img/content/top-logo.png" alt="">
+					</a>
+					<div class="page-header__select">
+						<a href="#">
+							<img src="img/content/top-icon1.png" alt="">
+							<i></i>
+						</a>
+						<ul class="page-header__select-list">
+							<li class="page-header__select-item page-header__select-item--active">
+								<a href="#">
+									<img src="img/content/top-icon1.png" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/content/top-icon2.png" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/content/top-icon3.png" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/content/top-icon4.png" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="page-header__links">
+						<a href="#" class="page-header__language">
+							<i>
+								<img src="img/content/rus.png" alt="">
+							</i>
+							Рус
+						</a>
+						<a href="#" class="page-header__favorite">
+							<i>
+								<img src="img/content/favorite.png" alt="">
+							</i>
+							Избранное
+						</a>
+					</div>
+					<div class="page-header__search">
+						<input type="text" class="page-header__input" placeholder="Введите город, пункт назначения или достопримечательность">
+						<input type="submit" class="page-header__submit" value="Найти">
+					</div>
+				</div>
+			</header>
+			<div class="wrapper">
+				<div class="page-content workarea">
+					<div class="breadcrumbs">
+						<a href="#" class="breadcrumbs__item"><span>Главная</span></a>
+						<span class="breadcrumbs__item">Создание экскурсии</span>
+					</div>
+					<div class="page-content__title">
+						<div class="container-fluid">
+							<h1>
+								Создание экскурсии
+							</h1>
+						</div>
+					</div>
+					<!-- CONTENT-PART -->
+					<div class="container-fluid">
+						<div class="page-content__wrapper">
+							<div class="create">
+								<form action="#" method="post">
+									<h2>Основная информация</h2>
+									<div class="input-wrap">
+										<label>Название экскурсии:</label>
+										<div class="input-wrap__overflow">
+											<input type="text">
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Краткое описание:</label>
+										<div class="input-wrap__overflow">
+											<textarea></textarea>
+											<div class="input-wrap__overflow-msg">
+												Изложите в краткой форме, чего<br> ждать от экскурсии
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Полное описание:</label>
+										<div class="input-wrap__overflow">
+											<textarea></textarea>
+											<div class="input-wrap__overflow-msg">
+												Будет выводиться под катом
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Основная фотография:</label>
+										<div class="input-wrap__overflow">
+											<div class="gallery-img">
+												<span class="gallery-img__close"></span>
+												<img src="img/svg/icon.svg" alt="" class="no-image blah">
+											</div>
+											<a href="#" class="gallery-img__change">
+												Выбрать
+												<input type='file' class="galleryInp" />
+											</a>
+											<div class="input-wrap__overflow-msg">
+												Выберите фотографию с шириной от 1500<br> px, для лучшего отображения
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Дополнительные фотографии:</label>
+										<div class="photo-list">
+											<div id="result">
+												<div class="photo-list__item">
+													<img src="img/content/test.jpg" alt="">
+													<a href="#" class="del"></a>
+												</div>
+												<div class="photo-list__item">
+													<img src="img/content/test2.jpg" alt="">
+													<a href="#" class="del"></a>
+												</div>
+												<div class="photo-list__item">
+													<img src="img/content/av.jpg" alt="">
+													<a href="#" class="del"></a>
+												</div>
+											</div>
+											<div class="photo-list__add-wrap">
+												<div class="photo-list__add-item">
+													<a href="#" class="photo-list__add">Выбрать</a>
+													 <input id="files" type="file" multiple/>
+												 </div>
+											</div>
+										</div>
+									</div>
+									<h2>Стоимость</h2>
+									<div class="input-wrap">
+										<label>Цена:</label>
+										<div class="input-wrap__overflow">
+											<input type="text" value="0" class="price">
+											<div class="input-wrap__overflow-msg">
+												Оставьте 0, если экскурсия бесплатная
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Старая цена:</label>
+										<div class="input-wrap__overflow">
+											<input type="text" value="0" class="price">
+											<div class="input-wrap__overflow-msg">
+												Укажите старую цену, если собираетесь сделать<br> скидку или оставьте 0
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Что входит в цену:</label>
+										<div class="input-wrap__overflow">
+											<input type="text">
+											<div class="input-wrap__overflow-msg">
+												Укажите через запятую
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Что не входит в цену:</label>
+										<div class="input-wrap__overflow">
+											<input type="text">
+										</div>
+									</div>
+									<h2>Кому подойдет</h2>
+									<div class="input-wrap">
+										<label>Категория гостей:</label>
+										<div class="input-wrap__overflow">
+											<div class="guest-category">
+												<div class="checkbox-wrap cat1">
+													<input type="checkbox" id="guest-cetegory1">
+													<label for="guest-cetegory1">Колясочникам</label>
+												</div>
+												<div class="checkbox-wrap cat2">
+													<input type="checkbox" id="guest-cetegory2">
+													<label for="guest-cetegory2">С нарушением слуха</label>
+												</div>
+												<div class="checkbox-wrap cat3">
+													<input type="checkbox" id="guest-cetegory3">
+													<label for="guest-cetegory3" class="cat3">С нарушением зрения</label>
+												</div>
+												<div class="checkbox-wrap cat4">
+													<input type="checkbox" id="guest-cetegory4">
+													<label for="guest-cetegory4" class="cat4">Для мам с детьми</label>
+												</div>
+											</div>
+											<div class="input-wrap__overflow-msg">
+												Выберите одну или несколько категорий<br>
+												кому подойдет экскурсия
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Место проведения:</label>
+										<div class="input-wrap__overflow">
+											<select class="fs">
+												<option>Город1</option>
+												<option>Город2</option>
+												<option>Город3</option>
+											</select>
+											<div class="input-wrap__overflow-msg">
+												Город, в котором проходит экскурсия
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Язык экскурсии:</label>
+										<div class="input-wrap__overflow">
+											<select multiple="multiple" class="multiple-select">
+										        <option value="1">Русский</option>
+										      	<option value="2">Английский</option>
+										      	<option value="3">Японский</option>
+										      	<option value="4">Польский</option>
+										        <option value="5">Немецкий</option>
+										        <option value="6">Русский</option>
+										      	<option value="7">Английский</option>
+										      	<option value="8">Японский</option>
+										      	<option value="9">Польский</option>
+										        <option value="10">Немецкий</option>
+										        <option value="11">Польский</option>
+										        <option value="12">Немецкий</option>
+										    </select>
+											<div class="input-wrap__overflow-msg">
+												На которых можете вести экскурсию
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Продолжительность:</label>
+										<div class="input-wrap__overflow">
+											<select class="fs">
+												<option>0-3 часа</option>
+												<option>3-6 часа</option>
+												<option>6-9 часов</option>
+											</select>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Вид экскурсии:</label>
+										<div class="input-wrap__overflow">
+											<select class="fs">
+												<option>Групповая</option>
+												<option>test1</option>
+												<option>test2</option>
+											</select>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>&nbsp;</label>
+										<div class="input-wrap__overflow">
+											<select class="fs">
+												<option>Автомобильная</option>
+												<option>test1</option>
+												<option>test2</option>
+											</select>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Место сбора:</label>
+										<div class="input-wrap__overflow">
+											<input type="text">
+											<div class="input-wrap__overflow-msg">
+												Укажите точный адрес места сбора
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>&nbsp;</label>
+										<div class="input-wrap__overflow">
+											<div class="checkbox-wrap">
+												<input type="checkbox" id="can">
+												<label for="can">Могу забрать из отеля</label>
+											</div>
+										</div>
+									</div>
+									<h2>Дополнительная информация</h2>
+									<div class="input-wrap">
+										<label>Тема экскурсии:</label>
+										<div class="input-wrap__overflow">
+											<select multiple="multiple" class="multiple-select-theme" data-placeholder="dsd">
+										        <option value="1">Тема 1</option>
+										      	<option value="2">Тема 2</option>
+										      	<option value="3">Тема 3</option>
+										    </select>
+											<div class="input-wrap__overflow-msg">
+												Выберите одну или несколько
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Достопримечательности:</label>
+										<div class="input-wrap__overflow">
+											<input type="text">
+											<div class="input-wrap__overflow-msg">
+												Укажите через запятую знаковые<br>
+												места на маршруте
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Дополнительная информация:</label>
+										<div class="input-wrap__overflow">
+											<textarea></textarea>
+											<div class="input-wrap__overflow-msg">
+												Что необходимо знать перед<br>
+												началом экскурсии<br>
+												Например: Понадобится зонт, еду с собой
+											</div>
+										</div>
+									</div>
+									<div class="input-wrap">
+										<label>Рекомендации:</label>
+										<div class="input-wrap__overflow">
+											<textarea></textarea>
+										</div>
+									</div>
+									<div class="btn-wrap">
+										<a href="#" class="btn btn--minimal">Добавить экскурсию</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end CONTENT-PART -->	
+			</div>
+			<footer class="page-footer">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-3">
+							<a href="#" class="page-footer__logo">
+								<img src="img/content/footer-logo.png" alt="">
+							</a>
+							<div class="socials">
+								<a href="#" class="socials__item">
+									<img src="img/content/vk.png" alt="">
+								</a>
+								<a href="#" class="socials__item">
+									<img src="img/content/fb.png" alt="">
+								</a>
+								<a href="#" class="socials__item">
+									<img src="img/content/inst.png" alt="">
+								</a>
+								<a href="#" class="socials__item">
+									<img src="img/content/tw.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="page-footer__menu">
+								<a href="#" class="page-footer__menu-item">Как это работает?</a>
+								<a href="#" class="page-footer__menu-item">Гидам</a>
+								<a href="#" class="page-footer__menu-item">Контакты</a>
+								<a href="#" class="page-footer__menu-item">Новости</a>
+								<a href="#" class="page-footer__menu-item">Объекты</a>
+								<a href="#" class="page-footer__menu-item">Опыт</a>
+								<a href="#" class="page-footer__menu-item">Лайфхаки</a>
+								<a href="#" class="page-footer__menu-item">Экскурсии</a>
+								<a href="#" class="page-footer__menu-item">Мероприятия</a>
+								<a href="#" class="page-footer__menu-item">Объекты</a>
+								<a href="#" class="page-footer__menu-item">Страны</a>
+								<a href="#" class="page-footer__menu-item">Партнерская программа</a>
+							</div>
+						</div>
+						<div class="col-xs-3">
+							<div class="page-footer__delivery">
+								<form action="#" method="post">
+									<input type="text" placeholder="Подписаться на рассылку" class="page-footer__delivery-input">
+									<input type="submit" class="page-footer__delivery-submit">
+								</form>
+							</div>
+							<a href="#guide-enter" class="guide-enter fb-inline">
+								<i></i>
+								<span>Вход для гида</span>
+							</a>
+						</div>
+					</div>
+					<div class="page-footer__copyright">
+						<div class="row">
+							<div class="col-xs-offset-3 col-xs-9">
+								<div class="page-footer__copyright-inner">
+									<div class="row">
+										<div class="col-xs-8 page-footer__copyright-item">
+											©2016. Globe-all.info
+										</div>
+										<div class="col-xs-4 page-footer__copyright-item">
+											О проекте
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div><!-- END LAYOUT-->
+
+
+		<div id="guide-enter" class="dnone">
+			<div class="popup">
+				<div class="popup__title">Вход для гидов</div>
+				<div class="popup__form">
+					<form action="#" method="post">
+						<div class="input-wrap input-wrap--error">
+							<label>Логин:</label>
+							<div class="error-wrap">
+								<input type="text" placeholder="">
+								<span class="label-error">Поле необходимо заполнить</span>
+							</div>
+						</div>
+						<div class="input-wrap input-wrap--error">
+							<label>Пароль:</label>
+							<div class="error-wrap">
+								<input type="text" placeholder="">
+								<a href="#recovery-password" class="forgot fb-inline">Забыли пароль</a>
+								<span class="label-error">Поле необходимо заполнить</span>
+							</div>
+						</div>
+						<div class="input-wrap">
+							<label>&nbsp;</label>
+							<!-- <input type="submit" value="Отправить"> -->
+							<div class="btn-wrap">
+								<a href="#" class="btn">Войти</a>
+								<a href="#" class="popup-register">Зарегистрироваться</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="recovery-password" class="dnone">
+			<div class="popup">
+				<div class="popup__title">Восстановление пароля</div>
+				<div class="popup__form">
+					<form action="#" method="post">
+						<div class="input-wrap">
+							<label>Эл. почта:</label>
+							<input type="email">
+						</div>
+						<div class="input-wrap">
+							<label>&nbsp;</label>
+							<!-- <input type="submit" value="Отправить"> -->
+							<a href="#success-guide-msg" class="btn fb-inline">Восстановить</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>	
+
+		<div id="success-guide-msg" class="dnone">
+			<div class="popup">
+				<div class="popup__title popup__title--centered">Восстановление пароля</div>
+				<div class="text-popup text-popup--centered">
+					На указанную электронную почту выслано письмо, с инструкцией по восстановлению пароля
+				</div>
+			</div>
+		</div>		
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/vendors/slick/slick.min.js"></script>
+		<script src="js/vendors/fancybox/jquery.fancybox.pack.js"></script>
+		<script src="js/vendors/formstyler/jquery.formstyler.min.js"></script>
+		<script src="js/vendors/inputmask/jquery.inputmask.bundle.min.js"></script>
+		<script src="js/vendors/multipleSelect/multiple-select.js"></script>
+
+
+		<script src="js/interface.js"></script>
+	</body>
+</html>
