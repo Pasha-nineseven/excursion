@@ -152,7 +152,14 @@ $(document).ready(function() {
 	    if(file){
 			$('.remove').remove();
 			$('.button').remove();
-	        $(this).siblings('.input-file-text').html(this.value.replace(/C:\\fakepath\\/i, '')).after("<a href='#' class='remove'></a>").addClass('active');
+	        $(this).siblings('.input-file-text')
+	        	.html(
+	        		this.value.replace(/C:\\fakepath\\/i, '')
+	        		+ ' ('
+	        		+ Number(file.size/1024/1024).toPrecision(2)
+	        		+ 'Mb)'
+        		)
+	        	.after("<a href='#' class='remove'></a>").addClass('active');
 	    }else{
 	        $(this).siblings('.input-file-text').html('').removeClass('active');
 	        $('.remove').remove();
