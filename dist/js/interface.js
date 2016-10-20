@@ -152,18 +152,18 @@ $(document).ready(function() {
 	    if(file){
 			$('.remove').remove();
 			$('.button').remove();
-	        $(this).siblings('.input-file-text').html(this.value).after("<a href='#' class='remove'></a>").addClass('active');
+	        $(this).siblings('.input-file-text').html(this.value.replace(/C:\\fakepath\\/i, '')).after("<a href='#' class='remove'></a>").addClass('active');
 	    }else{
 	        $(this).siblings('.input-file-text').html('').removeClass('active');
 	        $('.remove').remove();
-	        $(this).after('<div class="button" >Выбрать<span>(до 5 мб)</span></div>');
+	        $(this).after('<div class="button" >Выбрать<span>один файл до 5 мб</span></div>');
 	    }
 	});
 	$( 'body' ).on( 'click', '.remove', function(){
 		$('.input-file-text').html('');
 		$('.remove').remove();
 		$('.input-file-text').html('').removeClass('active');
-		$('.input-file').after('<div class="button" >Выбрать<span>(до 5 мб)</span></div>');
+		$('.input-file').after('<div class="button" >Выбрать<span>один файл до 5 мб</span></div>');
 		return false
 	});
 
@@ -252,7 +252,7 @@ $(document).ready(function() {
 });
 
 
- 
+
 
 $(window).resize(function () {
 
@@ -279,11 +279,11 @@ $(window).load(function(){
 	                    div.className = 'photo-list__item';
 	                    div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
 	                            "title='" + picFile.name + "'/><a href='#' class='del'></a>";
-	                    output.insertBefore(div,null);            
+	                    output.insertBefore(div,null);
 	                });
 	                picReader.readAsDataURL(file);
-	            }                               
-	           
+	            }
+
 	        });
 	    }
 	    else
