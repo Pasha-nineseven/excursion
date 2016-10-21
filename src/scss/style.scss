@@ -1494,6 +1494,7 @@ p.subtitle{
 		display: inline-block;
 		font-size: 14px;
 		margin-right: 5px;
+		margin-top: -8px;
 	}
 }
 .tags__item{
@@ -1510,6 +1511,7 @@ p.subtitle{
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     text-decoration: none;
+    margin-bottom: 10px;
 	&:last-child{
 		margin-right: 0;
 	}
@@ -1802,6 +1804,9 @@ p.subtitle{
 	padding: 35px 60px;
 	.input-wrap label {
 	    width: 175px;
+	    sup{
+	    	color: #db1b3c;
+	    }
 	}
 	input[type="text"],
 	input[type="email"],
