@@ -3247,6 +3247,24 @@ p.subtitle{
 	}
 }
 
+.page-footer__develop{
+	text-align: right;
+	a{
+		display: inline-block;
+		vertical-align: middle;
+		color: #fff;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+		&.nineseven{
+			color: #3dcbff;
+		}
+	}
+}
+.page-footer__copyright-item{
+	padding: 0;
+}
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
    .excursions__bottom{
