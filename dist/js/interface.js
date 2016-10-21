@@ -163,7 +163,6 @@ $(document).ready(function() {
 	    }else{
 	        $(this).siblings('.input-file-text').html('').removeClass('active');
 	        $('.remove').remove();
-	        $(this).after('<div class="button" >Выбрать<span>один файл до 5 мб</span></div>');
 	    }
 	});
 	$( 'body' ).on( 'click', '.remove', function(){
