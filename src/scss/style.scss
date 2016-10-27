@@ -1278,18 +1278,20 @@ p.subtitle{
 .page-footer__menu{
 	overflow: hidden;
 }
-// .page-footer__menu-column{
-// 	width: 33.333%;
-// 	float: left;
-// }
+.page-footer__menu-column{
+	width: 33.333%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: -4px;
+}
 .page-footer__menu-item{
 	color: #3dcbff;
 	font-size: 16px;
 	text-decoration: none;
 	display: block;
 	margin-bottom: 22px;
-	width: 33.333%;
-	float: left;
+	// width: 33.333%;
+	// float: left;
 	&:hover{
 		text-decoration: underline;
 	}
