@@ -219,7 +219,8 @@
 
 
 .page-header--index{
-	height: 845px;
+	height: 85vh;
+    min-height: 590px;
 	background: url(../img/index-head-bg/index-head-bg1.jpg) no-repeat;
 	background-size: cover!important;
 	background-repeat: no-repeat!important;
@@ -1218,17 +1219,61 @@ p.subtitle{
 	height: 50px;
 	line-height: 50px;
 	vertical-align: middle;
-	background: #0d1827;
+	background-color: #0d1827;
 	@include border-radius(50%);
 	text-align: center;
-	@include transition(all 0.3s ease);
+	@include transition(all 0s ease);
 	&:hover{
-		background: #0f1c2c;
+		//background: #0f1c2c;
 	}
 	&:last-child{
 		margin-right: 0;
 	}
 }
+
+.socials__item--vk{
+	background-image: url(../img/content/vk.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	&:hover{
+		background-image: url(../img/content/vk-h.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+.socials__item--inst{
+	background-image: url(../img/content/inst.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	&:hover{
+		background-image: url(../img/content/inst-h.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+.socials__item--fb{
+	background-image: url(../img/content/fb.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	&:hover{
+		background-image: url(../img/content/fb-h.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+.socials__item--tw{
+	background-image: url(../img/content/tw.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	&:hover{
+		background-image: url(../img/content/tw-h.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+
 
 .page-footer__menu{
 	overflow: hidden;
@@ -1331,7 +1376,17 @@ p.subtitle{
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 40px;
+	.item-favorite{
+		right: 25px;
+	}
+	&:hover{
+		.news__item-img-wrap{
+			&:after{
+				opacity: 1;
+			}
+		}
 
+	}
 }
 .news__item-inner{
 	display: block;
@@ -1360,6 +1415,18 @@ p.subtitle{
 	overflow: hidden;
 	height: 370px;
 	position: relative;
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(24, 88, 195, 0.14);
+		opacity: 0;
+		@include transition(all 0.3s ease);
+	}
 }
 
 .news__item-img{
@@ -1435,11 +1502,23 @@ p.subtitle{
 	text-decoration: none;
 	margin-bottom: 16px;
 	line-height: 1.2;
+	display: block;
+	&:hover{
+		text-decoration: underline;
+	}
 }
 
 .news__item-date{
 	color: #000;
 	font-size: 14px;
+	display: block;
+}
+
+
+.news__item--banner{
+	background-size: 100% 100%!important;
+    background-repeat: no-repeat!important;
+    background-position: center!important; 
 }
 
 
@@ -1563,6 +1642,8 @@ p.subtitle{
 		margin-bottom: 0;
 	}
 	h2{
+		font-size: 48px;
+		line-height: 0.95;
 		text-align: center;
 		margin-bottom: 30px;
 	}
@@ -1700,6 +1781,22 @@ p.subtitle{
 			-o-transform: scale(1.05);
 			transform: scale(1.05);
 		}
+		.btn{
+	    	-webkit-transition-delay: 0.1s;
+		    -moz-transition-delay: 0.1s;
+		    -o-transition-delay: 0.1s;
+		    -ms-transition-delay: 0.1s;
+		    transition-delay: 0.1s;
+		    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		    filter: alpha(opacity=100);
+		    -webkit-transform: translateY(0px);
+		    -moz-transform: translateY(0px);
+		    -o-transform: translateY(0px);
+		    -ms-transform: translateY(0px);
+		    transform: translateY(0px);
+		    opacity: 1;
+		    margin-top: 40px;
+	    }
 	}
 }
 
@@ -1727,7 +1824,7 @@ p.subtitle{
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: rgba(0, 0, 0, 0.8); 
+		background: rgba(0, 0, 0, 0.5); 
 		z-index: 10;
 	}
 }
@@ -1741,12 +1838,29 @@ p.subtitle{
     position: relative;
     width: 100%;
     height: 100%;
+    .btn{
+    	font-size: 18px;
+    	margin-top: -40px;
+    	opacity: 0;
+    	-webkit-transition: all 0.3s ease-in-out;
+	    -moz-transition: all 0.3s ease-in-out;
+	    -o-transition: all 0.3s ease-in-out;
+	    -ms-transition: all 0.3s ease-in-out;
+	    transition: all 0.3s ease-in-out;
+
+	    -webkit-transform: translateY(180px);
+	    -moz-transform: translateY(180px);
+	    -o-transform: translateY(180px);
+	    -ms-transform: translateY(180px);
+	    transform: translateY(180px);
+	    padding: 13px 15px;
+    }
 }
 
 .city-list__info-inner{
 	display: table-cell;
 	vertical-align: middle;
-	    padding: 0 30px;
+	padding: 0 30px;
 }
 
 
@@ -1758,7 +1872,17 @@ p.subtitle{
 	border-bottom: 1px solid #2d758e;
 	    margin-bottom: 48px;
     padding: 10px 0;
+    display: block;
+    color: #fff;
+    text-decoration: none;
 }
+
+.city-list__count{
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+
 
 .city-list__item--big{
 	.city-list__title{
@@ -2125,6 +2249,22 @@ p.subtitle{
 }
 
 .excursions__item-favorite{
+	display: inline-block;
+	vertical-align: middle;
+	width: 27px;
+	height: 24px;
+	background: url(../img/content/favorite-ex.png) no-repeat;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 15;
+	&:hover,
+	&.active{
+		background: url(../img/content/favorite-ex-h.png) no-repeat;
+	}
+}
+
+.item-favorite{
 	display: inline-block;
 	vertical-align: middle;
 	width: 27px;
@@ -3264,6 +3404,9 @@ p.subtitle{
 }
 .page-footer__copyright-item{
 	padding: 0;
+	&:first-child{
+		padding-left: 15px;
+	}
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
