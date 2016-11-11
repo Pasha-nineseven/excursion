@@ -26,6 +26,13 @@ $(document).ready(function() {
 	    $('.page-header__select-list').fadeOut(200);
 	    // return false
 	});
+	$(document).click(function (e){
+		var div = $(".page-header__select");
+		if (!div.is(e.target)
+		    && div.has(e.target).length === 0) {
+			$('.page-header__select-list').fadeOut(200);
+		}
+	});
 
 	//TEXT-SLIDER
 	if ($('.text-slider').length>0) {
@@ -101,6 +108,36 @@ $(document).ready(function() {
 	});
 
 	$(".fb-image").fancybox({
+    	openEffect	: 'elastic',
+    	closeEffect	: 'elastic',
+
+    	padding:0,
+		beforeShow: function(){
+		    $("body").css({'overflow-y':'hidden'});
+		    if($(window).width() > 700){
+		    	$("html").css({'padding-right':'17px'});
+		    }
+		    if($(window).width() < 700){
+		    	$("body").css({'position': 'fixed'});
+		    }
+		},
+		afterClose: function(){
+		    $("body").css({'overflow-y':'auto'});
+		    if($(window).width() > 700){
+			    $("html").css({'padding-right':'0'});
+			}
+		    if($(window).width() < 700){
+		    	$("body").css({'position': 'static'});
+		    }
+		},
+		helpers : {
+	        overlay : {
+	            locked: false,
+	        }
+	    }
+    });
+
+    $(".fb-gallery").fancybox({
     	openEffect	: 'elastic',
     	closeEffect	: 'elastic',
 

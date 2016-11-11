@@ -1471,9 +1471,122 @@ p.subtitle{
 .news__icon--disable{
 	width: 33px;
 	height: 33px;
-	background: url(../img/content/icon-disable.png) no-repeat;
-	background-size: cover;	
+    position: relative;
+    &:before{
+    	content: "";
+    	width: 100%;
+    	height: 100%;
+    	background: rgba(0,0,0,0.5);
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	@include border-radius(50%);
+    	z-index: 1;
+    }
+    &:after{
+    	content: "";
+		width: 100%;
+		height: 100%;
+	    background: url(../img/content/top-icon1.png);
+	    background-repeat: no-repeat!important;
+	    background-size: 23px 23px!important;
+	    background-position: center!important;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    z-index: 5;
+    }
 }
+.news__icon--pram{
+	width: 33px;
+	height: 33px;
+    position: relative;
+    &:before{
+    	content: "";
+    	width: 100%;
+    	height: 100%;
+    	background: rgba(0,0,0,0.5);
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	@include border-radius(50%);
+    	z-index: 1;
+    }
+    &:after{
+    	content: "";
+		width: 100%;
+		height: 100%;
+	    background: url(../img/content/head-icon4.png);
+	    background-repeat: no-repeat!important;
+	    background-size: 23px 23px!important;
+	    background-position: center!important;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    z-index: 5;
+    }
+}
+
+.news__icon--eye{
+	width: 33px;
+	height: 33px;
+    position: relative;
+    &:before{
+    	content: "";
+    	width: 100%;
+    	height: 100%;
+    	background: rgba(0,0,0,0.5);
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	@include border-radius(50%);
+    	z-index: 1;
+    }
+    &:after{
+    	content: "";
+		width: 100%;
+		height: 100%;
+	    background: url(../img/content/head-icon1.png);
+	    background-repeat: no-repeat!important;
+	    background-size: 23px 23px!important;
+	    background-position: center!important;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    z-index: 5;
+    }
+}
+
+.news__icon--hearing{
+	width: 33px;
+	height: 33px;
+    position: relative;
+    &:before{
+    	content: "";
+    	width: 100%;
+    	height: 100%;
+    	background: rgba(0,0,0,0.5);
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	@include border-radius(50%);
+    	z-index: 1;
+    }
+    &:after{
+    	content: "";
+		width: 100%;
+		height: 100%;
+	    background: url(../img/content/head-icon2.png);
+	    background-repeat: no-repeat!important;
+	    background-size: 23px 23px!important;
+	    background-position: center!important;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    z-index: 5;
+    }
+}
+
 
 .news__item-txt{
 	padding: 16px 20px 24px;
@@ -1962,14 +2075,16 @@ p.subtitle{
 	.input-wrap--error textarea{
 	    border: 1px solid #de2e4c;
 	}
-	input[type="submit"]{
+	input[type="submit"],
+	button[type="submit"]{
 		background: #db1b3c;
+		margin-top: 10px;
 		@include transition(all 0.3s ease);
 		color: #fff;
 		font-size: 24px;
 		font-weight: 300;
 		border: 0;
-		padding: 8px 70px;
+		padding: 13px 70px;
 		text-decoration: none;
 		display: inline-block;
 		vertical-align: middle;
@@ -2249,6 +2364,7 @@ p.subtitle{
 	-webkit-box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.3);
      position: relative;
+     width: 100%;
 }
 
 .excursions__item-favorite{
@@ -2321,6 +2437,7 @@ p.subtitle{
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    display: block;
 }
 
 .excursions__item-img__label{
@@ -2369,6 +2486,7 @@ p.subtitle{
     text-decoration: none;
     margin-bottom: 16px;
     line-height: 1.2;
+    display: block;
 }
 
 .excursions__item-city{
@@ -2619,11 +2737,16 @@ p.subtitle{
 	font-size: 18px;
 }
 
+.excursions__in-info__right--cathegory{
+	margin-bottom: -35px;
+}
+
 .people-cathegory{
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 35px;
 	    margin-top: -10px;
+	    margin-bottom: 35px;
 	&:last-child{
 		margin-right: 0;
 	}
@@ -2684,6 +2807,16 @@ p.subtitle{
 	margin-right: -3px;
 	display: inline-block;
 	vertical-align: top;
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	img{
+		max-width: 100%;
+		height: auto;
+		max-height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
 .excursions__in-text{
 	margin-bottom: 20px;
@@ -3103,7 +3236,7 @@ p.subtitle{
     vertical-align: middle;
     margin-right: 20px;
     position: relative;
-    display: none;
+    // display: none;
     img{
     	max-width: 100%;
 	    height: auto;
@@ -3217,7 +3350,7 @@ p.subtitle{
 	    position: relative;
 	    cursor: pointer;
 	    padding-left: 45px;
-	    line-height: 40px;
+	    line-height: 22px;
 	    display: inline-block;
 	    width: auto;
 	    &:after{
@@ -3229,6 +3362,8 @@ p.subtitle{
 		width: 50%;
 		margin-right: -4px;
 		margin-bottom: 30px;
+		vertical-align: top;
+		padding-right: 15px;
 	}
 	.cat1{
 		input[type="checkbox"]:not(:checked) + label:before{
@@ -3237,6 +3372,8 @@ p.subtitle{
 			background: url(../img/content/cat1.png);
 			background-position: 0 0;
 			border: 0;
+			top: 50%;
+			margin-top: -20px;
 		}
 		input[type="checkbox"]:checked + label:before{
 			background: url(../img/content/cat1.png);
@@ -3244,6 +3381,8 @@ p.subtitle{
 			width: 33px;
 			height: 40px;
 			border: 0;
+			top: 50%;
+    		margin-top: -20px;
 		}
 	}
 	.cat2{
@@ -3253,6 +3392,8 @@ p.subtitle{
 			background: url(../img/content/cat2.png);
 			background-position: 0 0;
 			border: 0;
+			top: 50%;
+			margin-top: -18px;
 		}
 		input[type="checkbox"]:checked + label:before{
 			background: url(../img/content/cat2.png);
@@ -3260,6 +3401,8 @@ p.subtitle{
 			width: 30px;
 			height: 37px;
 			border: 0;
+			top: 50%;
+			margin-top: -18px;
 		}
 	}
 	.cat3{
@@ -3269,6 +3412,8 @@ p.subtitle{
 			background: url(../img/content/cat3.png);
 			background-position: 0 0;
 			border: 0;
+			top: 50%;
+			margin-top: -16px;
 		}
 		input[type="checkbox"]:checked + label:before{
 			background: url(../img/content/cat3.png);
@@ -3276,6 +3421,8 @@ p.subtitle{
 			width: 39px;
 			height: 32px;
 			border: 0;
+			top: 50%;
+			margin-top: -16px;
 		}
 	}
 	.cat4{
@@ -3285,6 +3432,8 @@ p.subtitle{
 			background: url(../img/content/cat4.png);
 			background-position: 0 0;
 			border: 0;
+			top: 50%;
+			margin-top: -18px;
 		}
 		input[type="checkbox"]:checked + label:before{
 			background: url(../img/content/cat4.png);
@@ -3292,6 +3441,8 @@ p.subtitle{
 			width: 37px;
 			height: 37px;
 			border: 0;
+			top: 50%;
+			margin-top: -18px;
 		}
 	}
 }
