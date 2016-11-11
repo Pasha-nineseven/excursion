@@ -231,7 +231,7 @@ $(document).ready(function() {
 	//MULTIPLE-SELECT
 	if ($('.multiple-select').length>0) {
 		$('.multiple-select').multipleSelect({
-			placeholder: "+ Добавить язык",
+			placeholder: "+ Добавить",
 			selectAll: false
 		});
 	};
