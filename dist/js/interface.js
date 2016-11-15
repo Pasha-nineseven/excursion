@@ -269,14 +269,18 @@ $(document).ready(function() {
 	if ($('.multiple-select').length>0) {
 		$('.multiple-select').multipleSelect({
 			placeholder: "+ Добавить",
-			selectAll: false
+			selectAll: false,
+			allSelected: false,
+			countSelected: false
 		});
 	};
 
 	if ($('.multiple-select-theme').length>0) {
 		$('.multiple-select-theme').multipleSelect({
 			placeholder: " ",
-			selectAll: false
+			selectAll: false,
+			allSelected: false,
+			countSelected: false
 		});
 	};
 
