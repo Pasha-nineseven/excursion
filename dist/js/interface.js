@@ -169,7 +169,7 @@ $(document).ready(function() {
 
 	//SELECT
     if ($('.fs').length>0) {
-		$('.fs').styler();
+		$('.fs').styler({selectPlaceholder: 'Выбрать'});
     };
 
 
@@ -356,7 +356,7 @@ function readURL(input) {
 }
 
 // links pages
-$('body').append(
+/*$('body').append(
 	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
 		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
 	<style> \
@@ -378,4 +378,4 @@ $('body').append(
 		<li><a href="create-excursion.html">Create-excursion</a></li> \
 		<li><a href="edit-excursion.html">Edit-excursion</a></li> \
 	</ol> \
-</div>');
+</div>');*/
