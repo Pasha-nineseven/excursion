@@ -80,7 +80,7 @@ $(document).ready(function() {
     $('.fb-inline').fancybox({
 		openEffect	: 'fade',
 		closeEffect	: 'fade',
-		maxWidth: 680,
+		maxWidth: 625,
 		padding:0,
 		beforeShow: function(){
 		    $("body").css({'overflow-y':'hidden'});
@@ -239,7 +239,7 @@ $(document).ready(function() {
 	//TEXT-TOGGLE
 	$( 'body' ).on( 'click', '.text-hidden__toggle', function(){
         $(this).toggleClass('active');
-        $(this).parents('.text-hidden__toggle-wrap').next('.text-hidden').slideToggle();
+        $(this).parents('.text-hidden__toggle-wrap').prev('.text-hidden').slideToggle();
         if ( $(this).hasClass("active") ) {
             $(this).text("Скрыть подробности");
         }
@@ -356,7 +356,7 @@ function readURL(input) {
 }
 
 // links pages
-/*$('body').append(
+$('body').append(
 	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
 		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
 	<style> \
@@ -377,5 +377,7 @@ function readURL(input) {
 		<li><a href="cabinet-data.html">Cabinet-data</a></li> \
 		<li><a href="create-excursion.html">Create-excursion</a></li> \
 		<li><a href="edit-excursion.html">Edit-excursion</a></li> \
+		<li><a href="excursions-not-found.html">Excursions-not-found</a></li> \
+		<li><a href="excursions-in2.html">excursions-in2</a></li> \
 	</ol> \
-</div>');*/
+</div>');
