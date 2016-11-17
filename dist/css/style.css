@@ -1469,7 +1469,35 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .forgot-pass:hover { text-decoration: none; }
 
+.excursion-favorite { display: inline-block; vertical-align: middle; margin-left: 20px; color: #000; text-decoration: none; }
+
+.excursion-favorite span { display: inline-block; vertical-align: middle; }
+
+.excursion-favorite i { display: inline-block; vertical-align: middle; width: 26px; height: 23px; background: url(../img/svg/like_add.svg) no-repeat; margin-right: 10px; }
+
+.excursion-favorite:hover i, .excursion-favorite.active i { background: url(../img/svg/like_added.svg) no-repeat; }
+
+.excursion-edit { width: 45px; height: 45px; line-height: 45px; display: inline-block; vertical-align: middle; margin-left: 20px; background: url(../img/svg/edit_pen.svg) no-repeat; padding-left: 60px; color: #000; text-decoration: none; }
+
+.excursion-edit span { display: inline-block; vertical-align: middle; }
+
 .dnone { display: none; }
+
+.fancybox-type-image .fancybox-close { background: url(../img/svg/close-white.svg) no-repeat; top: -20px; right: 0; background-size: cover; }
+
+.fancybox-type-image .fancybox-nav { width: 60px; height: 100%; }
+
+.fancybox-type-image .fancybox-next { background: rgba(0, 0, 0, 0.4) url(../img/svg/fb-right.svg) 22px center no-repeat; background-size: 20px 35px; opacity: 0; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+
+.fancybox-type-image .fancybox-next span { display: none; }
+
+.fancybox-type-image .fancybox-next:hover { opacity: 1; }
+
+.fancybox-type-image .fancybox-prev { background: rgba(0, 0, 0, 0.4) url(../img/svg/fb-left.svg) 18px center no-repeat; background-size: 20px 35px; opacity: 0; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+
+.fancybox-type-image .fancybox-prev span { display: none; }
+
+.fancybox-type-image .fancybox-prev:hover { opacity: 1; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .excursions__bottom { justify-content: space-around; } }
 

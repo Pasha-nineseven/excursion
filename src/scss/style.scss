@@ -3601,9 +3601,88 @@ p.subtitle{
 	}
 }
 
+.excursion-favorite{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+	color: #000;
+	text-decoration: none;
+	span{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	i{
+		display: inline-block;
+		vertical-align: middle;
+		width: 26px;
+		height: 23px;
+		background: url(../img/svg/like_add.svg) no-repeat;
+		margin-right: 10px;
+	}
+	&:hover,
+	&.active{
+		i{
+			background: url(../img/svg/like_added.svg) no-repeat;
+		}
+	}
+}
+.excursion-edit{
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+	background: url(../img/svg/edit_pen.svg) no-repeat;
+	padding-left: 60px;
+	color: #000;
+	text-decoration: none;
+	span{
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
 
 .dnone{
 	display: none;
+}
+
+
+.fancybox-type-image{
+	.fancybox-close {
+	    background: url(../img/svg/close-white.svg) no-repeat;
+	    top: -20px;
+	    right: 0;
+	    background-size: cover;
+	}
+	.fancybox-nav {
+	    width: 60px;
+	    height: 100%;
+	}
+	.fancybox-next {
+	    background: rgba(0, 0, 0, 0.4) url(../img/svg/fb-right.svg) 22px center no-repeat;
+	    background-size: 20px 35px;
+	    opacity: 0;
+	    @include transition(all 0.3s ease);
+	    span{
+	    	display: none;
+	    }
+	    &:hover{
+	    	opacity: 1;
+	    }
+	}
+	.fancybox-prev {
+	    background: rgba(0, 0, 0, 0.4) url(../img/svg/fb-left.svg) 18px center no-repeat;
+	    background-size: 20px 35px;
+	    opacity: 0;
+	    @include transition(all 0.3s ease);
+	    span{
+	    	display: none;
+	    }
+	    &:hover{
+	    	opacity: 1;
+	    }
+	}
 }
 
 
