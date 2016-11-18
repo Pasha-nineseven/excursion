@@ -1735,6 +1735,8 @@ p.subtitle{
     left: 50%;
     margin-left: -115px;
     text-align: center;
+    color: #000;
+    text-decoration: none;
 	span{
 		display: block;
 		vertical-align: middle;
@@ -1742,6 +1744,13 @@ p.subtitle{
 		background: #fff;
 		padding: 0 20px;
 		margin-bottom: 5px;
+	}
+	&:hover{
+		.tags__offer-link{
+			-webkit-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
 	}
 }
 .tags__offer-link{
@@ -1752,11 +1761,6 @@ p.subtitle{
 	display: inline-block;
 	vertical-align: middle;
 	@include transition(transform 0.3s ease);
-	&:hover{
-		-webkit-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		transform: rotate(90deg);
-	}
 }
 
 .news__page{
@@ -2270,8 +2274,9 @@ p.subtitle{
 	    padding-right: 5px;
 	    line-height: 47px;
 	    span{
-	    	line-height: 1;
-	    	display: inline-block;
+			line-height: 10px;
+			display: inline-block;
+			vertical-align: middle;
 	    }
 	}
 	.select-wrap{
@@ -3701,6 +3706,61 @@ p.subtitle{
     text-align: left;
     z-index: 1;
 }
+
+.input-wrap--msg{
+	position: relative;
+}
+.input-wrap__message{
+	position: absolute;
+	left: 100%;
+	top: 50%;
+	margin-top: -23px;
+	color: #fff;
+    background: #ed1c24;
+    font-size: 14px;
+    padding: 8px 5px;
+    margin-left: 42px;
+    z-index: 5;
+    width: auto;
+    white-space: nowrap;
+    @include transition(all 0.3s ease);
+    opacity: 0;
+    visibility: hidden;
+    &:before{
+    	content: "";
+    	width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 5px 7px 5px 0;
+		border-color: transparent #ee1c23 transparent transparent;
+		position: absolute;
+		left: -5px;
+		top: 50%;
+		margin-top: -6px;
+    }
+    &.active{
+    	opacity: 1;
+    	visibility: visible;
+    }
+}
+
+.excursions__filter-submit-wrap--disabled{
+	position: relative;
+	&:before{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 10;
+	}
+	.excursions__filter-submit{
+		opacity: 0.3;
+		pointer-events:none;
+	}
+}
+
 
 
 
