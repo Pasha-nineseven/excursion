@@ -2458,6 +2458,7 @@ p.subtitle{
 	color: #fff;
 	background: #ed1c24;
 	padding: 8px 17px;
+	z-index: 5;
 }
 
 .excursions__item-img__time{
@@ -3684,6 +3685,23 @@ p.subtitle{
 	    }
 	}
 }
+
+
+.excursions__item-img__date {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    color: #fff;
+        background: rgba(0, 0, 0, 0.6);
+    padding: 0 10px;
+    height: 47px;
+    line-height: 47px;
+    width: 100%;
+    text-align: left;
+    z-index: 1;
+}
+
 
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
