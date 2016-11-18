@@ -184,31 +184,31 @@ $(document).ready(function() {
 
 
     //INPUT FILE
-	$('.input-file').on('change', function (event) {
-	    var file = this.files[0];
-	    if(file){
-			$('.remove').remove();
-			$('.button').remove();
-	        $(this).siblings('.input-file-text')
-	        	.html(
-	        		this.value.replace(/C:\\fakepath\\/i, '')
-	        		+ ' ('
-	        		+ Number(file.size/1024/1024).toPrecision(2)
-	        		+ 'Mb)'
-        		)
-	        	.after("<a href='#' class='remove'></a>").addClass('active');
-	    }else{
-	        $(this).siblings('.input-file-text').html('').removeClass('active');
-	        $('.remove').remove();
-	    }
-	});
-	$( 'body' ).on( 'click', '.remove', function(){
-		$('.input-file-text').html('');
-		$('.remove').remove();
-		$('.input-file-text').html('').removeClass('active');
-		$('.input-file').after('<div class="button" >Выбрать<span>один файл до 5 мб</span></div>');
-		return false
-	});
+	// $('.input-file').on('change', function (event) {
+	//     var file = this.files[0];
+	//     if(file){
+	// 		$('.remove').remove();
+	// 		$('.button').remove();
+	//         $(this).siblings('.input-file-text')
+	//         	.html(
+	//         		this.value.replace(/C:\\fakepath\\/i, '')
+	//         		+ ' ('
+	//         		+ Number(file.size/1024/1024).toPrecision(2)
+	//         		+ 'Mb)'
+ //        		)
+	//         	.after("<a href='#' class='remove'></a>").addClass('active');
+	//     }else{
+	//         $(this).siblings('.input-file-text').html('').removeClass('active');
+	//         $('.remove').remove();
+	//     }
+	// });
+	// $( 'body' ).on( 'click', '.remove', function(){
+	// 	$('.input-file-text').html('');
+	// 	$('.remove').remove();
+	// 	$('.input-file-text').html('').removeClass('active');
+	// 	$('.input-file').after('<div class="button" >Выбрать<span>один файл до 5 мб</span></div>');
+	// 	return false
+	// });
 
 	//SLIDER COUNT
 	if ($( ".slider-count-slider" ).length>0) {
@@ -356,7 +356,7 @@ function readURL(input) {
 }
 
 // links pages
-$('body').append(
+/*$('body').append(
 	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
 		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
 	<style> \
@@ -380,4 +380,4 @@ $('body').append(
 		<li><a href="excursions-not-found.html">Excursions-not-found</a></li> \
 		<li><a href="excursions-in2.html">excursions-in2</a></li> \
 	</ol> \
-</div>');
+</div>');*/
