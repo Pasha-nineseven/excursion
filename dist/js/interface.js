@@ -305,11 +305,11 @@ $(document).ready(function() {
 
 
 	//IMG-TOGGLE
-	$( 'body' ).on( 'click', '.img-hidden-toggle', function( event ) {
-		event.preventDefault();
-		$(this).find('.img-hidden-toggle__wrap').hide();
-	    $(this).next('.excursions__in-images--hidden').fadeIn();
-	});
+	// $( 'body' ).on( 'click', '.img-hidden-toggle', function( event ) {
+	// 	event.preventDefault();
+	// 	$(this).find('.img-hidden-toggle__wrap').hide();
+	//     $(this).next('.excursions__in-images--hidden').fadeIn();
+	// });
 });
 
 
