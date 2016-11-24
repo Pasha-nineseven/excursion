@@ -302,6 +302,14 @@ $(document).ready(function() {
 		$('.input-wrap__message').removeClass('active');
 	 	$(this).parents('.input-wrap--msg').find('.input-wrap__message').addClass('active');
 	});
+
+
+	//IMG-TOGGLE
+	$( 'body' ).on( 'click', '.img-hidden-toggle', function( event ) {
+		event.preventDefault();
+		$(this).find('.img-hidden-toggle__wrap').hide();
+	    $(this).next('.excursions__in-images--hidden').fadeIn();
+	});
 });
 
 

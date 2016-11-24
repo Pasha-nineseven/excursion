@@ -2599,6 +2599,10 @@ p.subtitle{
 
 .excursions__in{
 	background: #fff;
+	.btn{
+		font-size: 22px;
+		padding: 12px 33px;
+	}
 }
 
 
@@ -2636,7 +2640,7 @@ p.subtitle{
 	background: #ebedf2;
 	display: table-cell;
 	text-align: center;
-	padding: 21px 10px;
+	padding: 18px 10px 22px 10px;
 	i,span{
 		display: inline-block;
 		vertical-align: middle;
@@ -2707,7 +2711,12 @@ p.subtitle{
 	width: 205px;
 	padding-top: 30px;
 	font-size: 14px;
-	    padding-left: 20px;
+	padding-left: 20px;
+	.btn{
+		font-size: 22px;
+		padding: 12px 33px;
+		margin-bottom: 20px;
+	}
 }
 .excursions__in-included__title{
 	color: #787d82;
@@ -2834,17 +2843,26 @@ p.subtitle{
     	}
     }
 }
+.text-hidden__toggle-wrap{
+	padding-top: 20px;
+}
 
 .excursions__in-images{
-	//margin-left: -45px;
+	padding: 10px 0;
+	border-bottom: 1px solid #ebedf2;
 }
 .excursions__in-images__item{
-	margin-right: -3px;
+	margin-right: 6px;
 	display: inline-block;
 	vertical-align: top;
 	width: 130px;
 	height: 130px;
 	line-height: 130px;
+	background-size: cover!important;
+	background-repeat: no-repeat!important;
+	background-position: center top!important;
+	position: relative;
+	margin-bottom: 10px;
 	img{
 		max-width: 100%;
 		height: auto;
@@ -3763,7 +3781,35 @@ p.subtitle{
 	}
 }
 
+.excursions__in-images--hidden{
+	display: none;
+}
 
+
+.img-hidden-toggle__wrap{
+	&:before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: rgba(9, 40, 71, 0.8);
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	span{
+		display: block;
+		width: 100%;
+		height: 100%;
+		//background: rgba(9, 40, 71, 0.8);
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: #fff;
+		font-size: 14px;
+		text-align: center;
+	}
+}
 
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
