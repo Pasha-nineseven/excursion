@@ -322,6 +322,8 @@
 .page-header__links{
 	float: right;
 	padding-top: 20px;
+	position: relative;
+    z-index: 20;
 	a{
 		color: #fff;
 		text-decoration: none;
@@ -339,6 +341,7 @@
     margin-top: 0;
     margin-right: 20px;
     position: relative;
+    z-index: 10;
 	a{
 		display: inline-block;
     	vertical-align: middle;
@@ -406,6 +409,7 @@
 
 .page-header__favorite{
 	float: right;
+	margin-left: 70px;
 	i{
 		display: inline-block;
 		vertical-align: middle;
@@ -416,11 +420,13 @@
 	}
 }
 
+.page-header__enter{
+	float: right;
+}
+
 .page-header__search{
-	overflow: hidden;
-	padding-left: 35px;
-	padding-right: 300px;
-	position: relative;
+	margin-right: 315px;
+    margin-left: 350px;
 }
 .page-header__input{
 	width: 100%;
@@ -447,7 +453,7 @@
     -webkit-box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5);
     box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5);
     position: absolute;
-    right: 70px;
+    right: 0px;
     top: 0;
     &:hover{
     	background: #eb2245;
@@ -1373,8 +1379,13 @@ p.subtitle{
 .news-wrap{
 	overflow: hidden;
 }
-
-.news{
+.results-wrap{
+	.news__item-img-wrap{
+		    height: 275px;
+	}
+}
+.news,
+.results{
 	display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -2128,6 +2139,63 @@ p.subtitle{
 
 .popup__form{
 	width: 515px;
+	input[type="checkbox"]:not(:checked),
+	input[type="checkbox"]:checked{
+		position: absolute;
+		left: -9999px;
+	}
+	input[type="checkbox"]:not(:checked) + label,
+	input[type="checkbox"]:checked + label{
+		position: relative;
+		cursor: pointer;
+		padding-left: 28px;
+		line-height: 16px;
+		display: block;
+		width: 100%;
+	}
+
+	input[type="checkbox"]:not(:checked) + label:before,
+	input[type="checkbox"]:checked + label:before{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 16px;
+		height: 16px;
+		border: 1px solid #db1b3c;
+		cursor: pointer;
+		z-index: 5;
+	}
+	input[type="checkbox"]:not(:checked) + label:after,
+	input[type="checkbox"]:checked + label:after {
+	  content: '';
+	  background: url('../img/content/check.png') center no-repeat;
+	  width: 17px;
+	  height: 13px;
+	  display: inline-block;
+	  position: absolute;
+	  top: 0px;
+	  left: 3px;
+	  z-index: 10;
+	}
+	input[type="checkbox"]:not(:checked) + label:after {
+	  opacity: 0;
+	}
+	input[type="checkbox"]:checked + label:after {
+	  opacity: 1;
+	}
+	.input-wrap__overflow{
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+
+.popup__link{
+	color: #1858c3;
+	&:hover{
+		text-decoration: none;
+	}
 }
 
 .uploadbutton {
@@ -2458,14 +2526,13 @@ p.subtitle{
 }
 
 .excursions__item-img__label{
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	font-size: 24px;
-	color: #fff;
-	background: #ed1c24;
-	padding: 8px 17px;
-	z-index: 5;
+    font-size: 22px;
+    color: #fff;
+    background: #ed1c24;
+    padding: 8px 8px;
+    z-index: 5;
+    text-align: right;
+    width: 50%;
 }
 
 .excursions__item-img__time{
@@ -2491,6 +2558,7 @@ p.subtitle{
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 5px;
+	float: left;
 }
 
 .excursions__item-txt {
@@ -3554,7 +3622,9 @@ p.subtitle{
 		text-decoration: underline;
 	}
 }
-#guide-enter{
+#guide-enter,
+#guide-enter__user,
+#register__user{
 	.btn-wrap{
 		position: relative;
 	}
@@ -3714,18 +3784,25 @@ p.subtitle{
 
 
 .excursions__item-img__date {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
     font-size: 14px;
     color: #fff;
         background: rgba(0, 0, 0, 0.6);
     padding: 0 10px;
-    height: 47px;
-    line-height: 47px;
-    width: 100%;
-    text-align: left;
+    // height: 47px;
+    // line-height: 47px;
+    width: 50%;
     z-index: 1;
+    display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+
+	-webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .input-wrap--msg{
@@ -3827,13 +3904,125 @@ p.subtitle{
 	}
 }
 
+.btn-wrap-enter{
+	text-align: center;
+}
+.enter-cab{
+	color: #1858c3;
+	&:hover{
+		text-decoration: none;
+	}
+}
 
+.page-header__autocomplete{
+	padding: 0;
+    list-style-type: none;
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    -webkit-box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    padding-bottom: 5px;
+    background: #fff;
+    display: none;
+}
+
+.page-header__autocomplete-item{
+	display: block;
+    background: #fff;
+    a{
+    	display: block;
+    	padding: 5px 15px;
+    	text-decoration: none;
+    	color: #000;
+    	@include transition(all 0.3s ease);
+    	&:hover{
+    		text-decoration: none;
+    		background: #ecedf3;
+    	} 
+    }
+}
+
+.page-header__search-wrap{
+	position: relative;
+	padding-right: 230px;
+}
+.page-header__input-wrap{
+	width: 100%;
+	position: relative;
+}
+
+.currency-price{
+	text-align: left;
+	font-size: 16px;
+	&:after{
+		content: "";
+		clear: both;
+		display: table;
+	}
+	.new-price{
+		float: right;
+	}
+	.old-price{
+		overflow: hidden;
+		margin-right: 0;
+		padding-right: 5px;
+		font-size: 16px;
+	}
+}
+
+.new-price{
+	display: inline-block;
+	vertical-align: middle;
+
+}
+
+
+.excursions__item-info{
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	justify-content: flex-end;
+}
+
+.excursions__item-img__date-wrapper{
+	display: block;
+}
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
    .excursions__bottom{
    		justify-content:space-around;
    }
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 0) {
+	::i-block-chrome, .excursions__list {
+	  display:block;
+	  overflow:hidden;
+	  width:75%;
+	}
+	::i-block-chrome, .excursions__filter-view .input-wrap label {
+	  width:33%;
+	}
+	::i-block-chrome, .news__item {
+	  display:inline-block;
+	  float:none;
+	  margin-bottom:40px;
+	  margin-right:-4px;
+	  vertical-align:top;
+	}
+}
+
+
 
 //MEDIA
 @media screen and (max-width: 1550px){
@@ -3934,6 +4123,12 @@ p.subtitle{
 	.slider-count{
 		width: 100%;
 		float: none;
+	}
+	.page-header__search {
+	    margin-right: 0;
+	    margin-left: 0;
+	    clear: both;
+	    padding-top: 20px;
 	}
 }
 

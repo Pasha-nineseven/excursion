@@ -310,6 +310,20 @@ $(document).ready(function() {
 	// 	$(this).find('.img-hidden-toggle__wrap').hide();
 	//     $(this).next('.excursions__in-images--hidden').fadeIn();
 	// });
+
+
+	//AUTOCOMPLETE
+	$('.page-header__input').keyup(function(){
+		$('.page-header__autocomplete').fadeIn();
+	});
+	//CLOSE AUTOCOMPLETE
+	$(document).click(function (e){
+		var div = $(".page-header__autocomplete");
+		if (!div.is(e.target)
+		    && div.has(e.target).length === 0) {
+			$('.page-header__autocomplete').fadeOut(200);
+		}
+	});
 });
 
 
@@ -393,5 +407,6 @@ $('body').append(
 		<li><a href="edit-excursion.html">Edit-excursion</a></li> \
 		<li><a href="excursions-not-found.html">Excursions-not-found</a></li> \
 		<li><a href="excursions-in2.html">excursions-in2</a></li> \
+		<li><a href="results.html">Results</a></li> \
 	</ol> \
 </div>');

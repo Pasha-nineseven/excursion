@@ -70,8 +70,26 @@
 						</a>
 					</div>
 					<div class="page-header__search">
-						<input type="text" class="page-header__input" placeholder="Введите город, пункт назначения или достопримечательность">
-						<input type="submit" class="page-header__submit" value="Найти">
+						<div class="page-header__search-wrap">
+							<div class="page-header__input-wrap">
+								<input type="text" class="page-header__input" placeholder="Введите город, пункт назначения или достопримечательность">
+								<ul class="page-header__autocomplete">
+									<li class="page-header__autocomplete-item">
+										<a href="#">test 1</a>
+									</li>
+									<li class="page-header__autocomplete-item">
+										<a href="#">test 2</a>
+									</li>
+									<li class="page-header__autocomplete-item">
+										<a href="#">test 3</a>
+									</li>
+									<li class="page-header__autocomplete-item">
+										<a href="#">test 4</a>
+									</li>
+								</ul>
+							</div>
+							<input type="submit" class="page-header__submit" value="Найти">
+						</div>
 					</div>
 				</div>
 			</header>
@@ -207,12 +225,17 @@
 												<div class="excursions__item-img-wrap">
 													<a href="#" class="excursions__item-img" style="background:url(img/news/news1.jpg)">
 													</a>
-													<div class="excursions__item-img__label">
-														<div class="excursions__item-img__time">3 часа</div>
-														Бесплатно
-													</div>
-													<div class="excursions__item-img__date">
-														23 сентября 2016 в 9:00
+													<div class="excursions__item-info">
+														<div class="excursions__item-img__date">
+															<div class="excursions__item-img__date-wrapper">
+																<div>5 декабря 2016</div>
+																<div>в 19:00</div>
+															</div>
+														</div>
+														<div class="excursions__item-img__label">
+															<div class="excursions__item-img__time">3 часа</div>
+															Бесплатно
+														</div>
 													</div>
 												</div>
 												<div class="news__icons">
@@ -250,10 +273,28 @@
 											<a href="#" class="excursions__item-inner">
 												<div class="excursions__item-img-wrap">
 													<div class="excursions__item-img" style="background:url(img/news/news2.jpg)"></div>
-													<div class="excursions__item-img__label">
-														<div class="excursions__item-img__time">14 дней</div>
-														<div class="old-price">3 300<span class="rouble">a</span></div>
-														3 300 <span class="rouble">a</span>
+													<div class="excursions__item-info">
+														<div class="excursions__item-img__date">
+															<div class="excursions__item-img__date-wrapper">
+																<div>5 декабря 2016</div>
+																<div>в 19:00</div>
+															</div>
+														</div>
+														<div class="excursions__item-img__label">
+															<div class="excursions__item-img__time">14 дней</div>
+															<div class="old-price">
+																3 300<span class="rouble">a</span>
+															</div>
+															3 300 <span class="rouble">a</span>
+															<div class="currency-price">
+																<div class="old-price">
+																	300$
+																</div>
+																<div class="new-price">
+																	304 $
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
 												<div class="news__icons">
@@ -288,12 +329,22 @@
 												<div class="excursions__item-img-wrap">
 													<div class="excursions__item-img" style="background:url(img/news/news3.jpg)">
 													</div>
-													<div class="excursions__item-img__label">
-														<div class="excursions__item-img__time">14 дней</div>
-														3 300 <span class="rouble">a</span>
-													</div>
-													<div class="excursions__item-img__date">
-														5 декабря 2016 в 19:00
+													<div class="excursions__item-info">
+														<div class="excursions__item-img__date">
+															<div class="excursions__item-img__date-wrapper">
+																<div>5 декабря 2016</div>
+																<div>в 19:00</div>
+															</div>
+														</div>
+														<div class="excursions__item-img__label">
+															<div class="excursions__item-img__time">14 дней</div>
+															3 300 <span class="rouble">a</span>
+															<div class="currency-price">
+																<div class="new-price">
+																	304 $
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
 												<div class="news__icons">
@@ -327,9 +378,11 @@
 												<div class="excursions__item-img-wrap">
 													<div class="excursions__item-img" style="background:url(img/news/news1.jpg)">
 													</div>
-													<div class="excursions__item-img__label">
-														<div class="excursions__item-img__time">3 часа</div>
-														Бесплатно
+													<div class="excursions__item-info">
+														<div class="excursions__item-img__label">
+															<div class="excursions__item-img__time">3 часа</div>
+															Бесплатно
+														</div>
 													</div>
 												</div>
 												<div class="news__icons">
@@ -362,10 +415,20 @@
 											<a href="#" class="excursions__item-inner">
 												<div class="excursions__item-img-wrap">
 													<div class="excursions__item-img" style="background:url(img/news/news2.jpg)"></div>
-													<div class="excursions__item-img__label">
-														<div class="excursions__item-img__time">14 дней</div>
-														<div class="old-price">3 300<span class="rouble">a</span></div>
-														3 300 <span class="rouble">a</span>
+													<div class="excursions__item-info">
+														<div class="excursions__item-img__label">
+															<div class="excursions__item-img__time">14 дней</div>
+															<div class="old-price">3 300<span class="rouble">a</span></div>
+															3 300 <span class="rouble">a</span>
+															<div class="currency-price">
+																<div class="old-price">
+																	300$
+																</div>
+																<div class="new-price">
+																	304 $
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
 												<div class="news__icons">
@@ -400,9 +463,11 @@
 												<div class="excursions__item-img-wrap">
 													<div class="excursions__item-img" style="background:url(img/news/news3.jpg)">
 													</div>
-													<div class="excursions__item-img__label">
-														<div class="excursions__item-img__time">14 дней</div>
-														3 300 <span class="rouble">a</span>
+													<div class="excursions__item-info">
+														<div class="excursions__item-img__label">
+															<div class="excursions__item-img__time">14 дней</div>
+															3 300 <span class="rouble">a</span>
+														</div>
 													</div>
 												</div>
 												<div class="news__icons">
@@ -436,9 +501,11 @@
 												<div class="excursions__item-img-wrap">
 													<div class="excursions__item-img" style="background:url(img/news/news1.jpg)">
 													</div>
-													<div class="excursions__item-img__label">
-														<div class="excursions__item-img__time">3 часа</div>
-														Бесплатно
+													<div class="excursions__item-info">
+														<div class="excursions__item-img__label">
+															<div class="excursions__item-img__time">3 часа</div>
+															Бесплатно
+														</div>
 													</div>
 												</div>
 												<div class="news__icons">
@@ -471,10 +538,12 @@
 											<a href="#" class="excursions__item-inner">
 												<div class="excursions__item-img-wrap">
 													<div class="excursions__item-img" style="background:url(img/news/news2.jpg)"></div>
-													<div class="excursions__item-img__label">
-														<div class="excursions__item-img__time">14 дней</div>
-														<div class="old-price">3 300<span class="rouble">a</span></div>
-														3 300 <span class="rouble">a</span>
+													<div class="excursions__item-info">
+														<div class="excursions__item-img__label">
+															<div class="excursions__item-img__time">14 дней</div>
+															<div class="old-price">3 300<span class="rouble">a</span></div>
+															3 300 <span class="rouble">a</span>
+														</div>
 													</div>
 												</div>
 												<div class="news__icons">
@@ -509,9 +578,11 @@
 												<div class="excursions__item-img-wrap">
 													<div class="excursions__item-img" style="background:url(img/news/news3.jpg)">
 													</div>
-													<div class="excursions__item-img__label">
-														<div class="excursions__item-img__time">14 дней</div>
-														3 300 <span class="rouble">a</span>
+													<div class="excursions__item-info">
+														<div class="excursions__item-img__label">
+															<div class="excursions__item-img__time">14 дней</div>
+															3 300 <span class="rouble">a</span>
+														</div>
 													</div>
 												</div>
 												<div class="news__icons">
