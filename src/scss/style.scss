@@ -256,6 +256,13 @@
 	}
 	.page-header__links {
 	    padding-top: 45px;
+	    position: relative;
+	}
+	.page-header__enter{
+	    top: 5px;
+	}
+	.page-header__profile{
+	    top: 5px;
 	}
 }
 
@@ -322,7 +329,7 @@
 .page-header__links{
 	float: right;
 	padding-top: 20px;
-	position: relative;
+	position: static;
     z-index: 20;
 	a{
 		color: #fff;
@@ -409,7 +416,6 @@
 
 .page-header__favorite{
 	float: right;
-	margin-left: 70px;
 	i{
 		display: inline-block;
 		vertical-align: middle;
@@ -421,7 +427,23 @@
 }
 
 .page-header__enter{
-	float: right;
+	position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 14px;
+    &:hover{
+    	text-decoration: underline;
+    }
+}
+
+.page-header__profile{
+	position: absolute;
+    top: -30px;
+    right: 60px;
+    font-size: 14px;
+    &:hover{
+    	text-decoration: underline;
+    }
 }
 
 .page-header__search{
@@ -1386,9 +1408,14 @@ p.subtitle{
 }
 .news,
 .results{
+	display: -webkit-box;
 	display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+
+    -webkit-flex-direction: row-reverse;
+    -webkit-justify-content: space-between;
+	flex-direction: row-reverse;
  
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -1397,6 +1424,10 @@ p.subtitle{
 }
 
 .news__item{
+	display: -webkit-box;
+	-webkit-flex-direction: row-reverse;
+	-webkit-justify-content: space-between;
+	flex-direction: row-reverse;
 	display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -2558,6 +2589,7 @@ p.subtitle{
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 5px;
+	    margin-top: 4px;
 	float: left;
 }
 
@@ -2708,7 +2740,8 @@ p.subtitle{
 	background: #ebedf2;
 	display: table-cell;
 	text-align: center;
-	padding: 18px 10px 22px 10px;
+	// padding: 18px 10px 22px 10px;
+	vertical-align: middle;
 	i,span{
 		display: inline-block;
 		vertical-align: middle;
@@ -2732,6 +2765,14 @@ p.subtitle{
 		left: 0;
 		top: 100%;
 	}
+	.excursions__in-price{
+		padding-top: 20px;
+		top: 0;
+	}
+}
+
+.excursions__in-price__currency{
+	font-size: 18px;
 }
 
 .excursions__bottom{
@@ -2762,12 +2803,10 @@ p.subtitle{
 	top: 5px;
 	.old-price{
 		position: absolute;
-		bottom: 100%;
-		left: 0;
-		width: 100%;
-		margin-right: 0;
-		margin-bottom: -5px;
-
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    margin-right: 0;
 	}
 }
 
@@ -3485,7 +3524,7 @@ p.subtitle{
 		width: 50%;
 		margin-right: -4px;
 		margin-bottom: 30px;
-		vertical-align: top;
+		vertical-align: middle;
 		padding-right: 15px;
 	}
 	.cat1{
@@ -3968,6 +4007,7 @@ p.subtitle{
 	.old-price{
 		overflow: hidden;
 		margin-right: 0;
+		margin-top: 0;
 		padding-right: 5px;
 		font-size: 16px;
 	}
@@ -4013,13 +4053,13 @@ p.subtitle{
 	::i-block-chrome, .excursions__filter-view .input-wrap label {
 	  width:33%;
 	}
-	::i-block-chrome, .news__item {
-	  display:inline-block;
-	  float:none;
-	  margin-bottom:40px;
-	  margin-right:-4px;
-	  vertical-align:top;
-	}
+	// ::i-block-chrome, .news__item {
+	//   display:inline-block;
+	//   float:none;
+	//   margin-bottom:40px;
+	//   margin-right:-4px;
+	//   vertical-align:top;
+	// }
 }
 
 

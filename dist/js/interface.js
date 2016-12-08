@@ -401,12 +401,15 @@ $('body').append(
 		<li><a href="excursions-in.html">Excursions-in</a></li> \
 		<li><a href="registration-gid.html">Registration-gid</a></li> \
 		<li><a href="recovery-password.html">Recovery-password</a></li> \
+		<li><a href="cabinet-user-excursions.html">Cabinet-user-excursions</a></li> \
 		<li><a href="cabinet-excursions.html">Cabinet-excursions</a></li> \
 		<li><a href="cabinet-data.html">Cabinet-data</a></li> \
+		<li><a href="cabinet-data-user.html">Cabinet-data-user</a></li> \
 		<li><a href="create-excursion.html">Create-excursion</a></li> \
 		<li><a href="edit-excursion.html">Edit-excursion</a></li> \
 		<li><a href="excursions-not-found.html">Excursions-not-found</a></li> \
 		<li><a href="excursions-in2.html">excursions-in2</a></li> \
 		<li><a href="results.html">Results</a></li> \
+		<li><a href="user-authorized.html">User-authorized</a></li> \
 	</ol> \
 </div>');

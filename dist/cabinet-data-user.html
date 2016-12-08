@@ -11,6 +11,7 @@
 		<link href="js/vendors/fancybox/jquery.fancybox.min.css" rel="stylesheet">
 		<link href="js/vendors/formstyler/jquery.formstyler.css" rel="stylesheet">
 		<link href="js/vendors/multipleSelect/multiple-select.css" rel="stylesheet">
+
 		<link href="css/style.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -20,7 +21,7 @@
 	<body>
 
 		<!--LAYOUT-->
-		<div class="layout layout--white-theme">
+		<div class="layout">
 			<header class="page-header">
 				<div class="container-fluid">
 					<a href="#" class="page-header__logo">
@@ -97,31 +98,55 @@
 				<div class="page-content workarea">
 					<div class="breadcrumbs">
 						<a href="#" class="breadcrumbs__item"><span>Главная</span></a>
-						<span class="breadcrumbs__item">Восстановление пароля</span>
+						<span class="breadcrumbs__item">Личный кабинет пользователя</span>
 					</div>
 					<div class="page-content__title">
 						<div class="container-fluid">
 							<h1>
-								Восстановление пароля
+								Личный кабинет пользователя
 							</h1>
 						</div>
 					</div>
 					<!-- CONTENT-PART -->
 					<div class="container-fluid">
-						<div class="page-content__wrapper">	
-							<div class="recovery">
-								<form action="#" method="post">
-									<div class="input-wrap">
-										<label>Новый пароль:</label>
-										<div class="input-wrap__overflow">
-											<input type="password" id="user_password">
-											<a href="#" class="pass-toggle"></a>
-										</div>
+						<div class="page-content__wrapper">
+							<div class="cabinet">
+								<div class="cabinet__links">
+									<a href="#" class="cabinet__links-item cabinet__links-item--active">Личные данные</a>
+									<a href="#" class="cabinet__links-item">Избранное</a>
+									<a href="#" class="cabinet__links-item">Смс уведомления</a>
+								</div>	
+								<div class="cabinet__data">
+									<div class="registration">
+										<form action="#" method="post">
+											<h2>Личная информация</h2>
+											<div class="input-wrap">
+												<label>ФИО:</label>
+												<div class="input-wrap__overflow">
+													<input type="text" placeholder="Егоров Константин Константинович">
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label>Эл.почта:</label>
+												<div class="input-wrap__overflow">
+													<input type="email" placeholder="mail@gmail.com">
+												</div>
+											</div>
+											<div class="input-wrap">
+												<label>Новый пароль:</label>
+												<div class="input-wrap__overflow">
+													<input type="password" id="user_password">
+													<a href="#" class="pass-toggle"></a>
+													<a href="#" class="forgot-pass">Забыли пароль?</a>
+												</div>
+											</div>
+											<hr>
+											<div class="btn-wrap">
+												<a href="#" class="btn btn--minimal">Сохранить изменения</a>
+											</div>
+										</form>
 									</div>
-									<div class="btn-wrap">
-										<a href="#" class="btn btn--minimal">Восстановить пароль</a>
-									</div>
-								</form>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -234,7 +259,7 @@
 			</div>
 		</div>
 
-				<div id="guide-enter__user" class="dnone">
+		<div id="guide-enter__user" class="dnone">
 			<div class="popup">
 				<div class="popup__title">Вход для пользователей</div>
 				<div class="popup__form">
@@ -346,6 +371,8 @@
 		<script src="js/vendors/formstyler/jquery.formstyler.min.js"></script>
 		<script src="js/vendors/inputmask/jquery.inputmask.bundle.min.js"></script>
 		<script src="js/vendors/multipleSelect/multiple-select.js"></script>
+
+
 		<script src="js/interface.js"></script>
 	</body>
 </html>

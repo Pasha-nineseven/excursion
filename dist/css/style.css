@@ -475,7 +475,11 @@ textarea, input { -webkit-box-shadow: none; box-shadow: none; font-family: inher
 
 .page-header--index .page-header__logo img { display: none; }
 
-.page-header--index .page-header__links { padding-top: 45px; }
+.page-header--index .page-header__links { padding-top: 45px; position: relative; }
+
+.page-header--index .page-header__enter { top: 5px; }
+
+.page-header--index .page-header__profile { top: 5px; }
 
 .page-header--index__selecting { display: table; position: absolute; top: 0; left: 0; table-layout: fixed; width: 100%; height: 100%; }
 
@@ -495,7 +499,7 @@ textarea, input { -webkit-box-shadow: none; box-shadow: none; font-family: inher
 
 .page-header__logo { float: left; display: block; text-decoration: none; margin-right: 30px; padding-top: 7px; }
 
-.page-header__links { float: right; padding-top: 20px; position: relative; z-index: 20; }
+.page-header__links { float: right; padding-top: 20px; position: static; z-index: 20; }
 
 .page-header__links a { color: #fff; text-decoration: none; }
 
@@ -521,11 +525,17 @@ textarea, input { -webkit-box-shadow: none; box-shadow: none; font-family: inher
 
 .page-header__language i { display: inline-block; vertical-align: middle; width: 13px; height: 13px; line-height: 13px; margin-right: 5px; }
 
-.page-header__favorite { float: right; margin-left: 70px; }
+.page-header__favorite { float: right; }
 
 .page-header__favorite i { display: inline-block; vertical-align: middle; width: 15px; height: 13px; line-height: 13px; margin-right: 5px; }
 
-.page-header__enter { float: right; }
+.page-header__enter { position: absolute; top: -30px; right: 0; font-size: 14px; }
+
+.page-header__enter:hover { text-decoration: underline; }
+
+.page-header__profile { position: absolute; top: -30px; right: 60px; font-size: 14px; }
+
+.page-header__profile:hover { text-decoration: underline; }
 
 .page-header__search { margin-right: 315px; margin-left: 350px; }
 
@@ -819,9 +829,9 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .results-wrap .news__item-img-wrap { height: 275px; }
 
-.news, .results { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-right: -20px; }
+.news, .results { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row-reverse; -webkit-justify-content: space-between; flex-direction: row-reverse; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-right: -20px; }
 
-.news__item { display: -webkit-flex; display: -ms-flexbox; display: flex; margin-bottom: 40px; }
+.news__item { display: -webkit-box; -webkit-flex-direction: row-reverse; -webkit-justify-content: space-between; flex-direction: row-reverse; display: -webkit-flex; display: -ms-flexbox; display: flex; margin-bottom: 40px; }
 
 .news__item .item-favorite { right: 25px; }
 
@@ -1153,7 +1163,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .rouble { font-family: 'rouble'; }
 
-.old-price { color: #fe8da1; font-size: 18px; text-decoration: line-through; display: inline-block; vertical-align: middle; margin-right: 5px; float: left; }
+.old-price { color: #fe8da1; font-size: 18px; text-decoration: line-through; display: inline-block; vertical-align: middle; margin-right: 5px; margin-top: 4px; float: left; }
 
 .excursions__item-txt { padding: 16px 20px 20px; }
 
@@ -1199,7 +1209,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .excursions__in-wrap { display: table; table-layout: fixed; vertical-align: middle; width: 100%; }
 
-.excursions__in-item { background: #ebedf2; display: table-cell; text-align: center; padding: 18px 10px 22px 10px; }
+.excursions__in-item { background: #ebedf2; display: table-cell; text-align: center; vertical-align: middle; }
 
 .excursions__in-item i, .excursions__in-item span { display: inline-block; vertical-align: middle; }
 
@@ -1211,6 +1221,10 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .excursions__in-item--price .btn { width: 100%; position: absolute; left: 0; top: 100%; }
 
+.excursions__in-item--price .excursions__in-price { padding-top: 20px; top: 0; }
+
+.excursions__in-price__currency { font-size: 18px; }
+
 .excursions__bottom { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; justify-content: flex-start; padding: 40px 0 20px; }
 
 .excursions__bottom h2 { text-align: center; }
@@ -1219,7 +1233,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .excursions__in-price { color: #f8284c; font-size: 24px; position: relative; top: 5px; }
 
-.excursions__in-price .old-price { position: absolute; bottom: 100%; left: 0; width: 100%; margin-right: 0; margin-bottom: -5px; }
+.excursions__in-price .old-price { position: absolute; top: 0; left: 0; width: 100%; margin-right: 0; }
 
 .excursions__in-info { overflow: hidden; margin-left: 21px; }
 
@@ -1435,7 +1449,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .guest-category input[type="checkbox"]:not(:checked) + label:after, .guest-category input[type="checkbox"]:checked + label:after { display: none; }
 
-.guest-category .checkbox-wrap { width: 50%; margin-right: -4px; margin-bottom: 30px; vertical-align: top; padding-right: 15px; }
+.guest-category .checkbox-wrap { width: 50%; margin-right: -4px; margin-bottom: 30px; vertical-align: middle; padding-right: 15px; }
 
 .guest-category .cat1 input[type="checkbox"]:not(:checked) + label:before { width: 33px; height: 40px; background: url(../img/content/cat1.png); background-position: 0 0; border: 0; top: 50%; margin-top: -20px; }
 
@@ -1579,7 +1593,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .currency-price .new-price { float: right; }
 
-.currency-price .old-price { overflow: hidden; margin-right: 0; padding-right: 5px; font-size: 16px; }
+.currency-price .old-price { overflow: hidden; margin-right: 0; margin-top: 0; padding-right: 5px; font-size: 16px; }
 
 .new-price { display: inline-block; vertical-align: middle; }
 
@@ -1590,8 +1604,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .excursions__bottom { justify-content: space-around; } }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0) { ::i-block-chrome, .excursions__list { display: block; overflow: hidden; width: 75%; }
-  ::i-block-chrome, .excursions__filter-view .input-wrap label { width: 33%; }
-  ::i-block-chrome, .news__item { display: inline-block; float: none; margin-bottom: 40px; margin-right: -4px; vertical-align: top; } }
+  ::i-block-chrome, .excursions__filter-view .input-wrap label { width: 33%; } }
 
 @media screen and (max-width: 1550px) { .page-footer .container-fluid, .page-header .container-fluid, .wrapper { padding: 0 25px; }
   .container-fluid { padding-left: 25px; padding-right: 25px; }
