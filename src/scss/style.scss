@@ -403,7 +403,7 @@
 
 .page-header__language{
 	float: right;
-	margin-left: 70px;
+	margin-left: 30px;
 	i{
 		display: inline-block;
 		vertical-align: middle;
@@ -4140,6 +4140,56 @@ p.subtitle{
 		max-height: 100%;
 	}
 }
+
+.page-header__currency{
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+	margin-left: 30px;
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	white-space: nowrap;
+	>span{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.jq-selectbox__select {
+	    height: auto;
+	    padding: 0 20px 0 2px;
+	    border: 0;
+	    font: 18px/18px "Roboto", sans-serif;
+	    color: #fff;
+	    text-shadow: none;
+	}
+	.jq-selectbox.focused .jq-selectbox__select {
+	    border: 0;
+	}
+	.jq-selectbox__trigger {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    width: 8px;
+	    height: 100%;
+	}
+	.jq-selectbox__trigger-arrow {
+	    top: 4px;
+	    right: 6px;
+	    background: url(../img/content/sel-arrow-w.png) no-repeat;
+	}
+	.jq-selectbox__dropdown{
+		left: -15px;
+	}
+	.jq-selectbox li {
+	    padding: 5px 3px 6px 17px;
+	    color: #231F20;
+	}
+
+	.jq-selectbox {
+	    width: 60px;
+	}
+}
+
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
    .excursions__bottom{
