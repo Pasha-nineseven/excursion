@@ -10,6 +10,9 @@
 		<link href="js/vendors/slick/slick.css" rel="stylesheet">
 		<link href="js/vendors/fancybox/jquery.fancybox.min.css" rel="stylesheet">
 		<link href="js/vendors/formstyler/jquery.formstyler.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
 		<link href="css/style.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -156,7 +159,7 @@
 								<div class="container-min">
 									<div class="excursions__in-info">
 										<div class="excursions__in-included">
-											<a href="#" class="btn btn--minimal">Записаться</a>
+											<a href="#entry" class="btn btn--minimal fb-inline fb-inline--entry">Записаться</a>
 											<div class="excursions__in-included__title">
 												В цену включено:
 											</div>
@@ -307,7 +310,7 @@
 										</div>
 									</div>
 									<div class="btn-wrap">
-										<a href="#" class="btn btn--minimal">Записаться на экскурсию</a>
+										<a href="#entry" class="btn btn--minimal fb-inline--entry">Записаться на экскурсию</a>
 									</div>
 								</div>
 							</div>
@@ -587,7 +590,7 @@
 			</div>
 		</div>
 
-				<div id="guide-enter__user" class="dnone">
+		<div id="guide-enter__user" class="dnone">
 			<div class="popup">
 				<div class="popup__title">Вход для пользователей</div>
 				<div class="popup__form">
@@ -691,9 +694,115 @@
 					На указанную электронную почту выслано письмо, с инструкцией по восстановлению пароля
 				</div>
 			</div>
-		</div>	
+		</div>
+
+		<div id="success-guide-msg" class="dnone">
+			<div class="popup">
+				<div class="popup__title popup__title--centered">Восстановление пароля</div>
+				<div class="text-popup text-popup--centered">
+					На указанную электронную почту выслано письмо, с инструкцией по восстановлению пароля
+				</div>
+			</div>
+		</div>
+
+		<div id="entry" class="dnone">
+			<div class="popup popup--entry">
+				<div class="popup__title popup__title--centered">Записаться на экскурсию</div>
+				<div class="popup__excursion-name">
+					«Экскурсия по знаковым местам Санкт-Петербурга»
+				</div>
+				<form action="#" method="post" class="popup__form">
+					<div class="input-wrap">
+						<label>Дата:</label>
+						<div class="error-wrap date-wrap">
+							<input type="text" placeholder="дд.мм.гг" id="datepicker">
+						</div>
+					</div>
+					<div class="input-wrap input-wrap--error">
+						<label>Имя:</label>
+						<div class="error-wrap">
+							<input type="text" placeholder="">
+							<span class="label-error">Поле необходимо заполнить</span>
+						</div>
+					</div>
+					<div class="input-wrap input-wrap--error">
+						<label>Телефон:</label>
+						<div class="error-wrap">
+							<input type="text" placeholder="">
+							<span class="label-error">Поле необходимо заполнить</span>
+						</div>
+					</div>
+					<div class="input-wrap input-wrap--error">
+						<label>Эл. почта:</label>
+						<div class="error-wrap">
+							<input type="email" placeholder="">
+							<span class="label-error">Поле необходимо заполнить</span>
+						</div>
+					</div>
+					<div class="input-wrap">
+						<label>Кол-во людей:</label>
+						<div class="error-wrap">
+							<select class="fs">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>47</option>
+							</select>
+						</div>
+					</div>
+					<div class="popup__excursion-total">
+						<div class="popup__excursion-sum">
+							Стоимость <span>85</span> <span class="euro">&euro;</span>
+						</div>
+						<div class="input-wrap">
+							<div class="input-wrap__overflow">
+								<div class="checkbox-wrap">
+									<input type="checkbox" id="agreement" name="agreement">
+									<label for="agreement">
+										Совершая оплату - соглашаюсь с <a href="#" class="popup__link">правилами и условиями</a> сервиса
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="popup__excursion-payment">
+							<a href="#" class="btn">Оплатить</a>
+							<span class="popup__excursion-redirect">
+								Вы будете перенаправлены на безопасную<br> страницу оплаты заказа
+							</span>
+						</div>
+					</div>
+					<div class="cards">
+						<div class="cards__item">
+							<img src="img/content/card1.png" alt="">
+						</div>
+						<div class="cards__item">
+							<img src="img/content/card2.png" alt="">
+						</div>
+						<div class="cards__item">
+							<img src="img/content/card3.png" alt="">
+						</div>
+						<div class="cards__item">
+							<img src="img/content/card4.png" alt="">
+						</div>
+						<div class="cards__item">
+							<img src="img/content/card5.png" alt="">
+						</div>
+						<div class="cards__item">
+							<img src="img/content/card6.png" alt="">
+						</div>
+						<div class="cards__item">
+							<img src="img/content/card7.png" alt="">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>			
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
 		<script src="js/vendors/slick/slick.min.js"></script>
 		<script src="js/vendors/fancybox/jquery.fancybox.pack.js"></script>
 		<script src="js/vendors/formstyler/jquery.formstyler.min.js"></script>

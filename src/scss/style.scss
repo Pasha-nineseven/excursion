@@ -1413,9 +1413,9 @@ p.subtitle{
     display: -ms-flexbox;
     display: flex;
 
-    -webkit-flex-direction: row-reverse;
+    -webkit-flex-direction: row;
     -webkit-justify-content: space-between;
-	flex-direction: row-reverse;
+	flex-direction: row;
  
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -1425,9 +1425,9 @@ p.subtitle{
 
 .news__item{
 	display: -webkit-box;
-	-webkit-flex-direction: row-reverse;
+	-webkit-flex-direction: row;
 	-webkit-justify-content: space-between;
-	flex-direction: row-reverse;
+	flex-direction: row;
 	display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -2173,7 +2173,11 @@ p.subtitle{
 	input[type="checkbox"]:not(:checked),
 	input[type="checkbox"]:checked{
 		position: absolute;
-		left: -9999px;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+		cursor: pointer;
+		opacity: 0;
 	}
 	input[type="checkbox"]:not(:checked) + label,
 	input[type="checkbox"]:checked + label{
@@ -2224,6 +2228,8 @@ p.subtitle{
 
 .popup__link{
 	color: #1858c3;
+	position: relative;
+	z-index: 10;
 	&:hover{
 		text-decoration: none;
 	}
@@ -4038,6 +4044,103 @@ p.subtitle{
 	display: block;
 }
 
+
+.popup__excursion-name{
+	color: #1858c3;
+	font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'bodoni',serif;
+    text-align: center;
+}
+
+.popup--entry{
+	.popup__title{
+		margin-bottom: 10px;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="password"]{
+		width: 350px;
+	}
+	.popup__form{
+		width: 100%;
+	}
+}
+
+.date-wrap{
+	position: relative;
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+	    padding: 11px 42px 11px 15px;
+	    width: 260px;
+	}
+	&:after{
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		width: 23px;
+		height: 23px;
+		background: url(../img/svg/date.svg) no-repeat;
+		position: absolute;
+		right: 10px;
+		top: 10px; 
+	}
+}
+
+.popup__excursion-sum{
+	font-size: 24px;
+	color: #f8284c;
+	margin-bottom: 20px;
+}
+
+.popup__excursion-total{
+	padding-left: 104px;
+}
+
+
+.popup__excursion-payment{
+	&:after{
+		content: "";
+		clear: both;
+		display: table;
+	}
+	.btn{
+		margin-right: 20px;
+		float: left;
+		font-size: 18px;
+		    padding: 9px 70px;
+	}
+}
+
+.popup__excursion-redirect{
+	font-size: 14px;
+	color: #787d82;
+	margin-top: 14px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+.cards{
+	text-align: center;
+	padding-top: 20px;
+}
+
+.cards__item{
+	display: inline-block;
+	vertical-align: middle;
+	height: 60px;
+	line-height: 60px;
+	img{
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 100%;
+		height: auto;
+		max-height: 100%;
+	}
+}
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
    .excursions__bottom{
    		justify-content:space-around;
@@ -4053,15 +4156,7 @@ p.subtitle{
 	::i-block-chrome, .excursions__filter-view .input-wrap label {
 	  width:33%;
 	}
-	// ::i-block-chrome, .news__item {
-	//   display:inline-block;
-	//   float:none;
-	//   margin-bottom:40px;
-	//   margin-right:-4px;
-	//   vertical-align:top;
-	// }
 }
-
 
 
 //MEDIA

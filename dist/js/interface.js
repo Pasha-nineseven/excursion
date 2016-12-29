@@ -107,6 +107,37 @@ $(document).ready(function() {
 	    }
 	});
 
+	 $('.fb-inline--entry').fancybox({
+		openEffect	: 'fade',
+		closeEffect	: 'fade',
+		maxWidth: 1000,
+		minWidth: 800,
+		padding:0,
+		beforeShow: function(){
+		    $("body").css({'overflow-y':'hidden'});
+		    if($(window).width() > 700){
+		    	$("html").css({'padding-right':'17px'});
+		    }
+		    if($(window).width() < 700){
+		    	$("body").css({'position': 'fixed'});
+		    }
+		},
+		afterClose: function(){
+		    $("body").css({'overflow-y':'auto'});
+		    if($(window).width() > 700){
+			    $("html").css({'padding-right':'0'});
+			}
+		    if($(window).width() < 700){
+		    	$("body").css({'position': 'static'});
+		    }
+		},
+		helpers : {
+	        overlay : {
+	            locked: false,
+	        }
+	    }
+	});
+
 	$(".fb-image").fancybox({
     	openEffect	: 'elastic',
     	closeEffect	: 'elastic',
@@ -324,6 +355,15 @@ $(document).ready(function() {
 			$('.page-header__autocomplete').fadeOut(200);
 		}
 	});
+
+	//DATEPICKER
+	$("#datepicker").datepicker({
+		monthNames: ['Январь', 'Февраль', 'Март', 'Апрель',
+		'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь',
+		'Октябрь', 'Ноябрь', 'Декабрь'],
+		 dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+		 firstDay: 1,
+	});
 });
 
 
@@ -384,32 +424,32 @@ function readURL(input) {
 }
 
 // links pages
-$('body').append(
-	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
-		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
-	<style> \
-		#pages { padding: 10px 20px 0 50px; font-size: 18px; } \
-		#pages a { text-decoration: none; } \
-		#pages li { margin: 5px 0; } \
-	</style> \
-	<ol id="pages"> \
-		<li><a href="about.html">About</a></li> \
-		<li><a href="news.html">News</a></li> \
-		<li><a href="news-in.html">News-in</a></li> \
-		<li><a href="index.html">Index</a></li> \
-		<li><a href="excursions.html">Excursions</a></li> \
-		<li><a href="excursions-in.html">Excursions-in</a></li> \
-		<li><a href="registration-gid.html">Registration-gid</a></li> \
-		<li><a href="recovery-password.html">Recovery-password</a></li> \
-		<li><a href="cabinet-user-excursions.html">Cabinet-user-excursions</a></li> \
-		<li><a href="cabinet-excursions.html">Cabinet-excursions</a></li> \
-		<li><a href="cabinet-data.html">Cabinet-data</a></li> \
-		<li><a href="cabinet-data-user.html">Cabinet-data-user</a></li> \
-		<li><a href="create-excursion.html">Create-excursion</a></li> \
-		<li><a href="edit-excursion.html">Edit-excursion</a></li> \
-		<li><a href="excursions-not-found.html">Excursions-not-found</a></li> \
-		<li><a href="excursions-in2.html">excursions-in2</a></li> \
-		<li><a href="results.html">Results</a></li> \
-		<li><a href="user-authorized.html">User-authorized</a></li> \
-	</ol> \
-</div>');
+// $('body').append(
+// 	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
+// 		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
+// 	<style> \
+// 		#pages { padding: 10px 20px 0 50px; font-size: 18px; } \
+// 		#pages a { text-decoration: none; } \
+// 		#pages li { margin: 5px 0; } \
+// 	</style> \
+// 	<ol id="pages"> \
+// 		<li><a href="about.html">About</a></li> \
+// 		<li><a href="news.html">News</a></li> \
+// 		<li><a href="news-in.html">News-in</a></li> \
+// 		<li><a href="index.html">Index</a></li> \
+// 		<li><a href="excursions.html">Excursions</a></li> \
+// 		<li><a href="excursions-in.html">Excursions-in</a></li> \
+// 		<li><a href="registration-gid.html">Registration-gid</a></li> \
+// 		<li><a href="recovery-password.html">Recovery-password</a></li> \
+// 		<li><a href="cabinet-user-excursions.html">Cabinet-user-excursions</a></li> \
+// 		<li><a href="cabinet-excursions.html">Cabinet-excursions</a></li> \
+// 		<li><a href="cabinet-data.html">Cabinet-data</a></li> \
+// 		<li><a href="cabinet-data-user.html">Cabinet-data-user</a></li> \
+// 		<li><a href="create-excursion.html">Create-excursion</a></li> \
+// 		<li><a href="edit-excursion.html">Edit-excursion</a></li> \
+// 		<li><a href="excursions-not-found.html">Excursions-not-found</a></li> \
+// 		<li><a href="excursions-in2.html">excursions-in2</a></li> \
+// 		<li><a href="results.html">Results</a></li> \
+// 		<li><a href="user-authorized.html">User-authorized</a></li> \
+// 	</ol> \
+// </div>');
