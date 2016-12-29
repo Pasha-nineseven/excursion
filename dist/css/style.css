@@ -1377,7 +1377,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .cabinet__links .btn { position: absolute; right: 0; top: 0; }
 
-.cabinet__links-item { display: inline-block; vertical-align: middle; margin-right: -5px; padding: 8px 20px; border-left: 1px solid #d8dbe6; text-decoration: none; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; color: #1858c3; background: #e8e9f0; }
+.cabinet__links-item { display: inline-block; vertical-align: middle; margin-right: -5px; padding: 8px 20px; border-left: 1px solid #d8dbe6; text-decoration: none; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; color: #1858c3; background: #e8e9f0; position: relative; }
 
 .cabinet__links-item:first-child { border-left: 0; }
 
@@ -1648,6 +1648,28 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 .page-header__currency .jq-selectbox li { padding: 5px 3px 6px 17px; color: #231F20; }
 
 .page-header__currency .jq-selectbox { width: 60px; }
+
+.cabinet-app-count { background: #db1b3c; color: #fff; text-align: center; font-size: 14px; width: 23px; height: 23px; line-height: 23px; -moz-border-radius: 50%; -webkit-border-radius: 50%; -ms-border-radius: 50%; border-radius: 50%; position: absolute; right: -10px; top: -10px; display: inline-block; vertical-align: middle; }
+
+.application { background: #fff; padding: 35px; border-bottom: 1px solid #d8dbe6; overflow: hidden; }
+
+.application:last-child { border-bottom: 0; }
+
+.application__link { float: right; color: #1858c3; border-bottom: 0; text-decoration: none; }
+
+.application__link span { border-bottom: 1px dashed #1858c3; }
+
+.application__link:hover span { border-bottom: 1px dashed transparent; }
+
+.application__link i { display: inline-block; vertical-align: middle; width: 8px; height: 5px; background: url(../img/content/app-arrow.png) no-repeat; margin-left: 10px; }
+
+.application__status { float: left; }
+
+.application__status--approved { color: #50a313; }
+
+.application__status--rejected { color: #787d82; }
+
+.application__info { clear: both; display: none; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .excursions__bottom { justify-content: space-around; } }
 

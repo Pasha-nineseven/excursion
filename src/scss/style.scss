@@ -3271,6 +3271,7 @@ p.subtitle{
 	@include transition(all 0.3s ease);
 	color: #1858c3;
 	background: #e8e9f0;
+	position: relative;
 	&:first-child{
 		border-left: 0;
 	}
@@ -4189,6 +4190,73 @@ p.subtitle{
 	    width: 60px;
 	}
 }
+
+
+.cabinet-app-count{
+	background: #db1b3c;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	width: 23px;
+	height: 23px;
+	line-height: 23px;
+	@include border-radius(50%);
+	position: absolute;
+	right: -10px;
+    top: -10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.application{
+	background: #fff;
+	padding: 35px;
+	border-bottom: 1px solid #d8dbe6;
+	overflow: hidden;
+	&:last-child{
+		border-bottom: 0;
+	}
+}
+
+.application__link{
+	float: right;
+	color: #1858c3;
+	border-bottom: 0;
+	text-decoration: none;
+	span{
+		border-bottom: 1px dashed #1858c3;
+	}
+	&:hover{
+		span{
+			border-bottom: 1px dashed transparent;		
+		}
+	}
+	i{
+		display: inline-block;
+		vertical-align: middle;
+		width: 8px;
+		height: 5px;
+		background: url(../img/content/app-arrow.png) no-repeat;
+		margin-left: 10px;
+	}
+}
+
+.application__status{
+	float: left;
+}
+.application__status--approved{
+	color: #50a313;
+}
+
+.application__status--rejected{
+	color: #787d82;
+}
+
+.application__info{
+	clear: both;
+	display: none;
+}
+
 
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
