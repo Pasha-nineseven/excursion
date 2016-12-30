@@ -4243,6 +4243,7 @@ p.subtitle{
 
 .application__status{
 	float: left;
+	width: 150px;
 }
 .application__status--approved{
 	color: #50a313;
@@ -4255,9 +4256,37 @@ p.subtitle{
 .application__info{
 	clear: both;
 	display: none;
+	border-top: 1px solid #d8dbe6;
+	padding: 30px 120px 0;
+	margin-top: 35px;
+	table{
+		th{
+			text-align: center;
+			font-size: 14px;
+			color: #787d82;
+		}
+		td{
+
+		}
+	}
 }
 
+.application__middle{
+	overflow: hidden;
+	padding: 0 40px 0 0;
+	padding-right: 350px;
+	position: relative;
+}
 
+.application__date{
+	padding-right: 40px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.application__title{
+	display: inline-block;
+	vertical-align: middle;
+}
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
    .excursions__bottom{
