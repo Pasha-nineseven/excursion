@@ -1669,6 +1669,8 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .application__status--rejected { color: #787d82; }
 
+.application__status--new { color: #db1b3c; }
+
 .application__info { clear: both; display: none; border-top: 1px solid #d8dbe6; padding: 30px 120px 0; margin-top: 35px; }
 
 .application__info table th { text-align: center; font-size: 14px; color: #787d82; }
@@ -1678,6 +1680,40 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 .application__date { padding-right: 40px; display: inline-block; vertical-align: middle; }
 
 .application__title { display: inline-block; vertical-align: middle; }
+
+.application__item { display: table-cell; vertical-align: middle; padding: 0 10px; text-align: center; }
+
+.application__name { color: #787d82; font-size: 14px; margin-bottom: 5px; }
+
+.application__email { color: #1858c3; text-decoration: none; }
+
+.application__email:hover { text-decoration: underline; }
+
+.application__inner { display: table; width: 100%; table-layout: fixed; }
+
+.application__price { color: #f8284c; font-size: 24px; }
+
+.application--new { background: #f7fbe8; margin-bottom: 10px; }
+
+.application--new .application__middle { padding-right: 20px; }
+
+.application--new a { text-decoration: none; color: #1858c3; }
+
+.application--new a:hover { text-decoration: underline; }
+
+.application--new .btn-more { margin-left: 20px; }
+
+.application--new .btn-more:hover { text-decoration: none; }
+
+.application__select { float: right; margin-right: 40px; }
+
+.popup--application textarea { width: 100%; height: 150px; }
+
+.popup--application .popup__excursion-payment .btn { padding: 9px 45px; }
+
+.p-applicaation-msg { margin-bottom: 15px; }
+
+.renouncement i { display: inline-block; vertical-align: middle; width: 11px; height: 11px; background: url(../img/content/p-close.png) no-repeat; margin-right: 5px; margin-top: -2px; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .excursions__bottom { justify-content: space-around; } }
 
@@ -1701,6 +1737,8 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
   .excursions__filter-view .input-wrap label { font-size: 12px; }
   .excursions__item-labels__item { margin-right: 1px; font-size: 12px; }
   .excursions__item-txt { padding: 15px 10px; } }
+
+@media screen and (max-width: 1500px) { .application__info { padding: 30px 40px 0; font-size: 14px; } }
 
 @media screen and (max-width: 1400px) { .input-wrap__overflow-msg { left: 0; top: 100%; padding-left: 0; }
   .input-wrap__overflow-msg br { display: none; } }

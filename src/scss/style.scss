@@ -4253,6 +4253,10 @@ p.subtitle{
 	color: #787d82;
 }
 
+.application__status--new{
+	color: #db1b3c;
+}
+
 .application__info{
 	clear: both;
 	display: none;
@@ -4286,6 +4290,91 @@ p.subtitle{
 .application__title{
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.application__item{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 10px;
+	text-align: center;
+}
+.application__name{
+	color: #787d82;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.application__email{
+	color: #1858c3;
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.application__inner{
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.application__price{
+	color: #f8284c;
+	font-size: 24px;
+}
+
+.application--new{
+	background: #f7fbe8;
+	margin-bottom: 10px;
+	.application__middle{
+		padding-right: 20px;
+	}
+	a{
+		text-decoration: none;
+		color: #1858c3;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	.btn-more{
+		margin-left: 20px;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.application__select{
+	float: right;
+	margin-right: 40px;
+}
+
+
+.popup--application{
+	textarea{
+		width: 100%;
+		height: 150px;
+	}
+	.popup__excursion-payment .btn {
+	    padding: 9px 45px;
+	}
+}
+
+
+.p-applicaation-msg{
+	margin-bottom: 15px;
+}
+
+
+.renouncement{
+	i{
+		display: inline-block;
+		vertical-align: middle;
+		width: 11px;
+		height: 11px;
+		background: url(../img/content/p-close.png) no-repeat;
+		margin-right: 5px;
+		    margin-top: -2px;
+	}
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
@@ -4376,6 +4465,12 @@ p.subtitle{
 	}
 }
 
+@media screen and (max-width: 1500px){
+	.application__info {
+	    padding: 30px 40px 0;
+	    font-size: 14px;
+	}
+}
 @media screen and (max-width: 1400px){
 	.input-wrap__overflow-msg {
 	    left: 0;
