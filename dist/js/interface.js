@@ -375,6 +375,19 @@ $(document).ready(function() {
         $(this).find('span').text(txt);
         $(this).parents('.application').find('.application__info').slideToggle();
     });
+
+
+    $( 'body' ).on( 'click', '.excursion-favorite', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $(this).find('span').text("В избранном");
+        } else {
+            $(this).find('span').text("В избранное");
+        }
+
+   
+	});
 });
 
 

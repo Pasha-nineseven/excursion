@@ -54,25 +54,29 @@
 					</div>
 					<div class="page-header__links">
 						<a href="#" class="page-header__language">
-							<i>
-								<img src="img/content/rus.png" alt="">
-							</i>
-							Рус
+							<form action="#" method="post">
+								<span class="lang-img">
+									<img src="img/content/rus.png">
+								</span>
+								<select class="fs">
+									<option value="rus">Рус</option>
+									<option value="eng">Eng</option>
+								</select>
+							</form>
 						</a>
 						<div class="page-header__currency">
-							<span class="euro">&euro;</span>
-							<select class="fs">
-								<option value="eur">eur</option>
-								<option value="ru">rub</option>
-							</select>
+							<form action="#" method="post">
+								<span class="currency-icon">&euro;</span>
+								<select class="fs">
+									<option value="eur">eur</option>
+									<option value="ru">rub</option>
+								</select>
+							</form>
 						</div>
 						<a href="#" class="page-header__favorite">
-							<i>
-								<img src="img/content/favorite.png" alt="">
-							</i>
-							Избранное
+							<i></i>
+							<span>Избранное</span>
 						</a>
-						<a href="#guide-enter__user" class="page-header__enter fb-inline">Войти</a>
 					</div>
 					<div class="page-header__search">
 						<input type="text" class="page-header__input" placeholder="Введите город, пункт назначения или достопримечательность">
