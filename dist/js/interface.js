@@ -80,7 +80,7 @@ $(document).ready(function() {
     $('.fb-inline').fancybox({
 		openEffect	: 'fade',
 		closeEffect	: 'fade',
-		maxWidth: 625,
+		maxWidth: 725,
 		padding:0,
 		beforeShow: function(){
 		    $("body").css({'overflow-y':'hidden'});
@@ -373,7 +373,7 @@ $(document).ready(function() {
         var txt = $(this).find('span').text();
         txt = (txt !='Детали') ? 'Детали' : 'Скрыть';
         $(this).find('span').text(txt);
-        $(this).parents('.application').find('.application__info').slideToggle();
+        $(this).parents('.application').addClass('active').find('.application__info').slideToggle();
     });
 
 
@@ -385,8 +385,23 @@ $(document).ready(function() {
         } else {
             $(this).find('span').text("В избранное");
         }
+	});
 
-   
+
+	$( 'body' ).on( 'click', '.excursions__item-favorite', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		// setTimeout(function(){
+  //           $(this).removeClass('active');
+  //       }, 2000);
+        if ($(this).hasClass('active')) {
+            $(this).find('span').addClass('active').text("Экскурия добавлена в избранное").removeClass("active", 5000);
+        } else {
+            $(this).find('span').addClass('active').text("Экскурия удалена из избранного").removeClass("active", 5000);
+        }
+
+       
 	});
 });
 
@@ -476,5 +491,7 @@ $('body').append(
 		<li><a href="results.html">Results</a></li> \
 		<li><a href="user-authorized.html">User-authorized</a></li> \
 		<li><a href="cabinet-application.html">Cabinet-application</a></li> \
+		<li><a href="favorites(not-found).html">Favorites(not-found)</a></li> \
+		<li><a href="search-result.html">Search-result</a></li> \
 	</ol> \
 </div>');
