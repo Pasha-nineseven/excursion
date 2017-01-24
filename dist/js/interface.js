@@ -388,20 +388,23 @@ $(document).ready(function() {
 	});
 
 
-	$( 'body' ).on( 'click', '.excursions__item-favorite', function(e) {
+	$(document).on( 'click', '.excursions__item-favorite', function(e) {
 		e.preventDefault();
 
 		$(this).toggleClass('active');
-		// setTimeout(function(){
-  //           $(this).removeClass('active');
-  //       }, 2000);
-        if ($(this).hasClass('active')) {
-            $(this).find('span').addClass('active').text("Экскурия добавлена в избранное").removeClass("active", 5000);
-        } else {
-            $(this).find('span').addClass('active').text("Экскурия удалена из избранного").removeClass("active", 5000);
-        }
 
-       
+		//$(this).find('span').addClass('active').removeClass("active", 5000);
+		var favoriteMsg = $(this).find('span');
+
+        if ($(this).hasClass('active')) {
+        	favoriteMsg .show();
+			setTimeout(function() { favoriteMsg .hide(); }, 5000);
+            $(this).find('span').text("Экскурия добавлена в избранное");
+        } else {
+        	favoriteMsg .show();
+			setTimeout(function() { favoriteMsg .hide(); }, 5000);
+            $(this).find('span').text("Экскурия удалена из избранного");
+        }
 	});
 });
 
@@ -463,35 +466,35 @@ function readURL(input) {
 }
 
 // links pages
-// $('body').append(
-// 	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
-// 		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
-// 	<style> \
-// 		#pages { padding: 10px 20px 0 50px; font-size: 18px; } \
-// 		#pages a { text-decoration: none; } \
-// 		#pages li { margin: 5px 0; } \
-// 	</style> \
-// 	<ol id="pages"> \
-// 		<li><a href="about.html">About</a></li> \
-// 		<li><a href="news.html">News</a></li> \
-// 		<li><a href="news-in.html">News-in</a></li> \
-// 		<li><a href="index.html">Index</a></li> \
-// 		<li><a href="excursions.html">Excursions</a></li> \
-// 		<li><a href="excursions-in.html">Excursions-in</a></li> \
-// 		<li><a href="registration-gid.html">Registration-gid</a></li> \
-// 		<li><a href="recovery-password.html">Recovery-password</a></li> \
-// 		<li><a href="cabinet-user-excursions.html">Cabinet-user-excursions</a></li> \
-// 		<li><a href="cabinet-excursions.html">Cabinet-excursions</a></li> \
-// 		<li><a href="cabinet-data.html">Cabinet-data</a></li> \
-// 		<li><a href="cabinet-data-user.html">Cabinet-data-user</a></li> \
-// 		<li><a href="create-excursion.html">Create-excursion</a></li> \
-// 		<li><a href="edit-excursion.html">Edit-excursion</a></li> \
-// 		<li><a href="excursions-not-found.html">Excursions-not-found</a></li> \
-// 		<li><a href="excursions-in2.html">excursions-in2</a></li> \
-// 		<li><a href="results.html">Results</a></li> \
-// 		<li><a href="user-authorized.html">User-authorized</a></li> \
-// 		<li><a href="cabinet-application.html">Cabinet-application</a></li> \
-// 		<li><a href="favorites(not-found).html">Favorites(not-found)</a></li> \
-// 		<li><a href="search-result.html">Search-result</a></li> \
-// 	</ol> \
-// </div>');
+$('body').append(
+	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
+		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
+	<style> \
+		#pages { padding: 10px 20px 0 50px; font-size: 18px; } \
+		#pages a { text-decoration: none; } \
+		#pages li { margin: 5px 0; } \
+	</style> \
+	<ol id="pages"> \
+		<li><a href="about.html">About</a></li> \
+		<li><a href="news.html">News</a></li> \
+		<li><a href="news-in.html">News-in</a></li> \
+		<li><a href="index.html">Index</a></li> \
+		<li><a href="excursions.html">Excursions</a></li> \
+		<li><a href="excursions-in.html">Excursions-in</a></li> \
+		<li><a href="registration-gid.html">Registration-gid</a></li> \
+		<li><a href="recovery-password.html">Recovery-password</a></li> \
+		<li><a href="cabinet-user-excursions.html">Cabinet-user-excursions</a></li> \
+		<li><a href="cabinet-excursions.html">Cabinet-excursions</a></li> \
+		<li><a href="cabinet-data.html">Cabinet-data</a></li> \
+		<li><a href="cabinet-data-user.html">Cabinet-data-user</a></li> \
+		<li><a href="create-excursion.html">Create-excursion</a></li> \
+		<li><a href="edit-excursion.html">Edit-excursion</a></li> \
+		<li><a href="excursions-not-found.html">Excursions-not-found</a></li> \
+		<li><a href="excursions-in2.html">excursions-in2</a></li> \
+		<li><a href="results.html">Results</a></li> \
+		<li><a href="user-authorized.html">User-authorized</a></li> \
+		<li><a href="cabinet-application.html">Cabinet-application</a></li> \
+		<li><a href="favorites(not-found).html">Favorites(not-found)</a></li> \
+		<li><a href="search-result.html">Search-result</a></li> \
+	</ol> \
+</div>');
