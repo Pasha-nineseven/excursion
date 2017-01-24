@@ -1798,11 +1798,9 @@ p.subtitle{
 	display: inline-block;
     vertical-align: middle;
     position: absolute;
-    bottom: -23px;
+    bottom: -64px;
     left: 50%;
     margin-left: -115px;
-    padding: 0 20px;
-    background: #fff;
     text-align: center;
     color: #000;
     text-decoration: none;
@@ -1811,7 +1809,7 @@ p.subtitle{
 		vertical-align: middle;
 		font-size: 18px;
 		background: #fff;
-		
+		padding: 0 20px;
 		margin-bottom: 5px;
 		border-bottom: 1px solid transparent;
 		line-height: 16px;
@@ -1839,9 +1837,6 @@ p.subtitle{
 	display: inline-block;
 	vertical-align: middle;
 	@include transition(transform 0.3s ease);
-	position: absolute;
-	left: 50%;
-	margin-left: -23px;
 }
 
 .news__page{
@@ -2706,9 +2701,6 @@ p.subtitle{
     margin-bottom: 16px;
     line-height: 1.2;
     display: block;
-    &:hover{
-    	text-decoration: underline;
-    }
 }
 
 .excursions__item-city{
@@ -4782,6 +4774,16 @@ html .ui-button.ui-state-disabled:active {
 	padding-bottom: 35px;
 	.tags__offer {
 	    bottom: 23px;
+	    padding: 0 20px;
+	    background: #fff;
+	    span{
+	    	padding: 0;
+	    }
+	}
+	.tags__offer-link{
+		position: absolute;
+		left: 50%;
+		margin-left: -23px;
 	}
 }
 
