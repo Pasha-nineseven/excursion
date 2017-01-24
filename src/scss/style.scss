@@ -2820,7 +2820,7 @@ p.subtitle{
     		color: #000;
     	}
     	i{
-    		background: url(../img/content/favorite-ex-h.png) no-repeat;
+    		background: url(../img/svg/like_add.svg) no-repeat;
     		background-size: contain;
     		width: 33px;
     		height: 33px;
@@ -2830,8 +2830,13 @@ p.subtitle{
 	    		border-bottom: 1px solid #000;
 	    	}
 	    	i{
-	    		background: url(../img/content/favorite-ex-h.png) no-repeat;
+	    		background: url(../img/svg/like_add.svg) no-repeat;
 	    		background-size: contain;
+	    		-webkit-transform: scale(1.10);
+			    -moz-transform: scale(1.10);
+			    -ms-transform: scale(1.10);
+			    -o-transform: scale(1.10);
+			    transform: scale(1.10);
 	    	}
     	}
     }
@@ -3902,6 +3907,18 @@ p.subtitle{
 	&.active{
 		i{
 			background: url(../img/svg/like_added.svg) no-repeat;
+			background-size: contain;
+		}
+		&:hover{
+			i{
+				background: url(../img/svg/like_added.svg) no-repeat;
+				background-size: contain;
+				// -webkit-transform: scale(1.15);  /* Saf3.1+, Chrome */
+				// -moz-transform: scale(1.15);  /* FF3.5+ */
+				// -ms-transform: scale(1.15);  /* IE9 */
+				// -o-transform: scale(1.15);  /* Opera 10.5+ */
+				// transform: scale(1.15);
+			}
 			
 		}
 	}
