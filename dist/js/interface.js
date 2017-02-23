@@ -366,6 +366,11 @@ $(document).ready(function() {
 			 firstDay: 1,
 		});
 	};
+	$("body").on("click",".date-wrap__link", function (e) {
+		e.preventDefault();
+        $("#datepicker").datepicker("show");
+    });
+
 
 	//PRODUCT-INFO-TOGGLE
 	$("body").on("click",".application__link", function (e) {
@@ -496,5 +501,6 @@ $('body').append(
 		<li><a href="cabinet-application.html">Cabinet-application</a></li> \
 		<li><a href="favorites(not-found).html">Favorites(not-found)</a></li> \
 		<li><a href="search-result.html">Search-result</a></li> \
+		<li><a href="page404.html">page404</a></li> \
 	</ol> \
 </div>');

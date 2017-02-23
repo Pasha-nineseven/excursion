@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=1200">
+		<title>test</title>
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+		<link href="js/vendors/slick/slick.css" rel="stylesheet">
+		<link href="js/vendors/fancybox/jquery.fancybox.min.css" rel="stylesheet">
+		<link href="js/vendors/formstyler/jquery.formstyler.css" rel="stylesheet">
+		<link href="js/vendors/multipleSelect/multiple-select.css" rel="stylesheet">
+
+		<link href="css/style.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<!--LAYOUT-->
+		<div class="layout layout--404">
+			<header class="page-header">
+				<div class="container-fluid">
+					<a href="#" class="page-header__logo">
+						<img src="img/content/top-logo.png" alt="">
+					</a>
+					<div class="page-header__select">
+						<a href="#">
+							<img src="img/svg/wheel-b-sm.svg" alt="">
+							<i></i>
+						</a>
+						<ul class="page-header__select-list">
+							<li class="page-header__select-item page-header__select-item--active">
+								<a href="#">
+									<img src="img/svg/wheel-b-sm.svg" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/svg/eye-sm.svg" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/svg/ear-sm.svg" alt="">
+								</a>
+							</li>
+							<li class="page-header__select-item">
+								<a href="#">
+									<img src="img/svg/kids-sm.svg" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="page-header__links">
+						<a href="#" class="page-header__language">
+							<form action="#" method="post">
+								<span class="lang-img">
+									<img src="img/content/rus.png">
+								</span>
+								<select class="fs">
+									<option value="rus">Рус</option>
+									<option value="eng">Eng</option>
+								</select>
+							</form>
+						</a>
+						<div class="page-header__currency">
+							<form action="#" method="post">
+								<span class="rouble">a</span>
+								<select class="fs">
+									<option value="eur">EUR</option>
+									<option value="ru">RUB</option>
+								</select>
+							</form>
+						</div>
+						<a href="#" class="page-header__favorite">
+							<i></i>
+							<span>Избранное</span>
+						</a>
+					</div>
+					<div class="page-header__search">
+						<div class="page-header__search-wrap">
+							<div class="page-header__input-wrap">
+								<input type="text" class="page-header__input" placeholder="Введите город, пункт назначения или достопримечательность">
+								<ul class="page-header__autocomplete">
+									<li class="page-header__autocomplete-item">
+										<a href="#">test 1</a>
+									</li>
+									<li class="page-header__autocomplete-item">
+										<a href="#">test 2</a>
+									</li>
+									<li class="page-header__autocomplete-item">
+										<a href="#">test 3</a>
+									</li>
+									<li class="page-header__autocomplete-item">
+										<a href="#">test 4</a>
+									</li>
+								</ul>
+							</div>
+							<input type="submit" class="page-header__submit" value="Найти">
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="wrapper">
+				<div class="page-content workarea">
+					<!-- CONTENT-PART -->
+					<div class="page404">
+						<div class="page404__inner">
+							<div class="page404__wrap">
+								<div class="page404__item">
+									<strong>Ой!</strong>
+									<p>Похоже, мы не можем найти нужную вам страницу.</p>
+									Вот несколько полезных ссылок:
+									<div class="page404__link">
+										<a href="#">Главная</a>
+									</div>
+									<div class="page404__link">
+										<a href="#">Публикации</a>
+									</div>
+								</div>
+								<div class="page404__item">
+									<!-- <img src="img/svg/wheelchair.svg" alt=""> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end CONTENT-PART -->	
+			</div>
+			<footer class="page-footer">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-3">
+							<a href="#" class="page-footer__logo">
+								<img src="img/content/footer-logo.png" alt="">
+							</a>
+							<div class="socials">
+								<a href="#" class="socials__item socials__item--vk"></a>
+								<a href="#" class="socials__item socials__item--fb"></a>
+								<a href="#" class="socials__item socials__item--inst"></a>
+								<a href="#" class="socials__item socials__item--tw"></a>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="page-footer__menu">
+								<div class="page-footer__menu-column">
+									<a href="#" class="page-footer__menu-item">Как это работает?</a>
+									<a href="#" class="page-footer__menu-item">Гидам</a>
+									<a href="#" class="page-footer__menu-item">Правила сервиса</a>
+									<a href="#" class="page-footer__menu-item">Правила безопасности</a>
+								</div>
+								<div class="page-footer__menu-column">
+									<a href="#" class="page-footer__menu-item">Новости</a>
+									<a href="#" class="page-footer__menu-item">Объекты</a>
+									<a href="#" class="page-footer__menu-item">Опыт</a>
+									<a href="#" class="page-footer__menu-item">Лайфхаки</a>
+								</div>
+								<div class="page-footer__menu-column">
+									<a href="#" class="page-footer__menu-item">Контакты</a>
+									<a href="#" class="page-footer__menu-item">Партнерская программа</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-3">
+							<div class="page-footer__delivery">
+								<form action="#" method="post">
+									<input type="text" placeholder="Подписаться на рассылку" class="page-footer__delivery-input">
+									<input type="submit" class="page-footer__delivery-submit">
+								</form>
+							</div>
+							<a href="#guide-enter" class="guide-enter fb-inline">
+								<i></i>
+								<span>Вход для гида</span>
+							</a>
+						</div>
+					</div>
+					<div class="page-footer__copyright">
+						<div class="row">
+							<div class="col-xs-offset-3 col-xs-9">
+								<div class="page-footer__copyright-inner">
+									<div class="row">
+										<div class="col-xs-8 page-footer__copyright-item">
+											©2016. Globe-all.info
+										</div>
+										<div class="col-xs-1 page-footer__copyright-item">
+											О проекте
+										</div>
+
+										<div class="col-xs-3 page-footer__develop">
+											<a href="http://nineseven.by/services/" target="_blank">Разработка:</a>
+											<a href="http://nineseven.by/" target="_blank" class="nineseven">Nineseven</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div><!-- END LAYOUT-->
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/vendors/slick/slick.min.js"></script>
+		<script src="js/vendors/fancybox/jquery.fancybox.pack.js"></script>
+		<script src="js/vendors/formstyler/jquery.formstyler.min.js"></script>
+		<script src="js/vendors/inputmask/jquery.inputmask.bundle.min.js"></script>
+		<script src="js/vendors/multipleSelect/multiple-select.js"></script>
+
+
+		<script src="js/interface.js"></script>
+	</body>
+</html>
