@@ -152,7 +152,14 @@
 	.page-content{
 		position: relative;
 	}
-
+	.page-header{
+		background: transparent;
+		    -webkit-box-shadow: none;
+		    box-shadow: none;
+		    &:before{
+		    	display: none;
+		    }
+	}
 }
 
 .page404{
@@ -162,7 +169,8 @@
 	display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-
+    background: url(../img/content/404-bg.png) right 3px no-repeat; 
+	background-size: contain;
 	webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -170,11 +178,11 @@
 }
 
 .page404__inner{
-	max-width: 1000px;
-        padding: 40px 0;
+	max-width: 1520px;
+    padding: 40px 0;
     position: relative;
     width: 100%;
-    margin: 0 auto; 
+    margin: 0 auto;
 	strong{
 		font-size: 80px;
 		line-height: 80px;
@@ -195,6 +203,7 @@
     padding: 0;
     position: relative;
     width: 100%;
+
 }
 
 .page404__item{
@@ -5092,6 +5101,13 @@ html .ui-button.ui-state-disabled:active {
 	}
 	.excursions__item-txt {
 	    padding: 15px 10px;
+	}
+}
+
+
+@media screen and (max-width: 1520px){
+	.page404 {
+	    padding: 0 20px;
 	}
 }
 
