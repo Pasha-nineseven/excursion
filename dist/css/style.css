@@ -453,17 +453,19 @@ textarea, input { -webkit-box-shadow: none; box-shadow: none; font-family: inher
 
 .layout--404 .page-header:before { display: none; }
 
-.page404 { width: 100%; height: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; background: url(../img/content/404-bg.png) right 3px no-repeat; background-size: contain; webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.page404 { width: 100%; height: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; }
 
-.page404__inner { max-width: 1520px; padding: 40px 0; position: relative; width: 100%; margin: 0 auto; }
+.page404__inner { max-width: 1520px; padding: 40px 0; width: 100%; margin: 0 auto; }
 
 .page404__inner strong { font-size: 80px; line-height: 80px; display: block; }
 
 .page404__inner p { font-size: 24px; }
 
-.page404__wrap { display: table; width: 100%; text-align: left; table-layout: fixed; max-width: 1520px; padding: 0; position: relative; width: 100%; }
+.page404__bg { background: url(../img/content/land.png) right bottom no-repeat; background-size: contain; position: absolute; right: 0; bottom: 0; width: 100%; max-width: 1400px; height: 620px; z-index: 1; }
 
-.page404__item { width: 50%; display: table-cell; vertical-align: middle; text-align: left; }
+.page404__wrap { display: table; width: 100%; text-align: left; table-layout: fixed; max-width: 1520px; padding: 0; width: 100%; }
+
+.page404__item { width: 50%; display: table-cell; vertical-align: middle; text-align: left; position: relative; z-index: 5; }
 
 .page404__item img { max-width: 100%; height: auto; }
 
@@ -472,6 +474,78 @@ textarea, input { -webkit-box-shadow: none; box-shadow: none; font-family: inher
 .page404__link a { color: #000; text-decoration: underline; }
 
 .page404__link a:hover { text-decoration: none; }
+
+.baloon { width: 235px; height: 317px; display: inline-block; position: absolute; left: 700px; bottom: 60px; z-index: 5; background: url(../img/content/baloon.png) no-repeat; background-size: cover; }
+
+.cloud1 { position: absolute; left: 100px; bottom: 100px; background: url(../img/svg/cloud_1.svg) no-repeat; background-size: cover; width: 200px; height: 78px; -webkit-animation: movecloud_1 50s linear infinite; -moz-animation: movecloud_1 50s linear infinite; -o-animation: movecloud_1 50s linear infinite; }
+
+.cloud2 { position: absolute; left: 150px; bottom: 300px; background: url(../img/svg/cloud_2.svg) no-repeat; background-size: cover; width: 93px; height: 43px; -webkit-animation: movecloud_2 180s linear infinite; -moz-animation: movecloud_2 180s linear infinite; -o-animation: movecloud_2 180s linear infinite; }
+
+.cloud3 { position: absolute; right: 300px; bottom: 100px; background: url(../img/svg/cloud_2.svg) no-repeat; background-size: cover; width: 93px; height: 43px; -webkit-animation: movecloud_3 120s linear infinite; -moz-animation: movecloud_3 120s linear infinite; -o-animation: movecloud_3 120s linear infinite; }
+
+.cloud4 { position: absolute; left: 240px; bottom: 185px; background: url(../img/svg/cloud_3.svg) no-repeat; background-size: cover; width: 321px; height: 85px; -webkit-animation: movecloud_4 30s linear infinite; -moz-animation: movecloud_4 30s linear infinite; -o-animation: movecloud_4 30s linear infinite; }
+
+.cloud5 { position: absolute; right: 380px; bottom: 230px; background: url(../img/svg/cloud_5.svg) no-repeat; background-size: cover; width: 200px; height: 77px; -webkit-animation: movecloud_5 230s linear infinite; -moz-animation: movecloud_5 230s linear infinite; -o-animation: movecloud_5 230s linear infinite; }
+
+@-webkit-keyframes movecloud_1 { 0% { left: 100px; }
+  50% { left: 500px; }
+  100% { left: 100px; } }
+
+@-moz-keyframes movecloud_1 { 0% { left: 100px; }
+  50% { left: 500px; }
+  100% { left: 100px; } }
+
+@-o-keyframes movecloud_1 { 0% { left: 100px; }
+  50% { left: 500px; }
+  100% { left: 100px; } }
+
+@-webkit-keyframes movecloud_2 { 0% { left: 100px; }
+  50% { left: 500px; }
+  100% { left: 100px; } }
+
+@-moz-keyframes movecloud_2 { 0% { left: 100px; }
+  50% { left: 500px; }
+  100% { left: 100px; } }
+
+@-o-keyframes movecloud_2 { 0% { left: 100px; }
+  50% { left: 500px; }
+  100% { left: 100px; } }
+
+@-webkit-keyframes movecloud_3 { 0% { right: 300px; }
+  50% { right: 0px; }
+  100% { right: 300px; } }
+
+@-moz-keyframes movecloud_3 { 0% { right: 300px; }
+  50% { right: 0px; }
+  100% { right: 300px; } }
+
+@-o-keyframes movecloud_3 { 0% { right: 300px; }
+  50% { right: 0px; }
+  100% { right: 300px; } }
+
+@-webkit-keyframes movecloud_4 { 0% { left: 240px; }
+  50% { left: 540px; }
+  100% { left: 240px; } }
+
+@-moz-keyframes movecloud_4 { 0% { left: 240px; }
+  50% { left: 540px; }
+  100% { left: 240px; } }
+
+@-o-keyframes movecloud_4 { 0% { left: 240px; }
+  50% { left: 540px; }
+  100% { left: 240px; } }
+
+@-webkit-keyframes movecloud_5 { 0% { right: 380px; }
+  50% { right: 100px; }
+  100% { right: 380px; } }
+
+@-moz-keyframes movecloud_5 { 0% { right: 380px; }
+  50% { right: 100px; }
+  100% { right: 380px; } }
+
+@-o-keyframes movecloud_5 { 0% { right: 380px; }
+  50% { right: 100px; }
+  100% { right: 380px; } }
 
 .btn { background: #db1b3c; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; color: #fff; font-size: 24px; font-weight: 300; padding: 13px 70px; text-decoration: none; display: inline-block; vertical-align: middle; -webkit-box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5); box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.5); }
 
@@ -1936,7 +2010,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
   .excursions__item-labels__item { margin-right: 1px; font-size: 12px; }
   .excursions__item-txt { padding: 15px 10px; } }
 
-@media screen and (max-width: 1520px) { .page404 { padding: 0 20px; } }
+@media screen and (max-width: 1520px) { .page404 { padding: 0 25px; } }
 
 @media screen and (max-width: 1500px) { .application__info { padding: 30px 40px 0; font-size: 14px; } }
 

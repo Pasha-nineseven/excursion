@@ -169,18 +169,19 @@
 	display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    background: url(../img/content/404-bg.png) right 3px no-repeat; 
-	background-size: contain;
+ //    background: url(../img/content/404-bg.png) right 3px no-repeat; 
+	// background-size: contain;
 	webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    position: relative;
 }
 
 .page404__inner{
 	max-width: 1520px;
     padding: 40px 0;
-    position: relative;
+    // position: relative;
     width: 100%;
     margin: 0 auto;
 	strong{
@@ -194,6 +195,18 @@
 }
 
 
+.page404__bg{
+	background: url(../img/content/land.png) right bottom no-repeat; 
+	background-size: contain;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	max-width: 1400px;
+	height: 620px;
+	z-index: 1;
+}
+
 .page404__wrap{
 	display: table;
 	width: 100%;
@@ -201,7 +214,7 @@
 	table-layout: fixed;
 	max-width: 1520px;
     padding: 0;
-    position: relative;
+    // position: relative;
     width: 100%;
 
 }
@@ -211,6 +224,8 @@
 	display: table-cell;
 	vertical-align: middle;
 	text-align: left;
+	position: relative;
+	z-index: 5;
 	img{
 		max-width: 100%;
 		height: auto;
@@ -227,6 +242,184 @@
 		}
 	} 
 }
+
+.baloon{
+	width: 235px;
+	height: 317px;
+	display: inline-block;
+	position: absolute;
+	left: 700px;
+	bottom: 60px;
+	z-index: 5;
+	background: url(../img/content/baloon.png) no-repeat;
+	background-size: cover;
+}
+
+
+.cloud1{
+	position: absolute;
+	left: 100px;
+	bottom: 100px;
+	background: url(../img/svg/cloud_1.svg) no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 78px;
+	-webkit-animation: movecloud_1 50s linear infinite;
+	-moz-animation: movecloud_1 50s linear infinite;
+	-o-animation: movecloud_1 50s linear infinite;
+}
+
+.cloud2{
+	position: absolute;
+	left: 150px;
+	bottom: 300px;
+	background: url(../img/svg/cloud_2.svg) no-repeat;
+	background-size: cover;
+	width: 93px;
+	height: 43px;
+	-webkit-animation: movecloud_2 180s linear infinite;
+	-moz-animation: movecloud_2 180s linear infinite;
+	-o-animation: movecloud_2 180s linear infinite;
+}
+.cloud3{
+	position: absolute;
+	right: 300px;
+	bottom: 100px;
+	background: url(../img/svg/cloud_2.svg) no-repeat;
+	background-size: cover;
+	width: 93px;
+	height: 43px;
+	-webkit-animation: movecloud_3 120s linear infinite;
+	-moz-animation: movecloud_3 120s linear infinite;
+	-o-animation: movecloud_3 120s linear infinite;
+}
+
+
+.cloud4{
+	position: absolute;
+	left: 240px;
+	bottom: 185px;
+	background: url(../img/svg/cloud_3.svg) no-repeat;
+	background-size: cover;
+	width: 321px;
+	height: 85px;
+	-webkit-animation: movecloud_4 30s linear infinite;
+	-moz-animation: movecloud_4 30s linear infinite;
+	-o-animation: movecloud_4 30s linear infinite;
+}
+
+.cloud5{
+	position: absolute;
+	    right: 380px;
+    bottom: 230px;
+	background: url(../img/svg/cloud_5.svg) no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 77px;
+	-webkit-animation: movecloud_5 230s linear infinite;
+	-moz-animation: movecloud_5 230s linear infinite;
+	-o-animation: movecloud_5 230s linear infinite;
+}
+
+
+
+
+@-webkit-keyframes movecloud_1 {
+	0% {left: 100px;}
+	50% {left: 500px;}
+	100% {left: 100px;}
+}
+
+@-moz-keyframes movecloud_1 {
+	0% {left: 100px;}
+	50% {left: 500px;}
+	100% {left: 100px;}
+}
+
+@-o-keyframes movecloud_1 {
+	0% {left: 100px;}
+	50% {left: 500px;}
+	100% {left: 100px;}
+}
+
+
+@-webkit-keyframes movecloud_2 {
+	0% {left: 100px;}
+	50% {left: 500px;}
+	100% {left: 100px;}
+}
+
+@-moz-keyframes movecloud_2 {
+	0% {left: 100px;}
+	50% {left: 500px;}
+	100% {left: 100px;}
+}
+
+@-o-keyframes movecloud_2 {
+	0% {left: 100px;}
+	50% {left: 500px;}
+	100% {left: 100px;}
+}
+
+
+@-webkit-keyframes movecloud_3 {
+	0% {right: 300px;}
+	50% {right: 0px;}
+	100% {right: 300px;}
+}
+
+@-moz-keyframes movecloud_3 {
+	0% {right: 300px;}
+	50% {right: 0px;}
+	100% {right: 300px;}
+}
+
+@-o-keyframes movecloud_3 {
+	0% {right: 300px;}
+	50% {right: 0px;}
+	100% {right: 300px;}
+}
+
+
+
+@-webkit-keyframes movecloud_4 {
+	0% {left: 240px;}
+	50% {left: 540px;}
+	100% {left: 240px;}
+}
+
+@-moz-keyframes movecloud_4 {
+	0% {left: 240px;}
+	50% {left: 540px;}
+	100% {left: 240px;}
+}
+
+@-o-keyframes movecloud_4{
+	0% {left: 240px;}
+	50% {left: 540px;}
+	100% {left: 240px;}
+}
+
+
+@-webkit-keyframes movecloud_5 {
+	0% {right: 380px;}
+	50% {right: 100px;}
+	100% {right: 380px;}
+}
+
+@-moz-keyframes movecloud_5 {
+	0% {right: 380px}
+	50% {right: 100px;}
+	100% {right: 380px;}
+}
+
+@-o-keyframes movecloud_5{
+	0% {right: 380px;}
+	50% {right: 100px;}
+	100% {right: 380px;}
+}
+
+
 
 .btn{
 	background: #db1b3c;
@@ -5107,7 +5300,7 @@ html .ui-button.ui-state-disabled:active {
 
 @media screen and (max-width: 1520px){
 	.page404 {
-	    padding: 0 20px;
+	    padding: 0 25px;
 	}
 }
 

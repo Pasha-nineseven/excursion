@@ -1,11 +1,49 @@
 $(document).ready(function() {
 
-	// detect touch device
-	if (isTouchDevice() === true) {
-		$('body').addClass('touch');
-	} else {
-		$('body').addClass('no-touch');
+	$('[data-section]').on({
+  
+	  'mousemove': throttle(function (e) {
+	  
+	    var x = -(e.pageX / 36);
+	        y = -(e.pageY / 36);
+	    
+	    $('.baloon').css({
+	        transform: 'translate3d(' + x + 'px, ' + y + 'px, 0)',
+	        transition: '300ms ease'
+	      });
+	  }, 100)
+	});
+
+	function throttle(fn, threshhold, scope) {
+	  var last,
+	      deferTimer;
+	  threshhold || (threshhold = 250);
+	  return function () {
+	    var context = scope || this,
+	        now = +new Date,
+	        args = arguments;
+	    if (last && now < last + threshhold) {
+	      clearTimeout(deferTimer);
+	      deferTimer = setTimeout(function () {
+	        last = now;
+	        fn.apply(context, args);
+	      }, threshhold);
+	    }
+	    else {
+	      last = now;
+	      fn.apply(context, args);
+	    }
+	  };
 	}
+
+	$(".page-header").on("click",".page-header--index__selecting-item", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
+
 
 	//TOP SELECT
 	//$('.page-header__select > a')
