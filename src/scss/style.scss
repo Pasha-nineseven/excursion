@@ -2190,6 +2190,8 @@ p.subtitle{
 .index-search__top{
 	max-width: 935px;
 	margin: 0 auto 20px;
+	position: relative;
+	z-index: 20;
 }
 
 .index-search__form{
@@ -4611,7 +4613,7 @@ p.subtitle{
 	margin-left: 30px;
 	color: #fff;
 	font-size: 18px;
-	//text-transform: uppercase;
+	text-transform: uppercase;
 	white-space: nowrap;
 	>span{
 		display: inline-block;
@@ -4645,7 +4647,7 @@ p.subtitle{
 	}
 	.jq-selectbox li {
 	    padding: 5px 3px 6px 17px;
-	    color: #231F20;
+	    color: #fff;
 	}
 
 	.jq-selectbox {
@@ -4695,7 +4697,7 @@ p.subtitle{
 	}
 	.jq-selectbox li {
 	    padding: 5px 3px 6px 17px;
-	    color: #231F20;
+	    color: #fff;
 	}
 
 	.jq-selectbox {
@@ -5208,6 +5210,33 @@ html .ui-button.ui-state-disabled:active {
     font-size: 14px;
 }
 
+.page-header .jq-selectbox__dropdown{
+	background: #3dcbff;
+}
+
+.page-header .jq-selectbox__dropdown {
+    border: 0;
+}
+
+
+.page-header .jq-selectbox ul li {
+    border-bottom: 1px solid #fff;
+}
+.page-header .jq-selectbox ul li:last-child{
+	border-bottom: 0;
+}
+
+
+.page-header .jq-selectbox li:hover {
+    background-color: #08C;
+}
+
+.page-header .jq-selectbox li.selected {
+    background-color: #08C;
+    pointer-events:none;
+    cursor: default;
+}
+
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
    .excursions__bottom{
@@ -5224,6 +5253,12 @@ html .ui-button.ui-state-disabled:active {
 	::i-block-chrome, .excursions__filter-view .input-wrap label {
 	  width:33%;
 	}
+}
+
+
+_::-webkit-:host:not(:root:root), .excursions__list{
+	margin-left: 0;
+	margin-right: 0;
 }
 
 
