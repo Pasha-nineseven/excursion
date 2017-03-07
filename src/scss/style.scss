@@ -1729,7 +1729,7 @@ p.subtitle{
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 40px;
-    width: 33.3%;
+    //width: 33.3%;
 	.item-favorite{
 		right: 25px;
 	}
@@ -2797,7 +2797,7 @@ p.subtitle{
         display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 33.3%;
+    // width: 33.3%;
     &:hover{
     	.excursions__item-hover {
 		    max-height: 200px;
@@ -5210,12 +5210,35 @@ html .ui-button.ui-state-disabled:active {
     font-size: 14px;
 }
 
-.page-header .jq-selectbox__dropdown{
-	background: #3dcbff;
-}
+
 
 .page-header .jq-selectbox__dropdown {
     border: 0;
+    margin-bottom: -1px;
+    background: #3dcbff;
+}
+
+
+
+.page-header .jq-selectbox__dropdown:after{
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #3dcbff;
+}
+
+
+.page-header .jq-selectbox__dropdown:hover:after{
+	background: #08C;
+}
+
+.page-header .jq-selectbox ul{
+	margin-bottom: -1px;
 }
 
 
@@ -5231,10 +5254,9 @@ html .ui-button.ui-state-disabled:active {
     background-color: #08C;
 }
 
-.page-header .jq-selectbox li.selected {
-    background-color: #08C;
-    pointer-events:none;
-    cursor: default;
+.page-header .jq-selectbox li.sel {
+    display: none;
+        border-bottom: 1px solid #fff;
 }
 
 
