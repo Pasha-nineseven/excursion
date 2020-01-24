@@ -1281,8 +1281,6 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .excursions__item-img__time { position: absolute; top: -17px; right: 0; background: rgba(0, 0, 0, 0.6); color: #fff; height: 17px; line-height: 17px; padding: 0 5px; font-size: 14px; }
 
-.rouble { font-family: 'rouble'; }
-
 .old-price { color: #fe8da1; font-size: 18px; text-decoration: line-through; display: inline-block; vertical-align: middle; margin-right: 5px; margin-top: 4px; float: left; }
 
 .excursions__item-txt { padding: 16px 20px 20px; }
@@ -2096,10 +2094,4 @@ _::-webkit-:host:not(:root:root), .excursions__list { margin-left: 0; margin-rig
   top: 0px;
   left: 3px;
   z-index: 10;
-}
-
-.payment-block p {
-  font-size: 14px;
-  margin-top: 8px;
-  margin-bottom: 0;
 }
