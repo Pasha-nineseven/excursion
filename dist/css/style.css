@@ -593,7 +593,7 @@ textarea, input { -webkit-box-shadow: none; box-shadow: none; font-family: inher
 
 .page-header--index__selecting-item:hover .page-header--index__icon--disabled { background-image: url(../img/svg/wheel-b-h.svg); }
 
-.page-header--index__selecting-item:hover .page-header--index__icon--pram { background-image: url(../img/svg/kids-h.svg); }
+.page-header--index__selecting-item:hover .page-header--index__icon--pram { background-image: url(../img/svg/kids.svg); }
 
 .page-header--index__title { color: #fff; font-size: 72px; font-family: 'bodoni',serif; text-align: center; margin-bottom: 30px; padding-top: 230px; }
 
@@ -1613,7 +1613,7 @@ p.subtitle { font-size: 24px; line-height: 1.3; font-weight: 100; margin-top: 0;
 
 .popup-register:hover { text-decoration: underline; }
 
-#guide-enter .btn-wrap, #guide-enter__user .btn-wrap, #register__user .btn-wrap { position: relative; }
+#guide-enter .btn-wrap, #guide-enter__user .btn-wrap, #register__user .btn-wrap, #tourist-enter .btn-wrap  { position: relative; }
 
 .photo-list__add-wrap { padding-top: 5px; }
 
